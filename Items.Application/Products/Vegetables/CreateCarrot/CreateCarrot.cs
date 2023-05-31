@@ -1,8 +1,9 @@
 ﻿using MediatR;
+using Range = Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.FruitsVegetables.Range;
 
-namespace Items.Application.Products.Vegetables.CreateBeet
+namespace Items.Application.Products.Vegetables.CreateCarrot
 {
-    public class CreateBeet : IRequest<Guid>
+    public class CreateCarrot : IRequest<Guid>
     {
         public string? ItemName { get; set; }
         public string? Brand { get; set; }
@@ -26,5 +27,7 @@ namespace Items.Application.Products.Vegetables.CreateBeet
         public string? Description { get; set; }
         public string? Package { get; set; }
         public string? Grade { get; set; }
+        public List<Range> SaleWeights { get; set; } = new();
+        public bool IsWash { get; set; }
     }
 }

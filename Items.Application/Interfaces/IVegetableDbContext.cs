@@ -4,11 +4,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces
 {
-    public interface IVegetableDbContext
+    public interface IVegetableDbContext : IProductDbContext
     {
-        DbSet<Item> Items { get; set; }
-        DbSet<Eatable> Eatables { get; set; }
+        DbSet<Vegetable> Vegetables { get; set; }
         DbSet<Beet> Beets { get; set; }
-
+        DbSet<Carrot> Carrots { get; set; }
+        DbSet<Cauliflower> Cauliflowers { get; set; }
+        DbSet<Marrow> Marrows { get; set; }
+        DbSet<Potato> Potatos { get; set; }
+        DbSet<Redis> Redises { get; set; }
+        DbSet<Salad> Salads { get; set; }
+        DbSet<SaladMix> SaladMixes { get; set; }
+        DbSet<Tomato> Tomatoes { get; set; }
+        DbSet<Сabbage> Сabbages { get; set; }
     }
 }

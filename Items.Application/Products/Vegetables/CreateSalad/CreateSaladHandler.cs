@@ -2,19 +2,19 @@
 using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.FruitsVegetables.Vegetables;
 using MediatR;
 
-namespace Items.Application.Products.Vegetables.CreateBeet
+namespace Items.Application.Products.Vegetables.CreateSalad
 {
-    public class CreateBeetHandler : IRequestHandler<CreateBeet, Guid>
+    public class CreateSaladHandler : IRequestHandler<CreateSalad, Guid>
     {
         private readonly IVegetableDbContext _dbContext;
 
-        public CreateBeetHandler(IVegetableDbContext dbContext) {
+        public CreateSaladHandler(IVegetableDbContext dbContext) {
             _dbContext = dbContext;
         }
 
-        public async Task<Guid> Handle(CreateBeet request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateSalad request, CancellationToken cancellationToken)
         {
-            var beet = new Beet
+            var salad = new Salad
             {
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
@@ -42,10 +42,10 @@ namespace Items.Application.Products.Vegetables.CreateBeet
                 Grade = request.Grade
             };
 
-            await _dbContext.Beets.AddAsync(beet, cancellationToken);
+            await _dbContext.Salads.AddAsync(salad, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return beet.ItemId;
+            return salad.ItemId;
         }
     }
 }

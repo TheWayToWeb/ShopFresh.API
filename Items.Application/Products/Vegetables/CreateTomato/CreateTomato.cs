@@ -1,8 +1,8 @@
 ﻿using MediatR;
 
-namespace Items.Application.Products.Vegetables.CreateBeet
+namespace Items.Application.Products.Vegetables.CreateTomato
 {
-    public class CreateBeet : IRequest<Guid>
+    public class CreateTomato : IRequest<Guid>
     {
         public string? ItemName { get; set; }
         public string? Brand { get; set; }
@@ -26,5 +26,6 @@ namespace Items.Application.Products.Vegetables.CreateBeet
         public string? Description { get; set; }
         public string? Package { get; set; }
         public string? Grade { get; set; }
+        public string? SkinColor { get; set; }
     }
 }

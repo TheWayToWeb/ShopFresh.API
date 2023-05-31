@@ -2,19 +2,18 @@
 using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.FruitsVegetables.Vegetables;
 using MediatR;
 
-namespace Items.Application.Products.Vegetables.CreateBeet
+namespace Items.Application.Products.Vegetables.CreateCabbage
 {
-    public class CreateBeetHandler : IRequestHandler<CreateBeet, Guid>
+    public class CreateCabbageHandler : IRequestHandler<CreateCabbage, Guid>
     {
         private readonly IVegetableDbContext _dbContext;
 
-        public CreateBeetHandler(IVegetableDbContext dbContext) {
+        public CreateCabbageHandler(IVegetableDbContext dbContext) {
             _dbContext = dbContext;
         }
-
-        public async Task<Guid> Handle(CreateBeet request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateCabbage request, CancellationToken cancellationToken)
         {
-            var beet = new Beet
+            var cabbage = new Сabbage
             {
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
@@ -26,7 +25,7 @@ namespace Items.Application.Products.Vegetables.CreateBeet
                 Storage = request.Storage,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
-                CoolingMode = request.CoolingMode,
+                CoolingMode= request.CoolingMode,
                 Shape = request.Shape,
                 Contain = request.Contain,
                 Weight = request.Weight,
@@ -42,10 +41,10 @@ namespace Items.Application.Products.Vegetables.CreateBeet
                 Grade = request.Grade
             };
 
-            await _dbContext.Beets.AddAsync(beet, cancellationToken);
+            await _dbContext.Сabbages.AddAsync(cabbage, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return beet.ItemId;
+            return cabbage.ItemId;
         }
     }
 }

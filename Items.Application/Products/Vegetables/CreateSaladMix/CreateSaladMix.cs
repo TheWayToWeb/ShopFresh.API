@@ -1,8 +1,9 @@
-﻿using MediatR;
+﻿using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.FruitsVegetables.Vegetables;
+using MediatR;
 
-namespace Items.Application.Products.Vegetables.CreateBeet
+namespace Items.Application.Products.Vegetables.CreateSaladMix
 {
-    public class CreateBeet : IRequest<Guid>
+    public class CreateSaladMix : IRequest<Guid>
     {
         public string? ItemName { get; set; }
         public string? Brand { get; set; }
@@ -26,5 +27,6 @@ namespace Items.Application.Products.Vegetables.CreateBeet
         public string? Description { get; set; }
         public string? Package { get; set; }
         public string? Grade { get; set; }
+        public List<Salad> SaladGrades { get; set; } = new();
     }
 }

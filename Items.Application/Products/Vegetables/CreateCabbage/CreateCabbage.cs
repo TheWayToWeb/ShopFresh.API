@@ -1,8 +1,8 @@
 ﻿using MediatR;
 
-namespace Items.Application.Products.Vegetables.CreateBeet
+namespace Items.Application.Products.Vegetables.CreateCabbage
 {
-    public class CreateBeet : IRequest<Guid>
+    public class CreateCabbage : IRequest<Guid>
     {
         public string? ItemName { get; set; }
         public string? Brand { get; set; }

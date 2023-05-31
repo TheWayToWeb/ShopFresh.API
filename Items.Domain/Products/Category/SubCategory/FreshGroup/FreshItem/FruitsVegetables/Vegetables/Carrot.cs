@@ -1,6 +1,6 @@
 ﻿namespace Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.FruitsVegetables.Vegetables
 {
-    public class Carrot : Eatable
+    public class Carrot : Vegetable
     {
         public string? Grade { get; set; }
         public List<Range> SaleWeights { get; set; } = new();
