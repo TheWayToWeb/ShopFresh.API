@@ -31,6 +31,7 @@ namespace Items.Application.Products.Fruits.CreateBanana
                 Shape = request.Shape,
                 Contain = request.Contain,
                 Weight = request.Weight,
+                Capacities = null,
                 Protein = request.Protein,
                 Fat = request.Fat,
                 Sugar = request.Sugar,

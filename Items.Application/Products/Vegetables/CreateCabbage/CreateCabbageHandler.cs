@@ -21,14 +21,10 @@ namespace Items.Application.Products.Vegetables.CreateCabbage
                 Brand = request.Brand,
                 Price = request.Price,
                 ImagePath = request.ImagePath,
-                Maker = request.Maker,
-                Storage = request.Storage,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
-                CoolingMode= request.CoolingMode,
-                Shape = request.Shape,
-                Contain = request.Contain,
                 Weight = request.Weight,
+                Capacities = null,
                 Protein = request.Protein,
                 Fat = request.Fat,
                 Sugar = request.Sugar,
@@ -36,8 +32,6 @@ namespace Items.Application.Products.Vegetables.CreateCabbage
                 CountInPackage = request.CountInPackage,
                 BeforeDate = request.BeforeDate,
                 ShortName = request.ShortName,
-                Description = request.Description,
-                Package = request.Package,
                 Grade = request.Grade
             };
 

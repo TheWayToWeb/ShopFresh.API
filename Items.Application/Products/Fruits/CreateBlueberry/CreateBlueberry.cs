@@ -15,7 +15,7 @@ namespace Items.Application.Products.Fruits.CreateBerry
         public string? CoolingMode { get; set; }
         public string? Shape { get; set; }
         public string? Contain { get; set; }
-        public float Weight { get; set; }
+        public float? Weight { get; set; }
         public float Protein { get; set; }
         public float Fat { get; set; }
         public float Sugar { get; set; }

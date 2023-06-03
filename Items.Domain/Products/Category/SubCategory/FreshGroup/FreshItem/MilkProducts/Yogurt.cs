@@ -1,13 +1,9 @@
 ﻿namespace Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.MilkProducts
 {
-    public class Yogurt : MilkProduct
+    public class Yogurt : Milk
     {
-        public string? Kind { get; set; }
-        public string? Taste { get; set; }
-        public int FatContent { get; set; }
-        public int Weight { get; set; }
-        public string? Addition { get; set; }
-        public List<string> Tastes { get; set; } = new();
-        public bool IsInterest { get; set; }
+        public string? TypeConsist { get; set; }
+        public List<Taste>? Tastes { get; set; } = new();
+        public float FatContent { get; set; }
     }
 }

@@ -30,6 +30,7 @@ namespace Items.Application.Products.Fruits.CreateGrape
                 Shape = request.Shape,
                 Contain = request.Contain,
                 Weight = request.Weight,
+                Capacities = null,
                 Protein = request.Protein,
                 Fat = request.Fat,
                 Sugar = request.Sugar,
