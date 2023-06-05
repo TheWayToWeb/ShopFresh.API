@@ -1,4 +1,4 @@
-﻿using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.MilkProducts;
+﻿using Items.Domain.Products.FreshItem.MilkProducts.LacticEntity;
 using MediatR;
 
 namespace Items.Application.Products.ProductMilk.CreateCream
@@ -6,7 +6,6 @@ namespace Items.Application.Products.ProductMilk.CreateCream
     public class CreateCream : IRequest<Guid>
     {
         public string? ItemName { get; set; }
-        public string? Brand { get; set; }
         public int Price { get; set; }
         public string? ImagePath { get; set; }
         public int MinTemp { get; set; }
@@ -24,6 +23,6 @@ namespace Items.Application.Products.ProductMilk.CreateCream
         public bool IsVegan { get; set; }
         public bool IsBestseller { get; set; }
         public string? KindCream { get; set; }
-        public List<MilkFat> Fats { get; set; } = new();
+        public List<MilkFat> FatContent { get; set; } = new();
     }
 }

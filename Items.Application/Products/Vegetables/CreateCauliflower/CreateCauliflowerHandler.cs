@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.FruitsVegetables.Vegetables;
+using Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.CreateCauliflower
@@ -19,13 +19,12 @@ namespace Items.Application.Products.Vegetables.CreateCauliflower
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
-                Brand = request.Brand,
+                BrandId = Guid.NewGuid(),
                 Price = request.Price,
                 ImagePath = request.ImagePath,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Weight = request.Weight,
-                Capacities = null,
                 Protein = request.Protein,
                 Fat = request.Fat,
                 Sugar = request.Sugar,

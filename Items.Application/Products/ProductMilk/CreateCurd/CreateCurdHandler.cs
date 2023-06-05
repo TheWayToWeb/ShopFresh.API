@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.MilkProducts;
+using Items.Domain.Products.FreshItem.MilkProducts;
 using MediatR;
 
 namespace Items.Application.Products.ProductMilk.CreateCurd
@@ -19,13 +19,12 @@ namespace Items.Application.Products.ProductMilk.CreateCurd
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
-                Brand = request.Brand,
+                BrandId = Guid.NewGuid(),
                 Price = request.Price,
                 ImagePath = request.ImagePath,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Weight = request.Weight,
-                Capacities = null,
                 Protein = request.Protein,
                 Fat = request.Fat,
                 Sugar = request.Sugar,

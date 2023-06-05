@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem;
+using Items.Domain.Products.FreshItem;
 
 namespace Items.Persistance.EntityTypeConfiguration
 {

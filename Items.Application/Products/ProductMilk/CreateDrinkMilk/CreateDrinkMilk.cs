@@ -1,4 +1,4 @@
-﻿using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.MilkProducts;
+﻿using Items.Domain.Products.FreshItem.MilkProducts.LacticEntity;
 using MediatR;
 
 namespace Items.Application.Products.ProductMilk.CreateDrinkingMilk
@@ -6,7 +6,6 @@ namespace Items.Application.Products.ProductMilk.CreateDrinkingMilk
     public class CreateDrinkMilk : IRequest<Guid>
     {
         public string? ItemName { get; set; }
-        public string? Brand { get; set; }
         public int Price { get; set; }
         public string? ImagePath { get; set; }
         public int MinTemp { get; set; }

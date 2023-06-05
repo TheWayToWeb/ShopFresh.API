@@ -1,4 +1,4 @@
-﻿using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.FruitsVegetables.Vegetables;
+﻿using Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.CreateSaladMix
@@ -6,7 +6,6 @@ namespace Items.Application.Products.Vegetables.CreateSaladMix
     public class CreateSaladMix : IRequest<Guid>
     {
         public string? ItemName { get; set; }
-        public string? Brand { get; set; }
         public int Price { get; set; }
         public string? ImagePath { get; set; }
         public int MinTemp { get; set; }

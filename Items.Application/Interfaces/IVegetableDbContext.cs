@@ -1,4 +1,5 @@
-﻿using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.FruitsVegetables.Vegetables;
+﻿using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.Mushrooms;
+using Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces
@@ -16,5 +17,6 @@ namespace Items.Application.Interfaces
         DbSet<SaladMix> SaladMixes { get; set; }
         DbSet<Tomato> Tomatoes { get; set; }
         DbSet<Сabbage> Сabbages { get; set; }
+        DbSet<Mushroom> Mushrooms { get; set; }
     }
 }

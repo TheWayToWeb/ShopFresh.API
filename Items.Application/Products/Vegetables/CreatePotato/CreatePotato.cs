@@ -1,13 +1,12 @@
 ﻿using MediatR;
 using System.Runtime.InteropServices;
-using Range = Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.FruitsVegetables.Range;
+using Range = Items.Domain.Products.FreshItem.FruitsVegetables.Range;
 
 namespace Items.Application.Products.Vegetables.CreatePotato
 {
     public class CreatePotato : IRequest<Guid>
     {
         public string? ItemName { get; set; }
-        public string? Brand { get; set; }
         public int Price { get; set; }
         public string? ImagePath { get; set; }
         public int MinTemp { get; set; }

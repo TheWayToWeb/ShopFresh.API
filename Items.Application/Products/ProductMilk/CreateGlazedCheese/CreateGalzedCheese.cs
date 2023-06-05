@@ -6,7 +6,6 @@ namespace Items.Application.Products.ProductMilk.CreateGlazedCheese
     public class CreateGalzedCheese : IRequest<Guid>
     {
         public string? ItemName { get; set; }
-        public string? Brand { get; set; }
         public int Price { get; set; }
         public string? ImagePath { get; set; }
         public int MinTemp { get; set; }
