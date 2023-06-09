@@ -8,5 +8,6 @@ namespace Items.Application.Products.Drinks.SoyMilk.Commands.CreateSoyMilk
 {
     internal class CreateSoyMilk
     {
+        /*Начать отсюда!!! */
     }
 }
