@@ -1,8 +1,6 @@
-﻿using Items.Domain.Products.FreshItem;
-
-namespace Items.Domain.Products.FreshItem.FruitsVegetables.Fruits
+﻿namespace Items.Domain.Products.FreshItem.FruitsVegetables.Fruits
 {
-    public abstract class Fruit : Eatable
+    public abstract class Fruit : Eat
     {
         public string? ShortName { get; set; }
         public string? Description { get; set; }

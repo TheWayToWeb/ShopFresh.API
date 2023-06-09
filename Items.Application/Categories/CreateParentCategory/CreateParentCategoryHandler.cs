@@ -19,7 +19,7 @@ namespace Items.Application.Categories.CreateParentCategory
             {
                 TitleId = Guid.NewGuid(),
                 Title = request.Title,
-                Category = request.Category
+                Categories = request.Categories
             };
 
             await _dbContext.ParentCategories.AddAsync(parentCategory, cancellationToken);

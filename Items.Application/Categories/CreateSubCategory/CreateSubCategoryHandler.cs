@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.Category.SubCategory;
+using Items.Domain.Categories.SubCategory;
 using MediatR;
 
 namespace Items.Application.Categories.CreateSubCategory
@@ -17,9 +17,9 @@ namespace Items.Application.Categories.CreateSubCategory
         {
             var subCategory = new SubCategory
             {
-                SubCategoryId = Guid.NewGuid(),
+                Id = Guid.NewGuid(),
                 SubCategoryName = request.SubCategoryName,
-                FreshGroup = request.FreshGroup
+                FreshGroups = request.FreshGroups
             };
 
             await _dbContext.SaveChangesAsync(cancellationToken);

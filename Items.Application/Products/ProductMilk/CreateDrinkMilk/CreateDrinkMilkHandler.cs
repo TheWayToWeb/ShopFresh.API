@@ -24,7 +24,7 @@ namespace Items.Application.Products.ProductMilk.CreateDrinkingMilk
                 ImagePath = request.ImagePath,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
-                Capacities = request.Capacities,
+                Capacity = request.Capacity,
                 Protein = request.Protein,
                 Fat = request.Fat,
                 Sugar = request.Sugar,

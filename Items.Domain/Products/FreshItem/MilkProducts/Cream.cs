@@ -1,4 +1,4 @@
-﻿using Items.Domain.Products.FreshItem.MilkProducts.LacticEntity;
+﻿using Items.Domain.Products.Template;
 
 namespace Items.Domain.Products.FreshItem.MilkProducts
 {

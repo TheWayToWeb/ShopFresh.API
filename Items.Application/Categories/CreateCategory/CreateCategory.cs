@@ -6,6 +6,6 @@ namespace Items.Application.Categories.CreateCategory
     public class CreateCategory : IRequest<Guid>
     {
         public string? CategoryName { get; set; }
-        public List<Category>? SubCategory { get; set; } = new();
+        public List<Category>? SubCategories { get; set; } = new();
     }
 }

@@ -1,4 +1,4 @@
-﻿using Items.Domain.Products.FreshItem.MilkProducts.LacticEntity;
+﻿using Items.Domain.Products.Template;
 using MediatR;
 
 namespace Items.Application.Products.ProductMilk.CreateCream
@@ -10,8 +10,7 @@ namespace Items.Application.Products.ProductMilk.CreateCream
         public string? ImagePath { get; set; }
         public int MinTemp { get; set; }
         public int MaxTemp { get; set; }
-        public float? Weight { get; set; }
-        public List<Capacity>? Capacities { get; set; } = new();
+        public List<Capacity>? Capacity { get; set; } = new();
         public float Protein { get; set; }
         public float Fat { get; set; }
         public float Sugar { get; set; }

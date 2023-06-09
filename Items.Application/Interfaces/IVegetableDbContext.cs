@@ -1,5 +1,4 @@
-﻿using Items.Domain.Products.Category.SubCategory.FreshGroup.FreshItem.Mushrooms;
-using Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables;
+﻿using Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

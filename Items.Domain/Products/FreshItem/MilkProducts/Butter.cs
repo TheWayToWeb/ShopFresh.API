@@ -1,7 +1,7 @@
 ﻿namespace Items.Domain.Products.FreshItem.MilkProducts
 {
-    public class Butter : LacticProduct
+    public class Butter : DrinkMilk
     {
-        public float FatContent { get; set; }
+        public bool IsHalal;
     }
 }

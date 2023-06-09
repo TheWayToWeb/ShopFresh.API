@@ -1,9 +1,8 @@
 ﻿using Items.Domain.Enums;
-using Items.Domain.Products.FreshItem;
 
 namespace Items.Domain.Products.FreshItem.Eggs
 {
-    public class Egg : Eatable
+    public class Egg : Eat
     {
         public string? Kind { get; set; }
         public Category Sort { get; set; }

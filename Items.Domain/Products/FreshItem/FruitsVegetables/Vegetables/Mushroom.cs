@@ -1,7 +1,4 @@
-﻿using Items.Domain.Products.FreshItem;
-using Items.Domain.Products.FreshItem.FruitsVegetables;
-
-namespace Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables
+﻿namespace Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables
 {
     public class Mushroom : Eatable
     {

@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.Category.SubCategory.FreshGroup;
+using Items.Domain.Categories.FreshGroup;
 using MediatR;
 
 namespace Items.Application.Categories.CreateFreshGroup
@@ -19,7 +19,7 @@ namespace Items.Application.Categories.CreateFreshGroup
             {
                 FreshGroupId = Guid.NewGuid(),
                 FreshGroupName = request.FreshGroupName,
-                FreshItem = request.FreshItem
+                FreshItems = request.FreshItems
             };
 
             await _dbContext.SaveChangesAsync(cancellationToken);

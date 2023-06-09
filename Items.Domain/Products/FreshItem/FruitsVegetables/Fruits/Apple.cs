@@ -1,6 +1,4 @@
-﻿using Items.Domain.Products.FreshItem.FruitsVegetables;
-
-namespace Items.Domain.Products.FreshItem.FruitsVegetables.Fruits
+﻿namespace Items.Domain.Products.FreshItem.FruitsVegetables.Fruits
 {
     public class Apple : Fruit
     {

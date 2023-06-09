@@ -17,14 +17,15 @@ namespace Items.Application.Categories.CreateCategory
         {
             var category = new Category
             {
-                CategoryId = Guid.NewGuid(),
-                SubCategory = request.SubCategory
+                Id = Guid.NewGuid(),
+                CategoryName = request.CategoryName,
+                SubCategories = request.SubCategories
             };
 
             await _dbContext.Categories.AddAsync(category, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return category.CategoryId;
+            return category.Id;
         }
     }
 }

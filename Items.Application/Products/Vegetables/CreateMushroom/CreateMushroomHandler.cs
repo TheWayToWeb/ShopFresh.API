@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using MushRoom = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.Mushroom;
+using SelfMushroom = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.Mushroom;
 
 namespace Items.Application.Products.Vegetables.CreateMushroom
 {
@@ -14,7 +14,7 @@ namespace Items.Application.Products.Vegetables.CreateMushroom
 
         public async Task<Guid> Handle(CreateMushroom request, CancellationToken cancellationToken)
         {
-            var mushroom = new MushRoom
+            var mushroom = new SelfMushroom
             {
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
