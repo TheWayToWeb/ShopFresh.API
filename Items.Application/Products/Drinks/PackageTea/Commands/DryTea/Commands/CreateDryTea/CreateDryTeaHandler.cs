@@ -1,20 +1,21 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfLemonade = Items.Domain.Products.FreshItem.Drinks.Lemonade;
+using SelfDryTea = Items.Domain.Products.FreshItem.Drinks.DryTea;
 
-namespace Items.Application.Products.Drinks.Lemonade.Commands.CreateLemonade
+namespace Items.Application.Products.Drinks.PackageTea.Commands.DryTea.Commands.CreateDryTea
 {
-    public class CreateLemonadeHandler : IRequestHandler<CreateLemonade, Guid>
+    public class CreateDryTeaHandler : IRequestHandler<CreateDryTea, Guid>
     {
         private readonly IDrinkDbContext _dbContext;
 
-        public CreateLemonadeHandler(IDrinkDbContext dbContext) {
+        public CreateDryTeaHandler(IDrinkDbContext dbContext)
+        {
             _dbContext = dbContext;
         }
 
-        public async Task<Guid> Handle(CreateLemonade request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateDryTea request, CancellationToken cancellationToken)
         {
-            var lemonade = new SelfLemonade
+            var dryTea = new SelfDryTea
             {
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
@@ -30,15 +31,15 @@ namespace Items.Application.Products.Drinks.Lemonade.Commands.CreateLemonade
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 BeforeDate = request.BeforeDate,
-                Capacity = request.Capacity,
-                Taste = request.Taste,
-                IsSparkling = request.IsSparkling
+                Sort = request.Sort,
+                KindOfTea = request.KindOfTea,
+                SachetCount = request.SachetCount
             };
 
-            await _dbContext.Lemonades.AddAsync(lemonade, cancellationToken);
+            await _dbContext.DryTea.AddAsync(dryTea, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return lemonade.ItemId;
+            return dryTea.ItemId;
         }
     }
 }

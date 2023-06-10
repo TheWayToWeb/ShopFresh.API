@@ -1,20 +1,20 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfLemonade = Items.Domain.Products.FreshItem.Drinks.Lemonade;
+using SelfTeaDrink = Items.Domain.Products.FreshItem.Drinks.DrinkingTea;
 
-namespace Items.Application.Products.Drinks.Lemonade.Commands.CreateLemonade
+namespace Items.Application.Products.Drinks.TeaDrink.Commands.CreateTeaDrink
 {
-    public class CreateLemonadeHandler : IRequestHandler<CreateLemonade, Guid>
+    public class CreateDrinkingTeaHandler : IRequestHandler<CreateDrinkingTea, Guid>
     {
         private readonly IDrinkDbContext _dbContext;
 
-        public CreateLemonadeHandler(IDrinkDbContext dbContext) {
+        public CreateDrinkingTeaHandler(IDrinkDbContext dbContext) {
             _dbContext = dbContext;
         }
 
-        public async Task<Guid> Handle(CreateLemonade request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateDrinkingTea request, CancellationToken cancellationToken)
         {
-            var lemonade = new SelfLemonade
+            var teaDrink = new SelfTeaDrink
             {
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
@@ -32,13 +32,15 @@ namespace Items.Application.Products.Drinks.Lemonade.Commands.CreateLemonade
                 BeforeDate = request.BeforeDate,
                 Capacity = request.Capacity,
                 Taste = request.Taste,
-                IsSparkling = request.IsSparkling
+                IsChilled = request.IsChilled,
+                Sort = request.Sort,
+                KindOfTea = request.KindOfTea
             };
 
-            await _dbContext.Lemonades.AddAsync(lemonade, cancellationToken);
+            await _dbContext.TeaDrinks.AddAsync(teaDrink, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return lemonade.ItemId;
+            return teaDrink.ItemId;
         }
     }
 }

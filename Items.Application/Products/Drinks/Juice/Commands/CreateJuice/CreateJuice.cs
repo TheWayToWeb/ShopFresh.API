@@ -1,7 +1,5 @@
-﻿using Items.Domain.Brands;
-using Items.Domain.Products.Template;
+﻿using Items.Domain.Products.Template;
 using MediatR;
-using System.Runtime.InteropServices;
 
 namespace Items.Application.Products.Drinks.Juice.Commands.CreateJuice
 {

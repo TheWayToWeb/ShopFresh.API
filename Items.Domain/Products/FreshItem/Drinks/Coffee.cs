@@ -1,6 +1,6 @@
 ﻿namespace Items.Domain.Products.FreshItem.Drinks
 {
-    public class Coffee : Eat
+    public class Coffee : Drink
     {
         public string? TypeCoffee { get; set; }
         public string? KindOfCofee { get; set; }

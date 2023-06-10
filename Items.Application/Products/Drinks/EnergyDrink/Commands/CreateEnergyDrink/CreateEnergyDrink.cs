@@ -1,5 +1,4 @@
-﻿using Items.Domain.Brands;
-using Items.Domain.Products.Template;
+﻿using Items.Domain.Products.Template;
 using Items.Domain.Products.Templates;
 using MediatR;
 

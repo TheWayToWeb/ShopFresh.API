@@ -1,9 +1,9 @@
 ﻿using Items.Domain.Products.Template;
 using MediatR;
 
-namespace Items.Application.Products.Drinks.SoyMilk.Commands.CreateSoyMilk
+namespace Items.Application.Products.Drinks.Kissel.Commands.CreateKissel
 {
-    public class CreateSoyMilk : IRequest<Guid>
+    public class CreateKissel : IRequest<Guid>
     {
         public string? ItemName { get; set; }
         public int Price { get; set; }
@@ -17,9 +17,7 @@ namespace Items.Application.Products.Drinks.SoyMilk.Commands.CreateSoyMilk
         public int CountInPackage { get; set; }
         public DateOnly BeforeDate { get; set; }
         public List<Taste>? Taste { get; set; } = new();
-        public List<Capacity> Capacity { get; set; } = new();
+        public List<Capacity>? Capacity { get; set; } = new();
         public bool IsChilled { get; set; }
-        public string? KindOfMilk { get; set; }
-
     }
 }

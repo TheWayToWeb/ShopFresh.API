@@ -1,20 +1,20 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfTeaDrink = Items.Domain.Products.FreshItem.Drinks.TeaDrink;
+using SelfKissel = Items.Domain.Products.FreshItem.Drinks.Kissel;
 
-namespace Items.Application.Products.Drinks.TeaDrink.Commands.CreateTeaDrink
+namespace Items.Application.Products.Drinks.Kissel.Commands.CreateKissel
 {
-    public class CreateTeaDrinkHandler : IRequestHandler<CreateTeaDrink, Guid>
+    public class CreateKisselHandler : IRequestHandler<CreateKissel, Guid>
     {
         private readonly IDrinkDbContext _dbContext;
 
-        public CreateTeaDrinkHandler(IDrinkDbContext dbContext) {
+        public CreateKisselHandler(IDrinkDbContext dbContext) {
             _dbContext = dbContext;
         }
 
-        public async Task<Guid> Handle(CreateTeaDrink request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateKissel request, CancellationToken cancellationToken)
         {
-            var teaDrink = new SelfTeaDrink
+            var kissel = new SelfKissel
             {
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
@@ -30,17 +30,16 @@ namespace Items.Application.Products.Drinks.TeaDrink.Commands.CreateTeaDrink
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 BeforeDate = request.BeforeDate,
-                Capacity = request.Capacity,
                 Taste = request.Taste,
-                IsChilled = request.IsChilled,
-                Sort = request.Sort,
-                KindOfTea = request.KindOfTea
+                Capacity = request.Capacity,
+                IsChilled = request.IsChilled
+
             };
 
-            await _dbContext.TeaDrinks.AddAsync(teaDrink, cancellationToken);
+            await _dbContext.Kissel.AddAsync(kissel, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return teaDrink.ItemId;
+            return kissel.ItemId;
         }
     }
 }

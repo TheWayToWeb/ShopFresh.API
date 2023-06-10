@@ -32,7 +32,7 @@ namespace Items.Application.Products.Drinks.Water.Commands.CreateWater
                 Capacity = request.Capacity,
                 Taste = request.Taste,
                 IsChilled = request.IsChilled,
-                IsCarbonation = request.IsCarbonation,
+                IsSparkling = request.IsSparkling,
                 Purpose = request.Purpose
             };
 

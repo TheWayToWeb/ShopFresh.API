@@ -10,9 +10,11 @@ namespace Items.Application.Interfaces
         DbSet<Juice> Juices { get; set; }
         DbSet<Lemonade> Lemonades { get; set; }
         DbSet<Tea> Tea { get; set; }
-        DbSet<PackageTea> PackageTea { get; set; }
+        DbSet<DryTea> DryTea { get; set; }
         DbSet<SoyMilk> SoyMilk { get; set; }
-        DbSet<TeaDrink> TeaDrinks { get; set; }
+        DbSet<DrinkingTea> DrinkingTea { get; set; }
         DbSet<Water> Water { get; set; }
+        DbSet<FruitDrink> FruitDrink { get; set; }
+        DbSet<Kissel> Kissel { get; set; }
     }
 }

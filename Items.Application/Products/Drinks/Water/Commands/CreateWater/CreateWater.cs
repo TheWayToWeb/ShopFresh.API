@@ -1,5 +1,4 @@
-﻿using Items.Domain.Brands;
-using Items.Domain.Products.Template;
+﻿using Items.Domain.Products.Template;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.Water.Commands.CreateWater
@@ -19,7 +18,7 @@ namespace Items.Application.Products.Drinks.Water.Commands.CreateWater
         public List<Capacity>? Capacity { get; set; } = new();
         public List<Taste>? Taste { get; set; } = new();
         public bool IsChilled { get; set; }
-        public bool IsCarbonation { get; set; }
+        public bool IsSparkling { get; set; }
         public string? Purpose { get; set; }
     }
 }

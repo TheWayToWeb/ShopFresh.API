@@ -6,6 +6,5 @@ namespace Items.Domain.Products.FreshItem.Eggs
     {
         public string? Kind { get; set; }
         public Category Sort { get; set; }
-        public bool IsFarmer { get; set; }
     }
 }

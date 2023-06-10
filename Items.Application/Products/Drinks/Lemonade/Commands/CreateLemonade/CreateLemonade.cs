@@ -1,5 +1,4 @@
-﻿using Items.Domain.Brands;
-using Items.Domain.Products.Template;
+﻿using Items.Domain.Products.Template;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.Lemonade.Commands.CreateLemonade
@@ -19,6 +18,6 @@ namespace Items.Application.Products.Drinks.Lemonade.Commands.CreateLemonade
         public DateOnly BeforeDate { get; set; }
         public List<Capacity> Capacity { get; set; } = new();
         public List<Taste>? Taste { get; set; } = new();
-        public bool IsCarbonation { get; set; }
+        public bool IsSparkling { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Items.Domain.Products.FreshItem.Drinks
 {
-    public class TeaDrink : Tea
+    public class FruitDrink : Juice
     {
     }
 }

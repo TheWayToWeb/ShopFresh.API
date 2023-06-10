@@ -2,7 +2,7 @@
 
 namespace Items.Domain.Products.FreshItem.Drinks
 {
-    public class EnergyDrink : Water
+    public class EnergyDrink : Drink
     {
         public List<State>? State { get; set; } = new();
         public float Coffein { get; set; }

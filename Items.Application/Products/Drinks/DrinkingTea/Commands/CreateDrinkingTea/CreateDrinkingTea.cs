@@ -1,10 +1,9 @@
-﻿using Items.Domain.Brands;
-using Items.Domain.Products.Template;
+﻿using Items.Domain.Products.Template;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.TeaDrink.Commands.CreateTeaDrink
 {
-    public class CreateTeaDrink : IRequest<Guid>
+    public class CreateDrinkingTea : IRequest<Guid>
     {
         public string? ItemName { get; set; }
         public int Price { get; set; }

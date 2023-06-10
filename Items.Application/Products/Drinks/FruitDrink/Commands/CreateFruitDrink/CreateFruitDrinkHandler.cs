@@ -1,25 +1,24 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfLemonade = Items.Domain.Products.FreshItem.Drinks.Lemonade;
+using SelfFruitDrink = Items.Domain.Products.FreshItem.Drinks.FruitDrink;
 
-namespace Items.Application.Products.Drinks.Lemonade.Commands.CreateLemonade
+namespace Items.Application.Products.Drinks.FruitDrink.Commands.CreateFruitDrink
 {
-    public class CreateLemonadeHandler : IRequestHandler<CreateLemonade, Guid>
+    public class CreateFruitDrinkHandler : IRequestHandler<CreateFruitDrink, Guid>
     {
         private readonly IDrinkDbContext _dbContext;
 
-        public CreateLemonadeHandler(IDrinkDbContext dbContext) {
+        public CreateFruitDrinkHandler(IDrinkDbContext dbContext) {
             _dbContext = dbContext;
         }
 
-        public async Task<Guid> Handle(CreateLemonade request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateFruitDrink request, CancellationToken cancellationToken)
         {
-            var lemonade = new SelfLemonade
+            var fruitDrink = new SelfFruitDrink
             {
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
-                BrandId = Guid.NewGuid(),
                 Price = request.Price,
                 ImagePath = request.ImagePath,
                 MinTemp = request.MinTemp,
@@ -30,15 +29,15 @@ namespace Items.Application.Products.Drinks.Lemonade.Commands.CreateLemonade
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 BeforeDate = request.BeforeDate,
-                Capacity = request.Capacity,
                 Taste = request.Taste,
-                IsSparkling = request.IsSparkling
+                Capacity = request.Capacity,
+                IsChilled = request.IsChilled
             };
 
-            await _dbContext.Lemonades.AddAsync(lemonade, cancellationToken);
+            await _dbContext.FruitDrink.AddAsync(fruitDrink, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return lemonade.ItemId;
+            return fruitDrink.ItemId;
         }
     }
 }
