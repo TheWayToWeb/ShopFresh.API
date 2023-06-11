@@ -4,11 +4,11 @@ using MediatR;
 
 namespace Items.Application.Products.FruisVegetables.Fruits.CreateExotic
 {
-    public class CreateExoticHandler : IRequestHandler<CreateExotic, Guid>
+    public class CreateExoticFruitHandler : IRequestHandler<CreateExotic, Guid>
     {
         private readonly IFruitDbContext _dbContext;
 
-        public CreateExoticHandler(IFruitDbContext dbContext)
+        public CreateExoticFruitHandler(IFruitDbContext dbContext)
         {
             _dbContext = dbContext;
         }

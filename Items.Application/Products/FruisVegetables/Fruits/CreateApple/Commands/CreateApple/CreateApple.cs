@@ -18,7 +18,9 @@ namespace Items.Application.Products.FruisVegetables.Fruits.CreateApple.Commands
         public DateOnly BeforeDate { get; set; }
         public float? Weight { get; set; }
         public string? CoolingMode { get; set; }
+        public bool IsFarmer { get; set; }
         public string? ShortName { get; set; }
+        public string? Shape { get; set; }
         public string? Grade { get; set; }
         public List<Range> SaleWeights { get; set; } = new();
     }

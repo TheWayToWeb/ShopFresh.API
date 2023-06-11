@@ -26,15 +26,17 @@ namespace Items.Application.Products.FruisVegetables.Fruits.CreateApple.Commands
                 ImagePath = request.ImagePath,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
-                Weight = request.Weight,
                 Protein = request.Protein,
                 Fat = request.Fat,
                 Sugar = request.Sugar,
+                Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 BeforeDate = request.BeforeDate,
-                ShortName = request.ShortName,
+                Weight = request.Weight,
                 CoolingMode = request.CoolingMode,
-                Grade = request.Grade,
+                IsFarmer = request.IsFarmer,
+                ShortName = request.ShortName,
+                Shape = request.Shape,
                 SaleWeights = request.SaleWeights
             };
 
