@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace Items.Application.Products.FruisVegetables.Fruits.CreateApple.Commands.DeleteApple
 {
-    internal class DeleteApple
+    public class DeleteApple : IRequest<Unit>
     {
+        public Guid PersonId { get; set; }
+        public Guid ItemId { get; set; }
     }
 }
