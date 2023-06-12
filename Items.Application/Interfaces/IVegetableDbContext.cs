@@ -7,6 +7,7 @@ namespace Items.Application.Interfaces
     {
         DbSet<Vegetable> Vegetables { get; set; }
         DbSet<Beet> Beets { get; set; }
+        DbSet<Сabbage> Сabbage { get; set; }
         DbSet<Carrot> Carrots { get; set; }
         DbSet<Cauliflower> Cauliflowers { get; set; }
         DbSet<Marrow> Marrows { get; set; }
@@ -15,7 +16,7 @@ namespace Items.Application.Interfaces
         DbSet<Salad> Salads { get; set; }
         DbSet<SaladMix> SaladMixes { get; set; }
         DbSet<Tomato> Tomatoes { get; set; }
-        DbSet<Сabbage> Сabbages { get; set; }
         DbSet<Mushroom> Mushrooms { get; set; }
+        DbSet<Bean> Beans { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Items.Domain.Products.FreshItem.FruitsVegetables.Fruits
+﻿using Items.Domain.Products.Templates;
+
+namespace Items.Domain.Products.FreshItem.Fruits
 {
     public class Apple : Fruit
     {

@@ -1,4 +1,6 @@
-﻿namespace Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables
+﻿using Items.Domain.Products.Templates;
+
+namespace Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables
 {
     public class Carrot : Vegetable
     {

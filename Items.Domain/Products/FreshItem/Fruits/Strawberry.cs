@@ -1,4 +1,4 @@
-﻿namespace Items.Domain.Products.FreshItem.FruitsVegetables.Fruits
+﻿namespace Items.Domain.Products.FreshItem.Fruits
 {
     public class Strawberry : Fruit
     {

@@ -1,20 +1,20 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables;
 using MediatR;
+using SelfBean = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.Bean;
 
-namespace Items.Application.Products.FruisVegetables.Vegetables.CreateCabbage
+namespace Items.Application.Products.FruisVegetables.Vegetables.Beans.Commands.CreateBeans
 {
-    public class CreateCabbageHandler : IRequestHandler<CreateCabbage, Guid>
+    public class CreateBeanHandler : IRequestHandler<CreateBean, Guid>
     {
         private readonly IVegetableDbContext _dbContext;
 
-        public CreateCabbageHandler(IVegetableDbContext dbContext)
-        {
+        public CreateBeanHandler(IVegetableDbContext dbContext) {
             _dbContext = dbContext;
         }
-        public async Task<Guid> Handle(CreateCabbage request, CancellationToken cancellationToken)
+
+        public async Task<Guid> Handle(CreateBean request, CancellationToken cancellationToken)
         {
-            var cabbage = new Сabbage
+            var bean = new SelfBean
             {
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
@@ -24,21 +24,19 @@ namespace Items.Application.Products.FruisVegetables.Vegetables.CreateCabbage
                 ImagePath = request.ImagePath,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
-                Weight = request.Weight,
                 Protein = request.Protein,
                 Fat = request.Fat,
                 Sugar = request.Sugar,
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 BeforeDate = request.BeforeDate,
-                ShortName = request.ShortName,
-                Grade = request.Grade
+                CoolingMode = request.CoolingMode
             };
 
-            await _dbContext.Сabbages.AddAsync(cabbage, cancellationToken);
+            await _dbContext.Beans.AddAsync(bean, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return cabbage.ItemId;
+            return bean.ItemId;
         }
     }
 }

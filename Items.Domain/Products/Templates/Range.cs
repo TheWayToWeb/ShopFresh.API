@@ -1,4 +1,4 @@
-﻿namespace Items.Domain.Products.FreshItem.FruitsVegetables
+﻿namespace Items.Domain.Products.Templates
 {
     public class Range
     {

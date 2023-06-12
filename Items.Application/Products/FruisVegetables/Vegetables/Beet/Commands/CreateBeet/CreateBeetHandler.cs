@@ -1,8 +1,8 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables;
+using SelfBeet = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.Beet;
 using MediatR;
 
-namespace Items.Application.Products.FruisVegetables.Vegetables.CreateBeet
+namespace Items.Application.Products.FruisVegetables.Vegetables.Beet.Commands.CreateBeet
 {
     public class CreateBeetHandler : IRequestHandler<CreateBeet, Guid>
     {
@@ -15,7 +15,7 @@ namespace Items.Application.Products.FruisVegetables.Vegetables.CreateBeet
 
         public async Task<Guid> Handle(CreateBeet request, CancellationToken cancellationToken)
         {
-            var beet = new Beet
+            var beet = new SelfBeet
             {
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
@@ -25,15 +25,15 @@ namespace Items.Application.Products.FruisVegetables.Vegetables.CreateBeet
                 ImagePath = request.ImagePath,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
-                Weight = request.Weight,
                 Protein = request.Protein,
                 Fat = request.Fat,
                 Sugar = request.Sugar,
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 BeforeDate = request.BeforeDate,
-                ShortName = request.ShortName,
-                Grade = request.Grade
+                Weight = request.Weight,
+                CoolingMode = request.CoolingMode,
+                ShortName = request.ShortName
             };
 
             await _dbContext.Beets.AddAsync(beet, cancellationToken);

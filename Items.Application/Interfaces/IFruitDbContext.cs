@@ -1,4 +1,4 @@
-﻿using Items.Domain.Products.FreshItem.FruitsVegetables.Fruits;
+﻿using Items.Domain.Products.FreshItem.Fruits;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces
@@ -11,7 +11,7 @@ namespace Items.Application.Interfaces
         DbSet<Blueberry> Blueberries { get; set; }
         DbSet<Сherries> Сherries { get; set; }
         DbSet<Citrus> Citruses { get; set; }
-        DbSet<Exotic> ExoticFruits { get; set; }
+        DbSet<ExoticFruit> ExoticFruits { get; set; }
         DbSet<Grape> Grapes { get; set; }
         DbSet<Pear> Pears { get; set; }
         DbSet<Strawberry> Strawberries { get; set; } 

@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Range = Items.Domain.Products.FreshItem.FruitsVegetables.Range;
+using Range = Items.Domain.Products.Templates.Range;
 
 namespace Items.Application.Products.FruisVegetables.Fruits.CreateBanana
 {
