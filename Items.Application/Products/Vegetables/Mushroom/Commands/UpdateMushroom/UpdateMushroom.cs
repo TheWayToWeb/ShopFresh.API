@@ -1,8 +1,8 @@
 ﻿using MediatR;
 
-namespace Items.Application.Products.Vegetables.Beans.Commands.UpdateBean
+namespace Items.Application.Products.Vegetables.Mushroom.Commands.UpdateMushroom
 {
-    public class UpdateBean : IRequest<Unit>
+    public class UpdateMushroom : IRequest<Unit>
     {
         public Guid PersonId { get; set; }
         public Guid ItemId { get; set; }
@@ -19,7 +19,7 @@ namespace Items.Application.Products.Vegetables.Beans.Commands.UpdateBean
         public int ProductExpiryDate { get; set; }
         public float? Weight { get; set; }
         public string? CoolingMode { get; set; }
-        public bool IsFarmer { get; set; }
         public string? Sort { get; set; }
+        public bool IsSlicingShape { get; set; }
     }
 }

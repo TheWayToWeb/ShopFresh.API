@@ -17,7 +17,7 @@ namespace Items.Application.Products.Vegetables.Salad.Commands.CreateSalad
         {
             var salad = new SelfSalad
             {
-                PersonId = Guid.NewGuid(),
+                PersonId = request.PersonId,
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
                 Price = request.Price,
@@ -25,10 +25,16 @@ namespace Items.Application.Products.Vegetables.Salad.Commands.CreateSalad
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Protein = request.Protein,
+                Fat = 0,
+                Sugar = 0,
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
-                Sort = request.Sort
+                Weight = null,
+                CoolingMode = request.CoolingMode,
+                IsFarmer = false,
+                Sort = request.Sort,
+                IsSlicingShape = request.IsSlicingShape
             };
 
             await _dbContext.Salads.AddAsync(salad, cancellationToken);

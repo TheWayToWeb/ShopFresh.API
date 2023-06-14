@@ -17,22 +17,26 @@ namespace Items.Application.Products.Vegetables.Potato.Commands.CreatePotato
         {
             var potato = new SelfPotato
             {
-                PersonId = Guid.NewGuid(),
+                PersonId = request.PersonId,
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
                 Price = request.Price,
                 ImagePath = request.ImagePath,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
+                Protein = 0,
                 Fat = request.Fat,
                 Sugar = request.Sugar,
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
+                Weight = null,
+                CoolingMode = request.CoolingMode,
+                IsFarmer = false,
                 Sort = request.Sort,
+                IsSlicingShape = request.IsSlicingShape,
                 SaleWeights = request.SaleWeights,
-                IsWash = request.IsWash,
-                SlicingShape = request.SlicingShape
+                IsWash = request.IsWash
             };
 
             await _dbContext.Potatos.AddAsync(potato, cancellationToken);

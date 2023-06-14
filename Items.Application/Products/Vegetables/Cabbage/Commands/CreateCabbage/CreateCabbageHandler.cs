@@ -16,7 +16,7 @@ namespace Items.Application.Products.Vegetables.Cabbage.Commands.CreateCabbage
         {
             var cabbage = new Сabbage
             {
-                PersonId = Guid.NewGuid(),
+                PersonId = request.PersonId,
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
                 BrandId = Guid.NewGuid(),
@@ -24,12 +24,19 @@ namespace Items.Application.Products.Vegetables.Cabbage.Commands.CreateCabbage
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Protein = request.Protein,
+                Fat = 0,
+                Sugar = 0,
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
+                Package = null,
                 Weight = request.Weight,
-                Sort = request.Sort
-
+                Contain = null,
+                CoolingMode = null,
+                Description = null,
+                IsFarmer = false,
+                Sort = request.Sort,
+                IsSlicingShape = false
             };
 
             await _dbContext.Сabbage.AddAsync(cabbage, cancellationToken);

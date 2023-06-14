@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables;
+using SelfCauliflower = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.Cauliflower;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.Cauliflower.Commands.CreateCauliflower
@@ -15,7 +15,7 @@ namespace Items.Application.Products.Vegetables.Cauliflower.Commands.CreateCauli
 
         public async Task<Guid> Handle(CreateCauliflower request, CancellationToken cancellationToken)
         {
-            var cauliflower = new Cauliflower
+            var cauliflower = new SelfCauliflower
             {
                 PersonId = Guid.NewGuid(),
                 ItemId = Guid.NewGuid(),
@@ -25,12 +25,16 @@ namespace Items.Application.Products.Vegetables.Cauliflower.Commands.CreateCauli
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Protein = request.Protein,
+                Fat = 0,
+                Sugar = 0,
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
                 Weight = request.Weight,
+                CoolingMode = request.CoolingMode,
+                IsFarmer = false,
                 Sort = request.Sort,
-                CoolingMode = request.CoolingMode
+                IsSlicingShape = false
             };
 
             await _dbContext.Cauliflowers.AddAsync(cauliflower, cancellationToken);

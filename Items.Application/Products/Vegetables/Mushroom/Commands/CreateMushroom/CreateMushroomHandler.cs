@@ -17,23 +17,24 @@ namespace Items.Application.Products.Vegetables.Mushroom.Commands.CreateMushroom
         {
             var mushroom = new SelfMushroom
             {
-                PersonId = Guid.NewGuid(),
+                PersonId = request.PersonId,
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
                 Price = request.Price,
-                BrandId = Guid.NewGuid(),
                 ImagePath = request.ImagePath,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Protein = request.Protein,
                 Fat = request.Fat,
+                Sugar = 0,
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
                 Weight = request.Weight,
                 CoolingMode = request.CoolingMode,
+                IsFarmer = false,
                 Sort = request.Sort,
-                SlicingShape = request.SlicingShape
+                IsSlicingShape = request.IsSlicingShape
             };
 
             await _dbContext.Mushrooms.AddAsync(mushroom, cancellationToken);

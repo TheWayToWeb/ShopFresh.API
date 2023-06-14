@@ -29,10 +29,11 @@ namespace Items.Application.Products.Vegetables.Carrot.Commands.CreateCarrot
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
-                Sort = request.Sort,
-                SaleWeights = request.SaleWeights,
+                Weight = request.Weight,
+                CoolingMode = request.CoolingMode,
                 IsWash = request.IsWash,
-                SlicingShape = request.SlicingShape
+                Sort = request.Sort,
+                IsSlicingShape = request.IsSlicingShape
             };
 
             await _dbContext.Carrots.AddAsync(carrot, cancellationToken);

@@ -5,6 +5,7 @@ namespace Items.Application.Products.Vegetables.Potato.Commands.CreatePotato
 {
     public class CreatePotato : IRequest<Guid>
     {
+        public Guid PersonId { get; set; }
         public string? ItemName { get; set; }
         public int Price { get; set; }
         public string? ImagePath { get; set; }
@@ -15,9 +16,10 @@ namespace Items.Application.Products.Vegetables.Potato.Commands.CreatePotato
         public float Energy { get; set; }
         public int CountInPackage { get; set; }
         public int ProductExpiryDate { get; set; }
+        public string? CoolingMode { get; set; }
         public string? Sort { get; set; }
+        public bool IsSlicingShape { get; set; }
         public List<Range>? SaleWeights { get; set; } = new();
         public bool IsWash { get; set; }
-        public bool SlicingShape { get; set; }
     }
 }

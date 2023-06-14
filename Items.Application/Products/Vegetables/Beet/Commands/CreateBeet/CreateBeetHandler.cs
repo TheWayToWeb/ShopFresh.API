@@ -30,11 +30,8 @@ namespace Items.Application.Products.Vegetables.Beet.Commands.CreateBeet
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
-                Package = null,
                 Weight = request.Weight,
-                Contain = null,
                 CoolingMode = request.CoolingMode,
-                Description = null,
                 IsFarmer = false,
                 Sort = request.Sort,
                 IsSlicingShape = request.IsSlicingShape

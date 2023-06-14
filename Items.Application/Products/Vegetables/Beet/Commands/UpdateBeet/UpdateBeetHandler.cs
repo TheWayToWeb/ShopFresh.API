@@ -31,11 +31,8 @@ namespace Items.Application.Products.Vegetables.Beet.Commands.UpdateBeet
             beet.Energy = request.Energy;
             beet.CountInPackage = request.CountInPackage;
             beet.ProductExpiryDate = request.ProductExpiryDate;
-            beet.Package = request.Package;
             beet.Weight = request.Weight;
-            beet.Contain = request.Contain;
             beet.CoolingMode = request.CoolingMode;
-            beet.Description = request.Description;
             beet.IsFarmer = request.IsFarmer;
             beet.Sort = request.Sort;
             beet.IsSlicingShape = request.IsSlicingShape;

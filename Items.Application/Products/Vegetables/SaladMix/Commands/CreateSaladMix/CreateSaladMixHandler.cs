@@ -1,8 +1,8 @@
 ﻿using Items.Application.Interfaces;
-using MediatR;
 using SelfSaladMix = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.SaladMix;
+using MediatR;
 
-namespace Items.Application.Products.Vegetables.SaladMix.Commands.CreateSaladMix
+namespace Items.Application.Products.SaladMix.Commands.CreateSaladMix
 {
     public class CreateSaladMixHandler : IRequestHandler<CreateSaladMix, Guid>
     {
@@ -17,18 +17,24 @@ namespace Items.Application.Products.Vegetables.SaladMix.Commands.CreateSaladMix
         {
             var saladMix = new SelfSaladMix
             {
-                PersonId = Guid.NewGuid(),
+                PersonId = request.PersonId,
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
                 Price = request.Price,
                 ImagePath = request.ImagePath,
                 MinTemp = request.MinTemp,
-                MaxTemp = request.MaxTemp,
+                MaxTemp = request.Maxtemp,
                 Protein = request.Protein,
+                Fat = 0,
+                Sugar = 0,
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
-                Weight = request.Weight,
+                Weight = null,
+                CoolingMode = request.CoolingMode,
+                IsFarmer = false,
+                Sort = null,
+                IsSlicingShape = request.IsSlicingShape,
                 GreeneryKinds = request.GreeneryKinds
             };
 

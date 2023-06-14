@@ -16,9 +16,10 @@ namespace Items.Application.Products.Vegetables.Carrot.Commands.CreateCarrot
         public float Energy { get; set; }
         public int CountInPackage { get; set; }
         public int ProductExpiryDate { get; set; }
-        public string? Sort { get; set; }
-        public List<Range>? SaleWeights { get; set; } = new();
+        public float? Weight { get; set; }
+        public string? CoolingMode { get; set; }
         public bool IsWash { get; set; }
-        public bool SlicingShape { get; set; }
+        public string? Sort { get; set; }
+        public bool IsSlicingShape { get; set; }
     }
 }

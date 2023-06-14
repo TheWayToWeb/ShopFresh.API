@@ -30,11 +30,8 @@ namespace Items.Application.Products.Vegetables.Beans.Commands.CreateBeans
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
-                Package = null,
                 Weight = null,
-                Contain = null,
                 CoolingMode = request.CoolingMode,
-                Description = null,
                 IsFarmer = false,
                 Sort = request.Sort,
                 IsSlicingShape = false

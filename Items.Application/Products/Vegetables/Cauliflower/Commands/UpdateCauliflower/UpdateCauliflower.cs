@@ -1,8 +1,8 @@
 ﻿using MediatR;
 
-namespace Items.Application.Products.Vegetables.Beans.Commands.UpdateBean
+namespace Items.Application.Products.Vegetables.Cauliflower.Commands.UpdateCauliflower
 {
-    public class UpdateBean : IRequest<Unit>
+    public class UpdateCauliflower : IRequest<Unit>
     {
         public Guid PersonId { get; set; }
         public Guid ItemId { get; set; }

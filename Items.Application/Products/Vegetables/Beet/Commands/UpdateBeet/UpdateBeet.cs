@@ -17,11 +17,8 @@ namespace Items.Application.Products.Vegetables.Beet.Commands.UpdateBeet
         public float Energy { get; set; }
         public int CountInPackage { get; set; }
         public int ProductExpiryDate { get; set; }
-        public string? Package { get; set; }
         public float? Weight { get; set; }
-        public string? Contain { get; set; }
         public string? CoolingMode { get; set; }
-        public string? Description { get; set; }
         public bool IsFarmer { get; set; }
         public string? Sort { get; set; }
         public bool IsSlicingShape { get; set; }

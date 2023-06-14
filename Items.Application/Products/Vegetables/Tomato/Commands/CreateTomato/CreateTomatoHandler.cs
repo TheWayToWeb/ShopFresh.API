@@ -1,4 +1,5 @@
 ﻿using Items.Application.Interfaces;
+using MediatR;
 using SelfTomato = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.Tomato;
 
 namespace Items.Application.Products.Vegetables.Tomato.Commands.CreateTomato

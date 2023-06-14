@@ -31,11 +31,8 @@ namespace Items.Application.Products.Vegetables.Beans.Commands.UpdateBean
             bean.Energy = request.Energy;
             bean.CountInPackage = request.CountInPackage;
             bean.ProductExpiryDate = request.ProductExpiryDate;
-            bean.Package = request.Package;
             bean.Weight = request.Weight;
-            bean.Contain = request.Contain;
             bean.CoolingMode = request.CoolingMode;
-            bean.Description = request.Description;
             bean.IsFarmer = request.IsFarmer;
             bean.Sort = request.Sort;
 
