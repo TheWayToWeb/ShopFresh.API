@@ -2,6 +2,5 @@
 {
     public class Salad : Vegetable
     {
-        public string? Grade { get; set; }
     }
 }

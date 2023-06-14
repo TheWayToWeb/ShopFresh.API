@@ -2,7 +2,6 @@
 {
     public class Redis : Vegetable
     {
-        public string? Grade { get; set; }
         public string? SkinColor { get; set; }
     }
 }

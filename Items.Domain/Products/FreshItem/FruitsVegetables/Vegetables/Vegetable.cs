@@ -1,8 +1,10 @@
-﻿namespace Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables
+﻿using Items.Domain.Enums;
+
+namespace Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables
 {
     public abstract class Vegetable : Eat
     {
-        public string? ShortName { get; set; }
-        public string? Description { get; set; }
+        public string? Sort { get; set; }
+        public bool IsSlicingShape { get; set; }
     }
 }

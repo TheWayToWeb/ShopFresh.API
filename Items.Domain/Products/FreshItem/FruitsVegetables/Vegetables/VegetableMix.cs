@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables
+﻿namespace Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables
 {
-    internal class VegetableMix
+    public class VegetableMix : Eat
     {
+        public List<Vegetable> Vegetables { get; set; } = new();
     }
 }

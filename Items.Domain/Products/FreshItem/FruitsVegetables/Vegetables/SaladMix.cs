@@ -2,6 +2,6 @@
 {
     public class SaladMix : Vegetable
     {
-        public List<Salad> SaladGrades { get; set; } = new();
+        public List<Salad> GreeneryKinds { get; set; } = new();
     }
 }

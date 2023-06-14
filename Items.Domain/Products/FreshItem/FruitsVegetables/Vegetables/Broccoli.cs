@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables
+﻿namespace Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables
 {
-    internal class Broccoli
+    public class Broccoli : Vegetable
     {
     }
 }

@@ -17,7 +17,7 @@ namespace Items.Application.Products.Eggs.Commands.CreateEggs
         {
             var egg = new Egg
             {
-                PersonId = Guid.NewGuid(),
+                PersonId = request.PersonId,
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
                 BrandId = Guid.NewGuid(),
@@ -27,14 +27,12 @@ namespace Items.Application.Products.Eggs.Commands.CreateEggs
                 MaxTemp = request.MaxTemp,
                 Protein = request.Protein,
                 Fat = request.Fat,
-                Sugar = request.Sugar,
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
-                BeforeDate = request.BeforeDate,
+                ProductExpiryDate = request.ProductExpiryDate,
                 Weight = request.Weight,
                 CoolingMode = request.CoolingMode,
                 Kind = request.Kind,
-                Sort = request.Sort,
                 IsFarmer = request.IsFarmer
             };
 
