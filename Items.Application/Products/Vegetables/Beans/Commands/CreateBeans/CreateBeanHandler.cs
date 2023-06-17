@@ -22,6 +22,7 @@ namespace Items.Application.Products.Vegetables.Beans.Commands.CreateBeans
                 ItemName = request.ItemName,
                 Price = request.Price,
                 ImagePath = request.ImagePath,
+                Maker = null,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Protein = request.Protein,

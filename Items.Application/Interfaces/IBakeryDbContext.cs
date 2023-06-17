@@ -1,4 +1,8 @@
 ﻿using Items.Domain.Products.FreshItem.Bakery;
+using Items.Domain.Products.FreshItem.Bakery.FactoryCookie;
+using Items.Domain.Products.FreshItem.Bakery.FactoryFancyCookie;
+using Items.Domain.Products.FreshItem.Bakery.FactoryGingerbread;
+using Items.Domain.Products.FreshItem.Bakery.FactoryRollCake;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

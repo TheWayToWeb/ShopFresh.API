@@ -23,6 +23,7 @@ namespace Items.Application.Products.Vegetables.Mushroom.Commands.UpdateMushroom
             mushroom.ItemName = request.ItemName;
             mushroom.Price = request.Price;
             mushroom.ImagePath = request.ImagePath;
+            mushroom.Maker = request.Maker;
             mushroom.MinTemp = request.MinTemp;
             mushroom.MaxTemp = request.MaxTemp;
             mushroom.Protein = request.Protein;
@@ -35,6 +36,10 @@ namespace Items.Application.Products.Vegetables.Mushroom.Commands.UpdateMushroom
             mushroom.CoolingMode = request.CoolingMode;
             mushroom.Sort = request.Sort;
             mushroom.IsSlicingShape = request.IsSlicingShape;
+
+            await _dbContext.SaveChangesAsync(cancellationToken);
+
+            return Unit.Value;
         }
     }
 }

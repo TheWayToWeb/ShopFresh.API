@@ -23,6 +23,7 @@ namespace Items.Application.Products.Vegetables.Salad.Commands.UpdateSalad
             salad.ItemName = request.ItemName;
             salad.Price = request.Price;
             salad.ImagePath = request.ImagePath;
+            salad.Maker = request.Maker;
             salad.MinTemp = request.MinTemp;
             salad.MaxTemp = request.MaxTemp;
             salad.Protein = request.Protein;
@@ -31,10 +32,7 @@ namespace Items.Application.Products.Vegetables.Salad.Commands.UpdateSalad
             salad.Energy = request.Energy;
             salad.CountInPackage = request.CountInPackage;
             salad.ProductExpiryDate = request.ProductExpiryDate;
-            salad.Package = request.Package;
             salad.CoolingMode = request.CoolingMode;
-            salad.Contain = request.Contain;
-            salad.Description = request.Description;
             salad.IsFarmer = request.IsFarmer;
             salad.Sort = request.Sort;
             salad.IsSlicingShape = request.IsSlicingShape;

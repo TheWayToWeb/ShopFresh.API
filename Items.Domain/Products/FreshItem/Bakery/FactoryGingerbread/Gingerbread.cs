@@ -1,4 +1,4 @@
-﻿namespace Items.Domain.Products.FreshItem.Bakery
+﻿namespace Items.Domain.Products.FreshItem.Bakery.FactoryGingerbread
 {
     public class Gingerbread : Bakery
     {

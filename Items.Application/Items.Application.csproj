@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="Products\Bread\" />
+    <Folder Include="Products\Bread\FlapJack\" />
   </ItemGroup>
 
 </Project>

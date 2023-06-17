@@ -17,11 +17,12 @@ namespace Items.Application.Products.Vegetables.Redis.Commands.CreateRedis
         {
             var redis = new SelfRedis
             {
-                PersonId = Guid.NewGuid(),
+                PersonId = request.PersonId,
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
                 Price = request.Price,
                 ImagePath = request.ImagePath,
+                Maker = null,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Protein = request.Protein,
@@ -31,7 +32,10 @@ namespace Items.Application.Products.Vegetables.Redis.Commands.CreateRedis
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
                 Weight = request.Weight,
-                Sort = request.Sort
+                CoolingMode = request.CoolingMode,
+                IsFarmer = false,
+                Sort = request.Sort,
+                SkinColor = null
             };
 
             await _dbContext.Redises.AddAsync(redis, cancellationToken);

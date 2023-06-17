@@ -17,11 +17,13 @@ namespace Items.Application.Products.Vegetables.Squash.Commands.CreateSquash
         {
             var squash = new SelfSquash
             {
-                PersonId = Guid.NewGuid(),
+                PersonId = request.PersonId,
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
+                Maker = null,
                 Price = request.Price,
                 ImagePath = request.ImagePath,
+                Maker = null,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Protein = request.Protein,
@@ -30,7 +32,10 @@ namespace Items.Application.Products.Vegetables.Squash.Commands.CreateSquash
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
                 Weight = request.Weight,
-                Sort = request.Sort
+                CoolingMode = null,
+                IsFarmer = false,
+                Sort = request.Sort,
+                IsSlicingShape = false
             };
 
             await _dbContext.Squashes.AddAsync(squash, cancellationToken);

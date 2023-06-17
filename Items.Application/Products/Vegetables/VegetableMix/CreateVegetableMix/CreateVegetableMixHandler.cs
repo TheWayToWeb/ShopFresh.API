@@ -16,20 +16,23 @@ namespace Items.Application.Products.Vegetables.VegetableMix.CreateVegetableMix
         {
             var vegetableMix = new SelfVegetableMix
             {
-                PersonId = Guid.NewGuid(),
+                PersonId = request.PersonId,
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
                 Price = request.Price,
                 ImagePath = request.ImagePath,
+                Maker = null,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Protein = request.Protein,
                 Fat = request.Fat,
+                Sugar = 0,
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
                 Weight = request.Weight,
                 CoolingMode = request.CoolingMode,
+                IsFarmer = false,
                 Vegetables = request.Vegetables
             };
 

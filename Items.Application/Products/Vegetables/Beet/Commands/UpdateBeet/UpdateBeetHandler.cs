@@ -23,6 +23,7 @@ namespace Items.Application.Products.Vegetables.Beet.Commands.UpdateBeet
             beet.ItemName = request.ItemName;
             beet.Price = request.Price;
             beet.ImagePath = request.ImagePath;
+            beet.Maker = request.Maker;
             beet.MinTemp = request.MinTemp;
             beet.MaxTemp = request.MaxTemp;
             beet.Protein = request.Protein;

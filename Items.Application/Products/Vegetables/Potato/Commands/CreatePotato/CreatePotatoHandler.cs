@@ -22,6 +22,7 @@ namespace Items.Application.Products.Vegetables.Potato.Commands.CreatePotato
                 ItemName = request.ItemName,
                 Price = request.Price,
                 ImagePath = request.ImagePath,
+                Maker = null,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Protein = 0,

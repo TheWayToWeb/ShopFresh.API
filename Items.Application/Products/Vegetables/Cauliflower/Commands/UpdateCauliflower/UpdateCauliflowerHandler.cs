@@ -23,6 +23,7 @@ namespace Items.Application.Products.Vegetables.Cauliflower.Commands.UpdateCauli
             cauliflower.ItemName = request.ItemName;
             cauliflower.Price = request.Price;
             cauliflower.ImagePath = request.ImagePath;
+            cauliflower.Maker = request.Maker;
             cauliflower.MinTemp = request.MinTemp;
             cauliflower.MaxTemp = request.MaxTemp;
             cauliflower.Protein = request.Protein;

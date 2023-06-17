@@ -23,6 +23,7 @@ namespace Items.Application.Products.Vegetables.Potato.Commands.UpdatePotato
             potato.ItemName = request.ItemName;
             potato.Price = request.Price;
             potato.ImagePath = request.ImagePath;
+            potato.Maker = request.Maker;
             potato.MinTemp = request.MinTemp;
             potato.MaxTemp = request.Maxtemp;
             potato.Protein = request.Protein;

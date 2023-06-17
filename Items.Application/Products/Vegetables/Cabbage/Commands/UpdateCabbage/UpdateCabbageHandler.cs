@@ -23,6 +23,7 @@ namespace Items.Application.Products.Vegetables.Cabbage.Commands.UpdateCabbage
             cabbage.ItemName = request.ItemName;
             cabbage.Price = request.Price;
             cabbage.ImagePath = request.ImagePath;
+            cabbage.Maker = request.Maker;
             cabbage.MinTemp = request.MinTemp;
             cabbage.MaxTemp = request.MaxTemp;
             cabbage.Protein = request.Protein;
@@ -31,10 +32,7 @@ namespace Items.Application.Products.Vegetables.Cabbage.Commands.UpdateCabbage
             cabbage.Energy = request.Energy;
             cabbage.CountInPackage = request.CountInPackage;
             cabbage.ProductExpiryDate = request.ProductExpiryDate;
-            cabbage.Package = request.Package;
             cabbage.Weight = request.Weight;
-            cabbage.Contain = request.Contain;
-            cabbage.Description = request.Description;
             cabbage.IsFarmer = request.IsFarmer;
             cabbage.Sort = request.Sort;
 

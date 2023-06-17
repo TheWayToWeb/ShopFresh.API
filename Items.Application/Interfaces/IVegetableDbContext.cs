@@ -19,5 +19,6 @@ namespace Items.Application.Interfaces
         DbSet<Mushroom> Mushrooms { get; set; }
         DbSet<Bean> Beans { get; set; }
         DbSet<VegetableMix> VegetableMixes { get; set; }
+        DbSet<Broccoli> Broccoli { get; set; }
     }
 }

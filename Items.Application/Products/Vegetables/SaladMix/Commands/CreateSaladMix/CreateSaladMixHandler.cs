@@ -22,6 +22,7 @@ namespace Items.Application.Products.SaladMix.Commands.CreateSaladMix
                 ItemName = request.ItemName,
                 Price = request.Price,
                 ImagePath = request.ImagePath,
+                Maker = null,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.Maxtemp,
                 Protein = request.Protein,

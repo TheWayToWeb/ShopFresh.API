@@ -9,6 +9,7 @@ namespace Items.Application.Products.Vegetables.Carrot.Commands.UpdateCarrot
         public string? ItemName { get; set; }
         public int Price { get; set; }
         public string? ImagePath { get; set; }
+        public string? Maker { get; set; }
         public int MinTemp { get; set; }
         public int MaxTemp { get; set; }
         public float Protein { get; set; }

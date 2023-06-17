@@ -17,20 +17,25 @@ namespace Items.Application.Products.Vegetables.Tomato.Commands.CreateTomato
         {
             var tomato = new SelfTomato
             {
-                PersonId = Guid.NewGuid(),
+                PersonId = request.PersonId,
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
                 Price = request.Price,
                 ImagePath = request.ImagePath,
+                Maker = null,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
+                Protein = 0,
                 Fat = request.Fat,
                 Sugar = request.Sugar,
                 Energy = request.Energy,
                 CountInPackage = request.CountInPackage,
                 ProductExpiryDate = request.ProductExpiryDate,
                 Weight = request.Weight,
-                Sort = request.Sort
+                CoolingMode = request.CoolingMode,
+                IsFarmer = false,
+                Sort = request.Sort,
+                IsSlicingShape = false,
             };
 
             await _dbContext.Tomatoes.AddAsync(tomato, cancellationToken);

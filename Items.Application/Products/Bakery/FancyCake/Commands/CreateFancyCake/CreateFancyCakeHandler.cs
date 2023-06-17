@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfFancyCake = Items.Domain.Products.FreshItem.Bakery.FancyCake;
+using SelfFancyCake = Items.Domain.Products.FreshItem.Bakery.FactoryFancyCookie.FancyCake;
 
 namespace Items.Application.Products.Bakery.FancyCake.Commands.CreateFancyCake
 {
@@ -16,21 +16,24 @@ namespace Items.Application.Products.Bakery.FancyCake.Commands.CreateFancyCake
         {
             var fancyCake = new SelfFancyCake
             {
-                PersonId = Guid.NewGuid(),
+                PersonId = request.PersonId,
                 ItemId = Guid.NewGuid(),
                 ItemName = request.ItemName,
-                BrandId = Guid.NewGuid(),
                 Price = request.Price,
                 ImagePath = request.ImagePath,
+                Maker = null,
                 MinTemp = request.MinTemp,
                 MaxTemp = request.MaxTemp,
                 Protein = request.Protein,
                 Fat = request.Fat,
                 Sugar = request.Sugar,
                 Energy = request.Energy,
-                BeforeDate = request.BeforeDate,
+                CountInPackage = request.CountInPackage,
+                ProductExpiryDate = request.ProductExpiryDate,
                 ProductBakeryKind = request.ProductBakeryKind,
+                Weight = request.Weight,
                 CoolingMode = request.CoolingMode,
+                IsFarmer = false,
                 ProductKindItSelf = request.ProductKindItSelf,
                 ProductTypeItSelf = request.ProductTypeItSelf
             };

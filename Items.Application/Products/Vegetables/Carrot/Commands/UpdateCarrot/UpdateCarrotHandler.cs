@@ -23,6 +23,7 @@ namespace Items.Application.Products.Vegetables.Carrot.Commands.UpdateCarrot
             carrot.ItemName = request.ItemName;
             carrot.Price = request.Price;
             carrot.ImagePath = request.ImagePath;
+            carrot.Maker = request.Maker;
             carrot.MinTemp = request.MinTemp;
             carrot.MaxTemp = request.MaxTemp;
             carrot.Protein = request.Protein;

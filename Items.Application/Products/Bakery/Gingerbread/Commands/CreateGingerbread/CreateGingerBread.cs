@@ -4,6 +4,7 @@ namespace Items.Application.Products.Bakery.Gingerbread.Commands.CreateGingerbre
 {
     public class CreateGingerBread : IRequest<Guid>
     {
+        public Guid PersonId { get; set; }
         public string? ItemName { get; set; }
         public int Price { get; set; }
         public string? ImagePath { get; set; }
@@ -13,8 +14,10 @@ namespace Items.Application.Products.Bakery.Gingerbread.Commands.CreateGingerbre
         public float Fat { get; set; }
         public float Sugar { get; set; }
         public float Energy { get; set; }
+        public int CountInPackge { get; set; }
+        public int ProductExpiryDate { get; set; }
+        public float? Weight { get; set; }
         public string? ProductBakeryKind { get; set; }
-        public DateOnly BeforeDate { get; set; }
         public string? ProductKindItSelf { get; set; }
     }
 }

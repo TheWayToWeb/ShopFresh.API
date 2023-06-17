@@ -23,6 +23,7 @@ namespace Items.Application.Products.Vegetables.Beans.Commands.UpdateBean
             bean.ItemName = request.ItemName;
             bean.Price = request.Price;
             bean.ImagePath = request.ImagePath;
+            bean.Maker = request.Maker;
             bean.MinTemp = request.MinTemp;
             bean.MaxTemp = request.MaxTemp;
             bean.Protein = request.Protein;

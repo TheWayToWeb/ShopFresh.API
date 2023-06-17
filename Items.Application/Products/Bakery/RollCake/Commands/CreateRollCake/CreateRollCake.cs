@@ -4,6 +4,7 @@ namespace Items.Application.Products.Bakery.RollCake.Commands.CreateRollCake
 {
     public class CreateRollCake : IRequest<Guid>
     {
+        public Guid PersonId { get; set; }
         public string? ItemName { get; set; }
         public int Price { get; set; }
         public string? ImagePath { get; set; }
@@ -13,7 +14,8 @@ namespace Items.Application.Products.Bakery.RollCake.Commands.CreateRollCake
         public float Fat { get; set; }
         public float Sugar { get; set; }
         public float Energy { get; set; }
-        public DateOnly BeforeDate { get; set; }
+        public int CountInPackage { get; set; }
+        public int ProductExpiryDate { get; set; }
         public string? CoolingMode { get; set; }
     }
 }

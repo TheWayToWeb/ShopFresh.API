@@ -4,6 +4,7 @@ namespace Items.Application.Products.Vegetables.Redis.Commands.CreateRedis
 {
     public class CreateRedis : IRequest<Guid>
     {
+        public Guid PersonId { get; set; }
         public string? ItemName { get; set; }
         public int Price { get; set; }
         public string? ImagePath { get; set; }
@@ -16,6 +17,7 @@ namespace Items.Application.Products.Vegetables.Redis.Commands.CreateRedis
         public int CountInPackage { get; set; }
         public int ProductExpiryDate { get; set; }
         public float? Weight { get; set; }
+        public string? CoolingMode { get; set; }
         public string? Sort { get; set; }
     }
 }
