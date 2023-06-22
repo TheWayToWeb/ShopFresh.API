@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
+using Items.Domain.Products.FreshItem.Bakery.FactoryRollCake;
 using MediatR;
-using SelfRollCake = Items.Domain.Products.FreshItem.Bakery.FactoryRollCake.RollCake;
 
 namespace Items.Application.Products.Bakery.RollCake.Commands.CreateRollCake
 {
@@ -14,31 +14,19 @@ namespace Items.Application.Products.Bakery.RollCake.Commands.CreateRollCake
 
         public async Task<Guid> Handle(CreateRollCake request, CancellationToken cancellationToken)
         {
-            var rollCake = new SelfRollCake
-            {
-                PersonId = request.PersonId,
-                ItemId = Guid.NewGuid(),
-                ItemName = request.ItemName,
-                Price = request.Price,
-                ImagePath = request.ImagePath,
-                Maker = null,
-                MinTemp = request.MinTemp,
-                MaxTemp = request.MaxTemp,
-                Protein = request.Protein,
-                Fat = request.Fat,
-                Sugar = request.Sugar,
-                Energy = request.Energy,
-                CountInPackage = request.CountInPackage,
-                ProductExpiryDate = request.ProductExpiryDate,
-                Weight = null,
-                CoolingMode = request.CoolingMode,
-                IsFarmer = false
-            };
+            MakeRollCake rollCake = new(request.PersonId);
 
-            await _dbContext.RollCakes.AddAsync(rollCake, cancellationToken);
+            rollCake.SetItemName(request.ItemName!);
+            rollCake.SetPrice(request.Price);
+            rollCake.SetImagePath(request.ImagePath!);
+
+            var actualRollCake = rollCake.CreateRollCake();
+
+            await _dbContext.RollCakes.AddAsync(actualRollCake, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return rollCake.ItemId;
+
+            return actualRollCake.ItemId;
         }
     }
 }

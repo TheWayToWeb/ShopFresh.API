@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace Items.Application.Products.Bakery.RollCake.Commands.DeleteRollCake
 {
-    internal class DeleteRollCake
+    public class DeleteRollCake : IRequest<Unit>
     {
+        public Guid PersonId { get; set; }
+        public Guid ItemId { get; set; }
     }
 }
