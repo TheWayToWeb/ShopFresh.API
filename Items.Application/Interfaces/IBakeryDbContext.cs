@@ -1,5 +1,5 @@
 ﻿using Items.Domain.Products.FreshItem.Bakery;
-using Items.Domain.Products.FreshItem.Bakery.FactoryCookie;
+using Items.Domain.Products.FreshItem.Bakery.MakingCookie;
 using Items.Domain.Products.FreshItem.Bakery.FactoryFancyCookie;
 using Items.Domain.Products.FreshItem.Bakery.FactoryGingerbread;
 using Items.Domain.Products.FreshItem.Bakery.FactoryRollCake;

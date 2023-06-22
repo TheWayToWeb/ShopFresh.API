@@ -1,5 +1,4 @@
 ﻿using Items.Application.Interfaces;
-using RealCookie = Items.Domain.Products.FreshItem.Bakery.FactoryCookie.Cookie;
 using MakeCookie = Items.Domain.Products.FreshItem.Bakery.FactoryCookie.MakeCookie;
 using MediatR;
 
@@ -15,36 +14,20 @@ namespace Items.Application.Products.Bakery.Cookie.Commands.CreateCookie
 
         public async Task<Guid> Handle(CreateCookieRequest request, CancellationToken cancellationToken)
         {
+            MakeCookie cookie = new(request.PersonId);
 
-            MakeCookie makeCookie = new(
-                request.PersonId,
-                Guid.NewGuid(),
-                request.ItemName,
-                request.Price,
-                request.ImagePath,
-                null,
-                request.MinTemp,
-                request.MaxTemp,
-                request.Protein,
-                request.Fat,
-                request.Sugar,
-                request.Energy,
-                request.CountInPackage,
-                request.ProductExpiryDate,
-                null,
-                request.CoolingMode,
-                false,
-                request.ProductBakeryKind,
-                request.Addition,
-                request.ProductKindItSelf
-                );
+            cookie.SetItemName(request.ItemName);
+            cookie.SetPrice(request.Price);
+            cookie.SetImagePath(request.ImagePath!);
 
-            var cookie = makeCookie.Create();
+            var actualCookie = cookie.CreateCookie();
 
-            await _dbContext.Cookies.AddAsync((RealCookie)cookie, cancellationToken);
+            await _dbContext.Cookies.AddAsync(actualCookie, cancellationToken);
+
+            await _dbContext.Cookies.AddAsync(actualCookie, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return cookie.ItemId;
+            return actualCookie.ItemId;
         }
     }
 }

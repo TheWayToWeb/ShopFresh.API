@@ -18,6 +18,7 @@ namespace Items.Application.Products.Bakery.Cookie.Commands.UpdateCookie
         public float Energy { get; set; }
         public int CountInPackage { get; set; }
         public int ProductExpiryDate { get; set; }
+        public float? Weight { get; set; }
         public string? CoolingMode { get; set; }
         public string? ProductBakeryKind { get; set; }
         public string? Addition { get; set; }

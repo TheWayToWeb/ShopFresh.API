@@ -1,4 +1,5 @@
 ﻿using Items.Application.Interfaces;
+using Items.Domain.Products.FreshItem.Bakery.FactoryCookie;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,7 +21,47 @@ namespace Items.Application.Products.Bakery.Cookie.Commands.UpdateCookie
                 throw new NotImplementedException();
             }
 
-            cookie.ItemName = request.ItemName;
+            MakeCookie updateCookie = new();
+
+
+            updateCookie.SetItemName(request.ItemName);
+            updateCookie.SetPrice(request.Price);
+            updateCookie.SetImagePath(request.ImagePath!);
+            updateCookie.SetMaker(request.Maker);
+            updateCookie.SetMinTemp(request.MinTemp);
+            updateCookie.SetMaxTemp(request.Maxtemp);
+            updateCookie.SetProtein(request.Protein);
+            updateCookie.SetFat(request.Fat);
+            updateCookie.SetSugar(request.Sugar);
+            updateCookie.SetEnergy(request.Energy);
+            updateCookie.SetCountInPackage(request.CountInPackage);
+            updateCookie.SetProductExpiryDate(request.ProductExpiryDate);
+            updateCookie.SetWeight(request.Weight);
+            updateCookie.SetCoolingMode(request.CoolingMode!);
+            updateCookie.SetProductBakeryKind(request.ProductBakeryKind!);
+            updateCookie.SetAddition(request.Addition!);
+            updateCookie.SetProductKindItSelf(request.ProductKindItSelf!);
+
+            cookie.ItemName = updateCookie.GetItemName();
+            cookie.Price = updateCookie.GetPrice();
+            cookie.ImagePath = updateCookie.GetImagePath();
+            cookie.Maker = updateCookie.GetMaker();
+            cookie.MinTemp = updateCookie.GetMinTemp();
+            cookie.MaxTemp = updateCookie.GetMaxTemp();
+            cookie.Protein = updateCookie.GetProtein();
+            cookie.Fat = updateCookie.GetFat();
+            cookie.Sugar = updateCookie.GetSugar();
+            cookie.Energy = updateCookie.GetEnergy();
+            cookie.CountInPackage = updateCookie.GetCountInPackage();
+            cookie.ProductExpiryDate = updateCookie.GetProductExpiryDate();
+            cookie.Weight = updateCookie.GetWeight();
+            cookie.CoolingMode = updateCookie.GetCoolingMode();
+            cookie.ProductBakeryKind = updateCookie.GetProductBakeryKind();
+            cookie.Addition = updateCookie.GetAddition();
+            cookie.ProductKindItSelf = updateCookie.GetProductKindItSelf();
+
+
+            /*cookie.ItemName = request.ItemName;
             cookie.Price = request.Price;
             cookie.ImagePath = request.ImagePath;
             cookie.Maker = request.Maker;
@@ -32,10 +73,11 @@ namespace Items.Application.Products.Bakery.Cookie.Commands.UpdateCookie
             cookie.Energy = request.Energy;
             cookie.CountInPackage = request.CountInPackage;
             cookie.ProductExpiryDate = request.ProductExpiryDate;
+            cookie.Weight = request.Weight;
             cookie.CoolingMode = request.CoolingMode;
             cookie.ProductBakeryKind = request.ProductBakeryKind;
             cookie.Addition = request.Addition;
-            cookie.ProductKindItSelf = request.ProductKindItSelf;
+            cookie.ProductKindItSelf = request.ProductKindItSelf;*/
 
             await _dbContext.SaveChangesAsync(cancellationToken);
 
