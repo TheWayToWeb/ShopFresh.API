@@ -61,24 +61,6 @@ namespace Items.Application.Products.Bakery.Cookie.Commands.UpdateCookie
             cookie.ProductKindItSelf = updateCookie.GetProductKindItSelf();
 
 
-            /*cookie.ItemName = request.ItemName;
-            cookie.Price = request.Price;
-            cookie.ImagePath = request.ImagePath;
-            cookie.Maker = request.Maker;
-            cookie.MinTemp = request.MinTemp;
-            cookie.MaxTemp = request.Maxtemp;
-            cookie.Protein = request.Protein;
-            cookie.Fat = request.Fat;
-            cookie.Sugar = request.Sugar;
-            cookie.Energy = request.Energy;
-            cookie.CountInPackage = request.CountInPackage;
-            cookie.ProductExpiryDate = request.ProductExpiryDate;
-            cookie.Weight = request.Weight;
-            cookie.CoolingMode = request.CoolingMode;
-            cookie.ProductBakeryKind = request.ProductBakeryKind;
-            cookie.Addition = request.Addition;
-            cookie.ProductKindItSelf = request.ProductKindItSelf;*/
-
             await _dbContext.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;
