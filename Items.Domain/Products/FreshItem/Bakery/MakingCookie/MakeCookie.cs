@@ -171,6 +171,14 @@ namespace Items.Domain.Products.FreshItem.Bakery.FactoryCookie
             return _productKindItSelf!;
         }
 
+        public void SetIsFarmer(bool value) {
+            _isFarmer = value;
+        }
+
+        public bool GetIsFarmer() {
+            return _isFarmer;
+        }
+
         public override Cookie CreateCookie()
         {
             return new Cookie(PersonId, ItemId, _itemName, _price, _imagePath);
