@@ -27,12 +27,18 @@ namespace Items.Domain.Products.FreshItem.Bakery.FactoryCookie
 
         public MakeCookie() {}
 
-        public MakeCookie(Guid personId) {
+        public MakeCookie(
+            Guid personId,
+            string? itemName,
+            int price,
+            string? imagePath
+        ) 
+        {
             PersonId = personId;
             ItemId = Guid.NewGuid();
-            _itemName = "";
-            _price = 0;
-            _imagePath = "";
+            _itemName = itemName;
+            _price = price;
+            _imagePath = imagePath;
         }
 
         public void SetItemName(string? value) {

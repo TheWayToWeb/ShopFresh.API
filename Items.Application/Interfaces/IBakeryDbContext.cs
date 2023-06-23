@@ -2,7 +2,7 @@
 using Items.Domain.Products.FreshItem.Bakery.MakingCookie;
 using Items.Domain.Products.FreshItem.Bakery.FactoryFancyCookie;
 using Items.Domain.Products.FreshItem.Bakery.FactoryGingerbread;
-using Items.Domain.Products.FreshItem.Bakery.FactoryRollCake;
+using Items.Domain.Products.FreshItem.Bakery.MakingRollCake;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

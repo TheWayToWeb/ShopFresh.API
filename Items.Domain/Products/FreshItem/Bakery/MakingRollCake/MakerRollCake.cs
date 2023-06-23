@@ -1,4 +1,4 @@
-﻿namespace Items.Domain.Products.FreshItem.Bakery.FactoryRollCake
+﻿namespace Items.Domain.Products.FreshItem.Bakery.MakingRollCake
 {
     public abstract class MakerRollCake
     {

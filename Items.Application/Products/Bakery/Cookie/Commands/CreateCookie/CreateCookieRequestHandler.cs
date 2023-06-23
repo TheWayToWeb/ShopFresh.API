@@ -14,11 +14,12 @@ namespace Items.Application.Products.Bakery.Cookie.Commands.CreateCookie
 
         public async Task<Guid> Handle(CreateCookieRequest request, CancellationToken cancellationToken)
         {
-            MakeCookie cookie = new(request.PersonId);
-
-            cookie.SetItemName(request.ItemName);
-            cookie.SetPrice(request.Price);
-            cookie.SetImagePath(request.ImagePath!);
+            MakeCookie cookie = new(
+                request.PersonId,
+                request.ItemName,
+                request.Price,
+                request.ImagePath!
+            );
 
             var actualCookie = cookie.CreateCookie();
 

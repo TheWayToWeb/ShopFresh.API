@@ -1,4 +1,4 @@
-﻿namespace Items.Domain.Products.FreshItem.Bakery.FactoryRollCake
+﻿namespace Items.Domain.Products.FreshItem.Bakery.MakingRollCake
 {
     public class MakeRollCake : MakerRollCake
     {
@@ -25,12 +25,18 @@
 
         public MakeRollCake() { }
 
-        public MakeRollCake(Guid personId) {
+        public MakeRollCake(
+            Guid personId,
+            string? itemName,
+            int price,
+            string? imagePath
+        ) 
+        {
             PersonId = personId;
             ItemId = Guid.NewGuid();
-            _itemName = "";
-            _price = 0;
-            _imagePath = "";
+            _itemName = itemName;
+            _price = price;
+            _imagePath = imagePath;
         }
 
         public void SetItemName(string value) {
@@ -177,9 +183,9 @@
             return _productKindItSelf!;
         }
 
-        public override RollCake CreateRollCake() {
-            /*Начать отсюда!*/
-            return new RollCake();
+        public override RollCake CreateRollCake() 
+        {
+            return new RollCake(PersonId, ItemId, _itemName, _price, _imagePath);
         }
     }
 }

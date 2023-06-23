@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.FreshItem.Bakery.FactoryRollCake;
+using Items.Domain.Products.FreshItem.Bakery.MakingRollCake;
 using MediatR;
 
 namespace Items.Application.Products.Bakery.RollCake.Commands.CreateRollCake
@@ -14,11 +14,12 @@ namespace Items.Application.Products.Bakery.RollCake.Commands.CreateRollCake
 
         public async Task<Guid> Handle(CreateRollCake request, CancellationToken cancellationToken)
         {
-            MakeRollCake rollCake = new(request.PersonId);
-
-            rollCake.SetItemName(request.ItemName!);
-            rollCake.SetPrice(request.Price);
-            rollCake.SetImagePath(request.ImagePath!);
+            MakeRollCake rollCake = new(
+                request.PersonId,
+                request.ItemName!,
+                request.Price,
+                request.ImagePath!
+            );
 
             var actualRollCake = rollCake.CreateRollCake();
 
