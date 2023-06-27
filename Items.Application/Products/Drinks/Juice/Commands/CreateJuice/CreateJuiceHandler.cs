@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfJuice =  Items.Domain.Products.FreshItem.Drinks.Juice;
+using SelfJuice = Items.Domain.Products.FreshItem.Drinks.MakingJuice.Juice;
 
 namespace Items.Application.Products.Drinks.Juice.Commands.CreateJuice
 {

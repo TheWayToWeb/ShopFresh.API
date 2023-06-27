@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.FreshItem.Bakery.FactoryRollCake;
+using Items.Domain.Products.FreshItem.Bakery.MakingRollCake;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

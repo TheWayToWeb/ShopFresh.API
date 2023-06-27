@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfDryTea = Items.Domain.Products.FreshItem.Drinks.DryTea;
+using SelfDryTea = Items.Domain.Products.FreshItem.Drinks.MakingTea.MakingDryTea.DryTea;
 
 namespace Items.Application.Products.Drinks.PackageTea.Commands.DryTea.Commands.CreateDryTea
 {

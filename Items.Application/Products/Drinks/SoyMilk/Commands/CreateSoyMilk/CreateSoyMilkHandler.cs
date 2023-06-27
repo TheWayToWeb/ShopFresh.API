@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfSoyMilk = Items.Domain.Products.FreshItem.Drinks.SoyMilk;
+using SelfSoyMilk = Items.Domain.Products.FreshItem.Drinks.MakingSoyMilk.SoyMilk;
 
 namespace Items.Application.Products.Drinks.SoyMilk.Commands.CreateSoyMilk
 {

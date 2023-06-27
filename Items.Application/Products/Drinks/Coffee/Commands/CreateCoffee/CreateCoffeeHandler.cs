@@ -1,7 +1,7 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
 using System.Runtime.ConstrainedExecution;
-using SelfCoffee = Items.Domain.Products.FreshItem.Drinks.Coffee;
+using SelfCoffee = Items.Domain.Products.FreshItem.Drinks.MakingCoffee.Coffee;
 
 namespace Items.Application.Products.Drinks.Coffee.Commands.CreateCoffee
 {

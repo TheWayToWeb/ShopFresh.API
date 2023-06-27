@@ -4,7 +4,7 @@ using SelfFancyCake = Items.Domain.Products.FreshItem.Bakery.FactoryFancyCookie.
 
 namespace Items.Application.Products.Bakery.FancyCake.Commands.CreateFancyCake
 {
-    public class CreateFancyCakeHandler : IRequestHandler<CreateFancyCake, Guid>
+    public class CreateFancyCakeHandler : CreateFancyCake, IRequestHandler<CreateFancyCake, Guid>
     {
         private readonly IBakeryDbContext _dbContext;
 

@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfWater = Items.Domain.Products.FreshItem.Drinks.Water;
+using SelfWater = Items.Domain.Products.FreshItem.Drinks.MakingWater.Water;
 
 namespace Items.Application.Products.Drinks.Water.Commands.CreateWater
 {

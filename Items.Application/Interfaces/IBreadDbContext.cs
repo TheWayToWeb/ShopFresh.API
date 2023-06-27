@@ -1,6 +1,15 @@
 ﻿using Items.Domain.Products.FreshItem.Bread;
 using Cheesecake = Items.Domain.Products.FreshItem.Bread.
 using Microsoft.EntityFrameworkCore;
+using Items.Domain.Products.FreshItem.Bread.MaikingBaguette;
+using Items.Domain.Products.FreshItem.Bread.MakingBun;
+using Items.Domain.Products.FreshItem.Bread.MakingFlapJack;
+using Items.Domain.Products.FreshItem.Bread.MakingCroissant;
+using Items.Domain.Products.FreshItem.Bread.MakingPuff;
+using Items.Domain.Products.FreshItem.Bread.MakingToast;
+using Items.Domain.Products.FreshItem.Bread.MakingSimpleCake;
+using Items.Domain.Products.FreshItem.Bread.MakingSingleFood;
+using Items.Domain.Products.FreshItem.Bread.MakingCottageCheesePatty;
 
 namespace Items.Application.Interfaces
 {

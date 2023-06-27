@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfKissel = Items.Domain.Products.FreshItem.Drinks.Kissel;
+using SelfKissel = Items.Domain.Products.FreshItem.Drinks.MakingKissel.Kissel;
 
 namespace Items.Application.Products.Drinks.Kissel.Commands.CreateKissel
 {

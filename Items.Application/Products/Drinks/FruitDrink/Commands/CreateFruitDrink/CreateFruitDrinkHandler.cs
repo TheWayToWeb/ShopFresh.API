@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfFruitDrink = Items.Domain.Products.FreshItem.Drinks.FruitDrink;
+using SelfFruitDrink = Items.Domain.Products.FreshItem.Drinks.MakingFruitDrink.FruitDrink;
 
 namespace Items.Application.Products.Drinks.FruitDrink.Commands.CreateFruitDrink
 {

@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using SelfEnergyDrink =  Items.Domain.Products.FreshItem.Drinks.EnergyDrink;
+using SelfEnergyDrink = Items.Domain.Products.FreshItem.Drinks.MakingEnergyDrink.EnergyDrink;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.EnergyDrink.Commands.CreateEnergyDrink

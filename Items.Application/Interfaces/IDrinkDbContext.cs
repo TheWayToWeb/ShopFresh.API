@@ -1,4 +1,14 @@
-﻿using Items.Domain.Products.FreshItem.Drinks;
+﻿using Items.Domain.Products.FreshItem.Drinks.MakingCoffee;
+using Items.Domain.Products.FreshItem.Drinks.MakingEnergyDrink;
+using Items.Domain.Products.FreshItem.Drinks.MakingFruitDrink;
+using Items.Domain.Products.FreshItem.Drinks.MakingJuice;
+using Items.Domain.Products.FreshItem.Drinks.MakingKissel;
+using Items.Domain.Products.FreshItem.Drinks.MakingLemonade;
+using Items.Domain.Products.FreshItem.Drinks.MakingSoyMilk;
+using Items.Domain.Products.FreshItem.Drinks.MakingTea;
+using Items.Domain.Products.FreshItem.Drinks.MakingTea.MakingDrinkingTea;
+using Items.Domain.Products.FreshItem.Drinks.MakingTea.MakingDryTea;
+using Items.Domain.Products.FreshItem.Drinks.MakingWater;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

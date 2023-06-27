@@ -4,9 +4,9 @@
     {
         public Guid PersonId { get; set; }
         public Guid ItemId { get; set; }
-        private string? _itemName { get; set; }
-        private int _price { get; set; }
-        private string? _imagePath { get; set; }
+        private string? _itemName { get; set; } = "";
+        private int _price { get; set; } = 0;
+        private string? _imagePath { get; set; } = "";
         private string? _maker { get; set; } = "";
         private int _minTemp { get; set; } = 0;
         private int _maxTemp { get; set; } = 0;
@@ -16,7 +16,7 @@
         private float _energy { get; set; } = 0;
         private int _countInPackage { get; set; } = 0;
         private int _productExpiryDate { get; set; } = 0;
-        private float? _weight { get; set; } = 0;
+        private float? _weight { get; set; } = null;
         private bool _isFarmer { get; set; } = false;
         private string? _coolingMode { get; set; } = "";
         private string? _productBakeryKind { get; set; } = "";

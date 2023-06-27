@@ -6,9 +6,9 @@ namespace Items.Domain.Products.FreshItem.Bakery.FactoryCookie
     {
         public Guid PersonId { get; set; }
         public Guid ItemId { get; set; }
-        private string? _itemName { get; set; }
-        private int _price { get; set; }
-        private string? _imagePath { get; set; }
+        private string? _itemName { get; set; } = "";
+        private int _price { get; set; } = 0;
+        private string? _imagePath { get; set; } = "";
         private string? _maker { get; set; } = "";
         private int _minTemp { get; set; } = 0;
         private int _maxTemp { get; set; } = 0;
@@ -18,7 +18,7 @@ namespace Items.Domain.Products.FreshItem.Bakery.FactoryCookie
         private float _energy { get; set; } = 0;
         private int _countInPackage { get; set; } = 0;
         private int _productExpiryDate { get; set; } = 0;
-        private float? _weight { get; set; } = 0;
+        private float? _weight { get; set; } = null;
         private bool _isFarmer { get; set; } = false;
         private string? _coolingMode { get; set; } = "";
         private string? _productBakeryKind { get; set; } = "";
@@ -41,7 +41,7 @@ namespace Items.Domain.Products.FreshItem.Bakery.FactoryCookie
             _imagePath = imagePath;
         }
 
-        public void SetItemName(string? value) {
+        public void SetItemName(string value) {
             _itemName = value;
         }
 
@@ -65,7 +65,7 @@ namespace Items.Domain.Products.FreshItem.Bakery.FactoryCookie
             return _imagePath!;
         }
 
-        public void SetMaker(string? value) {
+        public void SetMaker(string value) {
             _maker = value;
         }
 
@@ -137,7 +137,7 @@ namespace Items.Domain.Products.FreshItem.Bakery.FactoryCookie
             return _productExpiryDate;
         }
 
-        public void SetWeight(float? value) {
+        public void SetWeight(float value) {
             _weight = value;
         }
 
