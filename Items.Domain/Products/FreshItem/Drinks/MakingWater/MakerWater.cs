@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Items.Domain.Products.FreshItem.Drinks.MakingWater
+﻿namespace Items.Domain.Products.FreshItem.Drinks.MakingWater
 {
-    internal class MakerWater
+    public abstract class MakerWater
     {
+        public abstract Water CreateWater();
     }
 }

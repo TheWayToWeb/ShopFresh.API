@@ -8,5 +8,14 @@
         public string? Composition { get; set; }
         public string? TasteIntensity { get; set; }
         public bool IsCoffeinFree { get; set; }
+
+        public Coffee(Guid personId, Guid itemId, string itemName, int price, string imagePath)
+        {
+            PersonId = personId;
+            ItemId = itemId;
+            ItemName = itemName;
+            Price = price;
+            ImagePath = imagePath;
+        }
     }
 }

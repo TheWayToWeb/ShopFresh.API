@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Items.Domain.Products.FreshItem.Drinks.MakingLemonade
+﻿namespace Items.Domain.Products.FreshItem.Drinks.MakingLemonade
 {
-    internal class MakerLemonade
+    public abstract class MakerLemonade
     {
+        public abstract Lemonade CreateLemonade();
     }
 }

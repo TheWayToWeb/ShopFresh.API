@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Items.Domain.Products.FreshItem.Drinks.MakingKissel
+﻿namespace Items.Domain.Products.FreshItem.Drinks.MakingKissel
 {
-    internal class MakerKissel
+    public abstract class MakerKissel
     {
+        public abstract Kissel CreateKissel();
     }
 }

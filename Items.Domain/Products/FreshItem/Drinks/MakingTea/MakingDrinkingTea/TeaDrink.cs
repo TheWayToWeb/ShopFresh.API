@@ -1,10 +1,10 @@
 ﻿using Items.Domain.Products.FreshItem.Drinks.MakingTea;
 
-namespace Items.Domain.Products.FreshItem.Drinks.MakingTea.MakingDryTea
+namespace Items.Domain.Products.FreshItem.Drinks.MakingTea.MakingDrinkingTea
 {
-    public class DryTea : Tea
+    public class TeaDrink : Tea
     {
-        public DryTea(Guid personId, Guid itemId, string itemName, int price, string imagePath)
+        public TeaDrink(Guid personId, Guid itemId, string itemName, int price, string imagePath)
         {
             PersonId = personId;
             ItemId = itemId;
@@ -12,7 +12,5 @@ namespace Items.Domain.Products.FreshItem.Drinks.MakingTea.MakingDryTea
             Price = price;
             ImagePath = imagePath;
         }
-
-        public int SachetCount { get; set; }
     }
 }

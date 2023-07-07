@@ -1,8 +1,8 @@
 ﻿using Items.Domain.Products.Template;
 
-namespace Items.Domain.Products.FreshItem.Drinks.MakingFruitDrink
+namespace Items.Domain.Products.FreshItem.Drinks.MakingTea.MakingDrinkingTea
 {
-    public class MakeFruitDrink : MakerFruitDrink
+    public class MakeTeaDrink : MakerTeaDrink
     {
         public Guid PersonId { get; private set; }
         public Guid ItemId { get; private set; }
@@ -21,10 +21,13 @@ namespace Items.Domain.Products.FreshItem.Drinks.MakingFruitDrink
         public List<Taste> _tastes { get; private set; } = new();
         public List<Capacity> _capacities { get; private set; } = new();
         public bool _isChilled { get; private set; } = false;
+        public string _grade { get; private set; } = "";
+        public string _kindOfTea { get; private set; } = "";
 
-        public MakeFruitDrink() { }
+        public MakeTeaDrink() {
+        }
 
-        public MakeFruitDrink(Guid personId, string itemName, int price, string imagePath) {
+        public MakeTeaDrink(Guid personId, string itemName, int price, string imagePath) {
             PersonId = personId;
             ItemId = Guid.NewGuid();
             _itemName = itemName;
@@ -37,7 +40,7 @@ namespace Items.Domain.Products.FreshItem.Drinks.MakingFruitDrink
         public void ImagePath(string value) => _imagePath = value;
         public void Maker(string value) => _maker = value;
         public void MinTemp(int value) => _minTemp = value;
-        public void MaxTemp(int value) => _maxTemp = value;
+        public void MaxTemp(int value) => _minTemp = value;
         public void Protein(float value) => _protein = value;
         public void Fat(float value) => _fat = value;
         public void Sugar(float value) => _sugar = value;
@@ -47,10 +50,12 @@ namespace Items.Domain.Products.FreshItem.Drinks.MakingFruitDrink
         public void Taste(List<Taste> value) => _tastes.AddRange(value);
         public void Capacity(List<Capacity> value) => _capacities.AddRange(value);
         public void IsChilled(bool value) => _isChilled = value;
+        public void Grade(string value) => _grade = value;
+        public void KindOfTea(string value) => _kindOfTea = value;
 
-        public override FruitDrink CreateFruitDrink()
+        public override TeaDrink CreateTeaDrink()
         {
-            return new FruitDrink(PersonId, ItemId, _itemName, _price, _imagePath);
+            return new TeaDrink(PersonId, ItemId, _itemName, _price, _imagePath);
         }
     }
 }

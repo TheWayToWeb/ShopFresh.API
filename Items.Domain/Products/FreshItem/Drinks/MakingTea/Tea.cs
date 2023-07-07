@@ -2,7 +2,7 @@
 {
     public abstract class Tea : Drink
     {
-        public string? Sort { get; set; }
+        public string? Grade { get; set; }
         public string? KindOfTea { get; set; }
     }
 }

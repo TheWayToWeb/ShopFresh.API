@@ -20,7 +20,7 @@ namespace Items.Application.Products.Drinks.EnergyDrink.Commands.CreateEnergyDri
         public List<Capacity> Capacity { get; set; } = new();
         public List<Taste>? Taste { get; set; } = new();
         public bool IsChilled { get; set; }
-        public List<State>? State { get; set; } = new();
+        public List<SaleStatus>? State { get; set; } = new();
         public float Coffein { get; set; }
     }
 }

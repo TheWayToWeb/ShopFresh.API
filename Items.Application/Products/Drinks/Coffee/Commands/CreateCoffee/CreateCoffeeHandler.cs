@@ -1,45 +1,31 @@
 ﻿using Items.Application.Interfaces;
+using Items.Domain.Products.FreshItem.Drinks.MakingCoffee;
 using MediatR;
-using System.Runtime.ConstrainedExecution;
-using SelfCoffee = Items.Domain.Products.FreshItem.Drinks.MakingCoffee.Coffee;
 
 namespace Items.Application.Products.Drinks.Coffee.Commands.CreateCoffee
 {
     public class CreateCoffeeHandler : IRequestHandler<CreateCoffee, Guid>
     {
         private readonly IDrinkDbContext _dbContext;
+        private CoffeeMake _selfCoffee;
 
-        public CreateCoffeeHandler(IDrinkDbContext dbContext)
+        public CreateCoffeeHandler(IDrinkDbContext dbContext, CoffeeMake selfCoffee)
         {
             _dbContext = dbContext;
+            _selfCoffee = selfCoffee;
         }
 
         public async Task<Guid> Handle(CreateCoffee request, CancellationToken cancellationToken)
         {
-            var coffee = new SelfCoffee
-            {
-               PersonId = Guid.NewGuid(),
-               ItemId = Guid.NewGuid(),
-               ItemName = request.ItemName,
-               BrandId = Guid.NewGuid(),
-               Price = request.Price,
-               ImagePath = request.ImagePath,
-               MinTemp = request.MinTemp,
-               MaxTemp = request.MaxTemp,
-               Weight = request.Weight,
-               Protein = request.Protein,
-               Fat = request.Fat,
-               Sugar = request.Sugar,
-               Energy = request.Energy,
-               CountInPackage = request.CountInPackage,
-               BeforeDate = request.BeforeDate,
-               TypeCoffee = request.TypeOfCoffee,
-               KindOfCofee = request.KindOfCoffee,
-               Consistency = request.Consistency,
-               Composition = request.Composition,
-               TasteIntensity = request.TasteIntensity,
-               IsCoffeinFree = request.IsCoffeinFree
-            };
+
+            _selfCoffee = new(
+                request.PersonId,
+                request.ItemName,
+                request.Price,
+                request.ImagePath
+            );
+
+            var coffee = _selfCoffee.CreateCoffe();
 
             await _dbContext.Coffee.AddAsync(coffee, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);

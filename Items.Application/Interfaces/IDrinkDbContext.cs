@@ -22,7 +22,7 @@ namespace Items.Application.Interfaces
         DbSet<Tea> Tea { get; set; }
         DbSet<DryTea> DryTea { get; set; }
         DbSet<SoyMilk> SoyMilk { get; set; }
-        DbSet<DrinkingTea> DrinkingTea { get; set; }
+        DbSet<TeaDrink> DrinkingTea { get; set; }
         DbSet<Water> Water { get; set; }
         DbSet<FruitDrink> FruitDrink { get; set; }
         DbSet<Kissel> Kissel { get; set; }

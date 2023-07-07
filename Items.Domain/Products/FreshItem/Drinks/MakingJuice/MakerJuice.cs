@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Items.Domain.Products.FreshItem.Drinks.MakingJuice
+﻿namespace Items.Domain.Products.FreshItem.Drinks.MakingJuice
 {
-    internal class MakerJuice
+    public abstract class MakerJuice
     {
+        public abstract Juice CreateJuice();
     }
 }

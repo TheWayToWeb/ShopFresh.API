@@ -19,6 +19,6 @@ namespace Items.Domain.Products.FreshItem
         public float Sugar { get; set; }
         public float Energy { get; set; }
         public int CountInPackage { get; set; }
-        public int ProductExpiryDate { get; set; }
+        public int CreatedDate { get; set; }
     }
 }
