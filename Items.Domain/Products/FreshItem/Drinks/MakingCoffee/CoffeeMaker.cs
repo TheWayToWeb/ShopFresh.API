@@ -2,6 +2,6 @@
 {
     public abstract class CoffeeMaker
     {
-        public abstract Coffee CreateCoffe();
+        public abstract Coffee CreateCoffee();
     }
 }
