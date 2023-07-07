@@ -60,7 +60,7 @@ namespace Items.Domain.Products.FreshItem.Drinks.MakingCoffee
         public void TasteIntensity(string value) =>  tasteIntensity = value;
         public void IsCoffeinFree(bool value) =>  isCoffeinFree = value;
 
-        public override Coffee CreateCoffe()
+        public override Coffee CreateCoffee()
         {
             return new Coffee(PersonId, ItemId, itemName, price, imagePath);
         }

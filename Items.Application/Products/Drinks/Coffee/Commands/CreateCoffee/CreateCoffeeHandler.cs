@@ -25,7 +25,7 @@ namespace Items.Application.Products.Drinks.Coffee.Commands.CreateCoffee
                 request.ImagePath
             );
 
-            var coffee = _selfCoffee.CreateCoffe();
+            var coffee = _selfCoffee.CreateCoffee();
 
             await _dbContext.Coffee.AddAsync(coffee, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
