@@ -7,27 +7,28 @@ namespace Items.Application.Products.Bakery.RollCake.Commands.CreateRollCake
     public class CreateRollCakeHandler : IRequestHandler<CreateRollCake, Guid>
     {
         private readonly IBakeryDbContext _dbContext;
+        private MakeRollCake _selfRollCake;
 
-        public CreateRollCakeHandler(IBakeryDbContext dbContext) {
+        public CreateRollCakeHandler(IBakeryDbContext dbContext, MakeRollCake selfRollCake) {
             _dbContext = dbContext;
+            _selfRollCake = selfRollCake;
         }
 
         public async Task<Guid> Handle(CreateRollCake request, CancellationToken cancellationToken)
         {
-            MakeRollCake rollCake = new(
+            _selfRollCake = new(
                 request.PersonId,
-                request.ItemName!,
+                request.ItemName,
                 request.Price,
-                request.ImagePath!
+                request.ImagePath
             );
 
-            var actualRollCake = rollCake.CreateRollCake();
+            var rollCake = _selfRollCake.CreateRollCake();
 
-            await _dbContext.RollCakes.AddAsync(actualRollCake, cancellationToken);
+            await _dbContext.RollCakes.AddAsync(rollCake);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-
-            return actualRollCake.ItemId;
+            return rollCake.ItemId;
         }
     }
 }

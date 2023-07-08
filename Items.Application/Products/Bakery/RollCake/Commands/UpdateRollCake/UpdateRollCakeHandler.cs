@@ -8,9 +8,11 @@ namespace Items.Application.Products.Bakery.RollCake.Commands.UpdateRollCake
     public class UpdateRollCakeHandler : IRequestHandler<UpdateRollCake, Unit>
     {
         private readonly IBakeryDbContext _dbContext;
+        private readonly MakeRollCake _selfRollCake;
 
         public UpdateRollCakeHandler(IBakeryDbContext dbContext) {
             _dbContext = dbContext;
+            _selfRollCake = new();
         }
 
         public async Task<Unit> Handle(UpdateRollCake request, CancellationToken cancellationToken)
@@ -22,38 +24,41 @@ namespace Items.Application.Products.Bakery.RollCake.Commands.UpdateRollCake
                 throw new NotImplementedException();
             }
 
-            MakeRollCake updateRollCake = new MakeRollCake();
+            _selfRollCake.ItemName(request.ItemName);
+            _selfRollCake.Price(request.Price);
+            _selfRollCake.ImagePath(request.ImagePath);
+            _selfRollCake.Maker(request.Maker);
+            _selfRollCake.MinTemp(request.MinTemp);
+            _selfRollCake.MaxTemp(request.MaxTemp);
+            _selfRollCake.Protein(request.Protein);
+            _selfRollCake.Fat(request.Fat);
+            _selfRollCake.Sugar(request.Sugar);
+            _selfRollCake.Energy(request.Energy);
+            _selfRollCake.CountInPackage(request.CountInPackage);
+            _selfRollCake.CreatedDate(request.CreatedDate);
+            _selfRollCake.Weight(request.Weight);
+            _selfRollCake.CoolingMode(request.CoolingMode);
+            _selfRollCake.IsFarmer(request.IsFarmer);
+            _selfRollCake.ProductBakeryKind(request.ProductBakeryKind);
+            _selfRollCake.Addition(request.Addition);
 
-            updateRollCake.SetItemName(request.ItemName!);
-            updateRollCake.SetPrice(request.Price);
-            updateRollCake.SetImagePath(request.ImagePath!);
-            updateRollCake.SetMaker(request.Maker!);
-            updateRollCake.SetMinTemp(request.MinTemp);
-            updateRollCake.SetMaxTemp(request.MaxTemp);
-            updateRollCake.SetProtein(request.Protein);
-            updateRollCake.SetFat(request.Fat);
-            updateRollCake.SetSugar(request.Sugar);
-            updateRollCake.SetEnergy(request.Energy);
-            updateRollCake.SetCountInPackage(request.CountInPackage);
-            updateRollCake.SetProductExpiryDate(request.ProductExpiryDate);
-            updateRollCake.SetWeight(request.Weight);
-            updateRollCake.SetCoolingMode(request.CoolingMode!);
-
-            rollCake.ItemName = updateRollCake.GatItemName();
-            rollCake.Price = updateRollCake.GetPrice();
-            rollCake.ImagePath = updateRollCake.GetImagePath();
-            rollCake.Maker = updateRollCake.GetMaker();
-            rollCake.MinTemp = updateRollCake.GetMinTemp();
-            rollCake.MaxTemp = updateRollCake.GetMaxTemp();
-            rollCake.Protein = updateRollCake.GetProtein();
-            rollCake.Fat = updateRollCake.GetFat();
-            rollCake.Sugar = updateRollCake.GetSugar();
-            rollCake.Energy = updateRollCake.GetEnergy();
-            rollCake.CountInPackage = updateRollCake.GetCountInPackage();
-            rollCake.ProductExpiryDate = updateRollCake.GetProductExpiryDate();
-            rollCake.Weight = updateRollCake.GetWeight();
-            rollCake.CoolingMode = updateRollCake.GetCoolingMode();
-
+            rollCake.ItemName =     _selfRollCake.itemName;
+            rollCake.Price =        _selfRollCake.price;
+            rollCake.ImagePath =    _selfRollCake.imagePath;
+            rollCake.Maker =        _selfRollCake.maker;
+            rollCake.MinTemp =      _selfRollCake.minTemp;
+            rollCake.MaxTemp =      _selfRollCake.maxTemp;
+            rollCake.Protein =      _selfRollCake.protein;
+            rollCake.Fat =          _selfRollCake.fat;
+            rollCake.Sugar =        _selfRollCake.sugar;
+            rollCake.Energy =       _selfRollCake.energy;
+            rollCake.CountInPackage = _selfRollCake.countInPackage;
+            rollCake.CreatedDate =  _selfRollCake.createdDate;
+            rollCake.Weight =       _selfRollCake.weight;
+            rollCake.CoolingMode =  _selfRollCake.coolingMode;
+            rollCake.IsFarmer =     _selfRollCake.isFarmer;
+            rollCake.ProductBakeryKind = _selfRollCake.productBakeryKind;
+            rollCake.Addition =     _selfRollCake.addition;
 
             await _dbContext.SaveChangesAsync(cancellationToken);
 

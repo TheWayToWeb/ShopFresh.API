@@ -21,9 +21,8 @@ namespace Items.Application.Products.Bakery.RollCake.Commands.DeleteRollCake
                 throw new NotImplementedException();
             }
 
-            _dbContext.RollCakes.Remove(rollCake);
-
-            await _dbContext.SaveChangesAsync(cancellationToken);
+                    _dbContext.RollCakes.Remove(rollCake);
+            await   _dbContext.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;
         }
