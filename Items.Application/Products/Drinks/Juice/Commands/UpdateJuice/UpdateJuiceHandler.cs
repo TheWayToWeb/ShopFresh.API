@@ -16,7 +16,7 @@ namespace Items.Application.Products.Drinks.Juice.Commands.UpdateJuice
         }
         public async Task<Unit> Handle(UpdateJuice request, CancellationToken cancellationToken)
         {
-            var juice = await _dbContext.Juices.FirstOrDefaultAsync(item => item.ItemId == request.ItemId);
+            var juice = await _dbContext.Juices.FirstOrDefaultAsync(item => item.ItemId == request.ItemId, cancellationToken);
 
             if (juice is null || request.PersonId != juice.PersonId)
             {

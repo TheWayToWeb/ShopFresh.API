@@ -20,9 +20,8 @@ namespace Items.Application.Products.Drinks.Kissel.Commands.DeleteKissel
                 throw new NotImplementedException();
             }
 
-            _dbContext.Kissel.Remove(kissel);
-
-            await _dbContext.SaveChangesAsync(cancellationToken);
+                    _dbContext.Kissel.Remove(kissel);
+            await   _dbContext.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;
         }
