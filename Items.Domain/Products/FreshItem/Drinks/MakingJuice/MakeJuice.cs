@@ -50,7 +50,26 @@ namespace Items.Domain.Products.FreshItem.Drinks.MakingJuice
 
         public override Juice CreateJuice()
         {
-            return new Juice(PersonId, ItemId,  itemName,  price,  imagePath);
+            
+            return new Juice(
+                PersonId,
+                ItemId,
+                itemName,
+                price,
+                imagePath,
+                maker,
+                minTemp,
+                maxTemp,
+                protein,
+                fat,
+                sugar,
+                energy,
+                countInPackage,
+                createdDate,
+                tastes,
+                capacities,
+                isChilled
+            );
         }
     }
 }
