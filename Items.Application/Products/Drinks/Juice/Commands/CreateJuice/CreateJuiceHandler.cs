@@ -1,4 +1,5 @@
 ﻿using Items.Application.Interfaces;
+using Items.Domain.Products.FreshItem.Drinks.MakingJuice;
 using MediatR;
 using SelfJuice = Items.Domain.Products.FreshItem.Drinks.MakingJuice.Juice;
 
@@ -7,33 +8,28 @@ namespace Items.Application.Products.Drinks.Juice.Commands.CreateJuice
     public class CreateJuiceHandler : IRequestHandler<CreateJuice, Guid>
     {
         private readonly IDrinkDbContext _dbContext;
+        private MakeJuice _selfJuice;
 
-        public CreateJuiceHandler(IDrinkDbContext dbContext) {
+        public CreateJuiceHandler(IDrinkDbContext dbContext, MakeJuice selfJuice) {
             _dbContext = dbContext;
+            _selfJuice = selfJuice;
         }
 
-        public Task<Guid> Handle(CreateJuice request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateJuice request, CancellationToken cancellationToken)
         {
-            var juice = new SelfJuice
-            {
-                PersonId = Guid.NewGuid(),
-                ItemId = Guid.NewGuid(),
-                ItemName = request.ItemName,
-                BrandId = Guid.NewGuid(),
-                Price = request.Price,
-                ImagePath = request.ImagePath,
-                MinTemp = request.MinTemp,
-                MaxTemp = request.MaxTemp,
-                Protein = request.Protein,
-                Fat = request.Fat,
-                Sugar = request.Sugar,
-                Energy = request.Energy,
-                CountInPackage = request.CountInPackage,
-                BeforeDate = request.BeforeDate,
-                Capacity = request.Capacity,
-                Taste = request.Taste,
-                IsChilled = request.IsChilled
-            };
+            _selfJuice = new(
+                request.PersonId,
+                request.ItemName,
+                request.Price,
+                request.ImagePath
+            );
+
+            var juice = _selfJuice.CreateJuice();
+
+            await _dbContext.Juices.AddAsync(juice, cancellationToken);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+
+            return juice.ItemId;
         }
     }
 }
