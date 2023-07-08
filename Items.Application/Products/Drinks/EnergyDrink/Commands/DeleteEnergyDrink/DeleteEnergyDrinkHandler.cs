@@ -19,8 +19,8 @@ namespace Items.Application.Products.Drinks.EnergyDrink.Commands.DeleteEnergyDri
                 throw new NotImplementedException();
             }
 
-            _dbContext.EnergyDrinks.Remove(energyDrink);
-            await _dbContext.SaveChangesAsync(cancellationToken);
+                    _dbContext.EnergyDrinks.Remove(energyDrink);
+            await   _dbContext.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;
         }

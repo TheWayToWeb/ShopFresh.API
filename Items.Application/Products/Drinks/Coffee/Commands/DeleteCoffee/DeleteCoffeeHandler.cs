@@ -19,8 +19,8 @@ namespace Items.Application.Products.Drinks.Coffee.Commands.DeleteCoffee
                 throw new NotImplementedException();
             }
 
-                  _dbContext.Coffee.Remove(coffee);
-            await _dbContext.SaveChangesAsync(cancellationToken);
+                    _dbContext.Coffee.Remove(coffee);
+            await   _dbContext.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;
         }

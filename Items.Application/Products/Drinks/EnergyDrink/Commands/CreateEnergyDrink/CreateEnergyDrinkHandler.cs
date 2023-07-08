@@ -1,41 +1,29 @@
 ﻿using Items.Application.Interfaces;
-using SelfEnergyDrink = Items.Domain.Products.FreshItem.Drinks.MakingEnergyDrink.EnergyDrink;
 using MediatR;
+using Items.Domain.Products.FreshItem.Drinks.MakingEnergyDrink;
 
 namespace Items.Application.Products.Drinks.EnergyDrink.Commands.CreateEnergyDrink
 {
     public class CreateEnergyDrinkHandler : IRequestHandler<CreateEnergyDrink, Guid>
     {
         private readonly IDrinkDbContext _dbContext;
+        private MakeEnergyDrink _selfEnergyDrink;
 
-        public CreateEnergyDrinkHandler(IDrinkDbContext dbContext) {
+        public CreateEnergyDrinkHandler(IDrinkDbContext dbContext, MakeEnergyDrink selfEnergyDrink) {
             _dbContext = dbContext;
+            _selfEnergyDrink = selfEnergyDrink;
         }
 
         public async Task<Guid> Handle(CreateEnergyDrink request, CancellationToken cancellationToken)
         {
-            var energyDrink = new SelfEnergyDrink
-            {
-                PersonId = Guid.NewGuid(),
-                ItemId = Guid.NewGuid(),
-                ItemName = request.ItemName,
-                BrandId = Guid.NewGuid(),
-                Price = request.Price,
-                ImagePath = request.ImagePath,
-                MinTemp = request.MinTemp,
-                MaxTemp = request.MaxTemp,
-                Protein = request.Protein,
-                Fat = request.Fat,
-                Sugar = request.Sugar,
-                Energy = request.Energy,
-                CountInPackage = request.CountInPackage,
-                BeforeDate = request.BeforeDate,
-                Capacity = request.Capacity,
-                Taste = request.Taste,
-                IsChilled = request.IsChilled,
-                State = request.State,
-                Coffein = request.Coffein
-            };
+            _selfEnergyDrink = new(
+                request.PersonId,
+                request.ItemName,
+                request.Price,
+                request.ImagePath
+            );
+
+            var energyDrink = _selfEnergyDrink.CreateEnergyDrink();
 
             await _dbContext.EnergyDrinks.AddAsync(energyDrink, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
