@@ -31,8 +31,8 @@ namespace Items.Domain.Products.FreshItem.Drinks.MakingCoffee
         public CoffeeMake() { }
 
         public CoffeeMake(Guid personId, string itemName, int price, string imagePath) {
-            PersonId = personId;
-            ItemId = Guid.NewGuid();
+                PersonId = personId;
+                ItemId = Guid.NewGuid();
             this.itemName = itemName;
             this.price = price;
             this.imagePath = imagePath;
@@ -62,7 +62,31 @@ namespace Items.Domain.Products.FreshItem.Drinks.MakingCoffee
 
         public override Coffee CreateCoffee()
         {
-            return new Coffee(PersonId, ItemId, itemName, price, imagePath);
+            return new Coffee(
+                PersonId, 
+                ItemId, 
+                itemName, 
+                price, 
+                imagePath, 
+                maker, 
+                minTemp,
+                maxTemp,
+                protein,
+                fat,
+                sugar,
+                energy,
+                countInPackage,
+                createdDate,
+                tastes,
+                capacities,
+                isChilled,
+                typeCoffee,
+                kindOfCoffee,
+                consistency,
+                composition,
+                tasteIntensity,
+                isCoffeinFree
+            );
         }
     }
 }
