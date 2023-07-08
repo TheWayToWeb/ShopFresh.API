@@ -13,14 +13,14 @@ namespace Items.Application.Products.Drinks.PackageTea.Commands.DryTea.Commands.
 
         public async Task<Unit> Handle(DeleteDryTea request, CancellationToken cancellationToken)
         {
-            var dryTea = await _dbContext.DryTea.FindAsync(new object[] { request.ItemId }, cancellationToken);
+            var packageTea = await _dbContext.DryTea.FindAsync(new object[] { request.ItemId }, cancellationToken);
 
-            if (dryTea is null || request.PersonId != dryTea.PersonId) {
+            if (packageTea is null || request.PersonId != packageTea.PersonId) {
                 throw new NotImplementedException();
             }
 
-            _dbContext.DryTea.Remove(dryTea);
-            await _dbContext.SaveChangesAsync(cancellationToken);
+                    _dbContext.DryTea.Remove(packageTea);
+            await   _dbContext.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;
         }

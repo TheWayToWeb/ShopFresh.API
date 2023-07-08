@@ -1,8 +1,8 @@
 ﻿using MediatR;
 
-namespace Items.Application.Products.Drinks.Kissel.Commands.CreateKissel
+namespace Items.Application.Products.Drinks.PackageTea.Commands.DryTea.Commands.CreateDryTea
 {
-    public class CreateKissel : IRequest<Guid>
+    public class CreatePackageTea : IRequest<Guid>
     {
         public Guid PersonId { get; set; }
         public string ItemName { get; set; } = "";
