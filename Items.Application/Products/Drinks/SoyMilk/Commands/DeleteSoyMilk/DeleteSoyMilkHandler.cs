@@ -19,8 +19,8 @@ namespace Items.Application.Products.Drinks.SoyMilk.Commands.DeleteSoyMilk
                 throw new NotImplementedException();
             }
 
-            _dbContext.SoyMilk.Remove(soyMilk);
-            await _dbContext.SaveChangesAsync(cancellationToken);
+                    _dbContext.SoyMilk.Remove(soyMilk);
+            await   _dbContext.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;
         }

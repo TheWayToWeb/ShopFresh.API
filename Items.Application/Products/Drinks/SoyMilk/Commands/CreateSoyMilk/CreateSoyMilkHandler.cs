@@ -1,41 +1,30 @@
 ﻿using Items.Application.Interfaces;
+using Items.Domain.Products.FreshItem.Drinks.MakingSoyMilk;
 using MediatR;
-using SelfSoyMilk = Items.Domain.Products.FreshItem.Drinks.MakingSoyMilk.SoyMilk;
 
 namespace Items.Application.Products.Drinks.SoyMilk.Commands.CreateSoyMilk
 {
     public class CreateSoyMilkHandler : IRequestHandler<CreateSoyMilk, Guid>
     {
         private readonly IDrinkDbContext _dbContext;
+        private MakeSoyMilk _selfSoyMilk;
 
-        public CreateSoyMilkHandler(IDrinkDbContext dbContext) {
+        public CreateSoyMilkHandler(IDrinkDbContext dbContext, MakeSoyMilk selfSoyMilk) {
             _dbContext = dbContext;
+            _selfSoyMilk = selfSoyMilk;
         }
 
         public async Task<Guid> Handle(CreateSoyMilk request, CancellationToken cancellationToken)
         {
-            var soyMilk = new SelfSoyMilk
-            {
-                PersonId = Guid.NewGuid(),
-                ItemId = Guid.NewGuid(),
-                ItemName = request.ItemName,
-                BrandId = Guid.NewGuid(),
-                Price = request.Price,
-                ImagePath = request.ImagePath,
-                MinTemp = request.MinTemp,
-                MaxTemp = request.MaxTemp,
-                Protein = request.Protein,
-                Fat = request.Fat,
-                Sugar = request.Sugar,
-                Energy = request.Energy,
-                CountInPackage = request.CountInPackage,
-                BeforeDate = request.BeforeDate,
-                Taste = request.Taste,
-                Capacity = request.Capacity,
-                IsChilled = request.IsChilled,
-                KindOfMilk = request.KindOfMilk
-            };
+            _selfSoyMilk = new(
+                request.PersonId,
+                request.ItemName,
+                request.Price,
+                request.ImagePath
+            );
 
+            var soyMilk = _selfSoyMilk.CreateSoyMilk();
+            
             await _dbContext.SoyMilk.AddAsync(soyMilk, cancellationToken);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
