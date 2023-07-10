@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using SelfSaladMix = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.SaladMix;
+using SelfSaladMix = Items.Domain.Models.Categories.Vegetables.SaladMix;
 using MediatR;
 
 namespace Items.Application.Products.SaladMix.Commands.CreateSaladMix

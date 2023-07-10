@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfMushroom = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.Mushroom;
+using SelfMushroom = Items.Domain.Models.Categories.Vegetables.Mushroom;
 
 namespace Items.Application.Products.Vegetables.Mushroom.Commands.CreateMushroom
 {

@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfBroccoli = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.Broccoli;
+using SelfBroccoli = Items.Domain.Models.Categories.Vegetables.Broccoli;
 
 namespace Items.Application.Products.Vegetables.Broccoli.Commands.CreateBroccoli
 {

@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.FreshItem.Drinks.MakingKissel;
+using Items.Domain.Models.Categories.Drinks.MakingKissel;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

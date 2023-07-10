@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfLemonade = Items.Domain.Products.FreshItem.Drinks.MakingLemonade.Lemonade;
+using SelfLemonade = Items.Domain.Models.Categories.Drinks.MakingLemonade.Lemonade;
 
 namespace Items.Application.Products.Drinks.Lemonade.Commands.CreateLemonade
 {

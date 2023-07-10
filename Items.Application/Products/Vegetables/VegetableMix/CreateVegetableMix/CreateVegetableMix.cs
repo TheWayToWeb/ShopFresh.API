@@ -1,4 +1,4 @@
-﻿using Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables;
+﻿using Items.Domain.Models.Categories.Vegetables;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.VegetableMix.CreateVegetableMix

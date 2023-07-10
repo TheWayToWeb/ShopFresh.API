@@ -1,5 +1,4 @@
-﻿using Items.Domain.Products.Template;
-using Items.Domain.Products.Templates;
+﻿using Items.Domain.Models.Categories.Common;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.EnergyDrink.Commands.UpdateEnergyDrink

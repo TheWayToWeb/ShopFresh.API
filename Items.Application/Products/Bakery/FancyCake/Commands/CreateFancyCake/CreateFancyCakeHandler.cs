@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfFancyCake = Items.Domain.Products.FreshItem.Bakery.FactoryFancyCookie.FancyCake;
+using SelfFancyCake = Items.Domain.Models.Categories.Bakery.FancyCake.FancyCake;
 
 namespace Items.Application.Products.Bakery.FancyCake.Commands.CreateFancyCake
 {

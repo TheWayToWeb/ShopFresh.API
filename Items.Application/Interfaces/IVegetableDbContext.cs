@@ -1,4 +1,4 @@
-﻿using Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables;
+﻿using Items.Domain.Models.Categories.Vegetables;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using SelfVegetable = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.Vegetable;
+using SelfVegetable = Items.Domain.Models.Categories.Vegetables.Vegetable;
 
 namespace Items.Application.Products.Vegetables.VegetableMix.UpdateVegetableMix
 {

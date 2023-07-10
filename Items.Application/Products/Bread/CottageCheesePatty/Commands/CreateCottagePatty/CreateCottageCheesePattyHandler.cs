@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfCottageCheesePatty = Items.Domain.Products.FreshItem.Bread.MakingCottageCheesePatty.CottageCheesePatty;
+using SelfCottageCheesePatty = Items.Domain.Models.Categories.Bread.CottageCheesePatty.CottageCheesePatty;
 
 namespace Items.Application.Products.Bread.CottageCheesePatty.Commands.CreateCottagePatty
 {

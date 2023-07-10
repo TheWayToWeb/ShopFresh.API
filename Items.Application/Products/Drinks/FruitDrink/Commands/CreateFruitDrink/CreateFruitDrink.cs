@@ -1,5 +1,5 @@
 ﻿using Items.Domain.Brands;
-using Items.Domain.Products.Template;
+using Items.Domain.Models.Categories.Common;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.FruitDrink.Commands.CreateFruitDrink

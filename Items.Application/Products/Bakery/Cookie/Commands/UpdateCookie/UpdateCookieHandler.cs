@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.FreshItem.Bakery.FactoryCookie;
+using Items.Domain.Models.Categories.Bakery.Cookie;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

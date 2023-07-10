@@ -3,9 +3,9 @@ using Items.Application.Interfaces;
 using Items.Domain;
 using Items.Persistance.EntityTypeConfiguration;
 using Items.Domain.Products.Category.SubCategory.ItemCategory.Items.Cheese;
-using Items.Domain.Products.FreshItem;
-using Items.Domain.Products.FreshItem.MilkProducts;
 using Items.Domain.Products.FreshItem.FrozenFood.Ice_cream;
+using Items.Domain.Models.Categories.MilkProducts;
+using Items.Domain.Models;
 
 namespace Items.Persistance
 {

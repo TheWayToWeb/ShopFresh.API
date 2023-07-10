@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfTeaDrink = Items.Domain.Products.FreshItem.Drinks.MakingTea.MakingDrinkingTea.TeaDrink;
+using SelfTeaDrink = Items.Domain.Models.Categories.Drinks.MakingTea.MakingDrinkingTea.TeaDrink;
 
 namespace Items.Application.Products.Drinks.TeaDrink.Commands.CreateTeaDrink
 {

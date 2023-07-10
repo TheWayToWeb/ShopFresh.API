@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.FreshItem.Bakery.MakingRollCake;
+using Items.Domain.Models.Categories.Bakery.RollCake;
 using MediatR;
 
 namespace Items.Application.Products.Bakery.RollCake.Commands.CreateRollCake

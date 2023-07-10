@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Products.FreshItem.Drinks.MakingCoffee;
+using Items.Domain.Models.Categories.Drinks.MakingCoffee;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.Coffee.Commands.CreateCoffee

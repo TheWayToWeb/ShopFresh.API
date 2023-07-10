@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using SelfBaguette = Items.Domain.Products.FreshItem.Bread.MaikingBaguette.Baguette;
+using SelfBaguette = Items.Domain.Models.Categories.Bread.Baguette.Baguette;
 using MediatR;
 
 namespace Items.Application.Products.Bread.Baguette.CreateBaguette

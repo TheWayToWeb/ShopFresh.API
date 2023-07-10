@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Range = Items.Domain.Products.Templates.Range;
+using Range = Items.Domain.Models.Categories.Common.Range;
 
 namespace Items.Application.Products.Fruits.CreateApple.Commands.CreateApple
 {

@@ -1,5 +1,6 @@
 ﻿using Items.Domain.Brands;
-using Items.Domain.Products.FreshItem;
+using Items.Domain.Models;
+using Items.Domain.Models.Categories.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

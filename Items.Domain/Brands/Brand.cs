@@ -1,4 +1,4 @@
-﻿using Items.Domain.Products.FreshItem;
+﻿using Items.Domain.Models;
 
 namespace Items.Domain.Brands
 {

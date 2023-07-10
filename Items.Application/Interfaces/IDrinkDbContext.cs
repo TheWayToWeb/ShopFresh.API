@@ -1,14 +1,14 @@
-﻿using Items.Domain.Products.FreshItem.Drinks.MakingCoffee;
-using Items.Domain.Products.FreshItem.Drinks.MakingEnergyDrink;
-using Items.Domain.Products.FreshItem.Drinks.MakingFruitDrink;
-using Items.Domain.Products.FreshItem.Drinks.MakingJuice;
-using Items.Domain.Products.FreshItem.Drinks.MakingKissel;
-using Items.Domain.Products.FreshItem.Drinks.MakingLemonade;
-using Items.Domain.Products.FreshItem.Drinks.MakingSoyMilk;
-using Items.Domain.Products.FreshItem.Drinks.MakingTea;
-using Items.Domain.Products.FreshItem.Drinks.MakingTea.MakingDrinkingTea;
-using Items.Domain.Products.FreshItem.Drinks.MakingTea.MakingDryTea;
-using Items.Domain.Products.FreshItem.Drinks.MakingWater;
+﻿using Items.Domain.Models.Categories.Drinks.EnergyDrink;
+using Items.Domain.Models.Categories.Drinks.MakingCoffee;
+using Items.Domain.Models.Categories.Drinks.MakingFruitDrink;
+using Items.Domain.Models.Categories.Drinks.MakingJuice;
+using Items.Domain.Models.Categories.Drinks.MakingKissel;
+using Items.Domain.Models.Categories.Drinks.MakingLemonade;
+using Items.Domain.Models.Categories.Drinks.MakingSoyMilk;
+using Items.Domain.Models.Categories.Drinks.MakingTea;
+using Items.Domain.Models.Categories.Drinks.MakingTea.MakingDrinkingTea;
+using Items.Domain.Models.Categories.Drinks.MakingTea.MakingPackageTea;
+using Items.Domain.Models.Categories.Drinks.MakingWater;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

@@ -1,5 +1,5 @@
-﻿using Items.Domain.Products.FreshItem.Eggs;
-using Items.Domain.Products.FreshItem.MilkProducts;
+﻿using Items.Domain.Models.Categories.Eggs;
+using Items.Domain.Models.Categories.MilkProducts;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

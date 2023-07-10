@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using SelfRedis = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.Redis;
+using SelfRedis = Items.Domain.Models.Categories.Vegetables.Redis;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.Redis.Commands.CreateRedis

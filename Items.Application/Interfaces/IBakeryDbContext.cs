@@ -1,9 +1,9 @@
-﻿using Items.Domain.Products.FreshItem.Bakery;
-using Items.Domain.Products.FreshItem.Bakery.MakingCookie;
-using Items.Domain.Products.FreshItem.Bakery.FactoryFancyCookie;
-using Items.Domain.Products.FreshItem.Bakery.FactoryGingerbread;
-using Items.Domain.Products.FreshItem.Bakery.MakingRollCake;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Items.Domain.Models.Categories.Bakery.Cookie;
+using Items.Domain.Models.Categories.Bakery.FancyCake;
+using Items.Domain.Models.Categories.Bakery.GingerBread;
+using Items.Domain.Models.Categories.Bakery.RollCake;
+using Items.Domain.Models.Categories.Common;
 
 namespace Items.Application.Interfaces
 {

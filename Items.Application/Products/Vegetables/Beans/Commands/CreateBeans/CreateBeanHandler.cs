@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfBean = Items.Domain.Products.FreshItem.FruitsVegetables.Vegetables.Bean;
+using SelfBean = Items.Domain.Models.Categories.Vegetables.Bean;
 
 namespace Items.Application.Products.Vegetables.Beans.Commands.CreateBeans
 {

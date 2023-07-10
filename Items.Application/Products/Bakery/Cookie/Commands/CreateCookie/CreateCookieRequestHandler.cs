@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using MakeCookie = Items.Domain.Products.FreshItem.Bakery.FactoryCookie.MakeCookie;
+using MakeCookie = Items.Domain.Models.Categories.Bakery.Cookie.MakeCookie;
 using MediatR;
 
 namespace Items.Application.Products.Bakery.Cookie.Commands.CreateCookie
