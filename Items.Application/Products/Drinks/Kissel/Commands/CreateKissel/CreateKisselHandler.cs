@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Models.Categories.Drinks.MakingKissel;
+using Items.Domain.Models.Categories.Drinks.Kissel;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.Kissel.Commands.CreateKissel

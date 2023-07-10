@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Models.Categories.Drinks.MakingJuice;
+using Items.Domain.Models.Categories.Drinks.Juice;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

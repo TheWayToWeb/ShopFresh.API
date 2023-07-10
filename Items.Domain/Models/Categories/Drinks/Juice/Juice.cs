@@ -1,6 +1,6 @@
 ﻿using Items.Domain.Models.Categories.Common;
 
-namespace Items.Domain.Models.Categories.Drinks.MakingJuice
+namespace Items.Domain.Models.Categories.Drinks.Juice
 {
     public class Juice : Drink
     {

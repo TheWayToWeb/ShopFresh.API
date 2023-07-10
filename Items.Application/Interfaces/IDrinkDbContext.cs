@@ -1,8 +1,8 @@
 ﻿using Items.Domain.Models.Categories.Drinks.EnergyDrink;
+using Items.Domain.Models.Categories.Drinks.FruitDrink;
+using Items.Domain.Models.Categories.Drinks.Juice;
+using Items.Domain.Models.Categories.Drinks.Kissel;
 using Items.Domain.Models.Categories.Drinks.MakingCoffee;
-using Items.Domain.Models.Categories.Drinks.MakingFruitDrink;
-using Items.Domain.Models.Categories.Drinks.MakingJuice;
-using Items.Domain.Models.Categories.Drinks.MakingKissel;
 using Items.Domain.Models.Categories.Drinks.MakingLemonade;
 using Items.Domain.Models.Categories.Drinks.MakingSoyMilk;
 using Items.Domain.Models.Categories.Drinks.MakingTea;

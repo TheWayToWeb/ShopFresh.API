@@ -1,8 +1,8 @@
 ﻿using Items.Domain.Models.Categories.Common;
 
-namespace Items.Domain.Models.Categories.Drinks.MakingJuice
+namespace Items.Domain.Models.Categories.Drinks.Kissel
 {
-    public class MakeJuice : MakerJuice
+    public class MakeKissel : IMakerKissel
     {
         public Guid PersonId { get; private set; }
         public Guid ItemId { get; private set; }
@@ -22,12 +22,12 @@ namespace Items.Domain.Models.Categories.Drinks.MakingJuice
         public List<Capacity> capacities { get; private set; } = new();
         public bool isChilled { get; private set; } = false;
 
+        public MakeKissel() { }
 
-        public MakeJuice() { }
-        public MakeJuice(Guid personId, string itemName, int price, string imagePath)
+        public MakeKissel(Guid personId, string itemName, int price, string imagePath)
         {
-            PersonId = personId;
-            ItemId = Guid.NewGuid();
+                PersonId = personId;
+                ItemId = Guid.NewGuid();
             this.itemName = itemName;
             this.price = price;
             this.imagePath = imagePath;
@@ -49,10 +49,9 @@ namespace Items.Domain.Models.Categories.Drinks.MakingJuice
         public void Capacity(List<Capacity> value) => capacities.AddRange(value);
         public void IsChilled(bool value) => isChilled = value;
 
-        public override Juice CreateJuice()
+        public Kissel CreateKissel()
         {
-
-            return new Juice(
+            return new Kissel(
                 PersonId,
                 ItemId,
                 itemName,

@@ -1,6 +1,6 @@
 ﻿using Items.Domain.Models.Categories.Common;
 
-namespace Items.Domain.Models.Categories.Drinks.MakingKissel
+namespace Items.Domain.Models.Categories.Drinks.Kissel
 {
     public class Kissel : Drink
     {
