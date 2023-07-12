@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Models.Categories.Drinks.Juice;
+using Items.Domain.Models.Categories.Drinks.ConcreteJuice.Juice.Juice;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.Juice.Commands.CreateJuice

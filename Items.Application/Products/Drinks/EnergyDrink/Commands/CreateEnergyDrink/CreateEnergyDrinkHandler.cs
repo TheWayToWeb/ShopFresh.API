@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using Items.Domain.Models.Categories.Drinks.EnergyDrink;
+using Items.Domain.Models.Categories.Drinks.ConcreteEnergyDrink.EnergyDrink.EnergyDrink;
 
 namespace Items.Application.Products.Drinks.EnergyDrink.Commands.CreateEnergyDrink
 {

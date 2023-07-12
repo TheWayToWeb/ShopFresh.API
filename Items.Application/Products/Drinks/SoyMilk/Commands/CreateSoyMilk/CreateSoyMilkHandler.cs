@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Models.Categories.Drinks.MakingSoyMilk;
+using Items.Domain.Models.Categories.Drinks.ConcreteSoyMilk.SoyMilk.SoyMilk;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.SoyMilk.Commands.CreateSoyMilk
