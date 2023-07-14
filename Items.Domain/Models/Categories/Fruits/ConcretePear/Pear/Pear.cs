@@ -1,8 +1,8 @@
 ﻿using Items.Domain.Models.Categories.Common;
 
-namespace Items.Domain.Models.Categories.Fruits
+namespace Items.Domain.Models.Categories.Fruits.ConcretePear.Pear
 {
-    public class Сherries : Fruit
+    public class Pear : Fruit
     {
         public string? Grade { get; set; }
     }

@@ -1,4 +1,12 @@
-﻿using Items.Domain.Models.Categories.Fruits;
+﻿using Items.Domain.Models.Categories.Common;
+using Items.Domain.Models.Categories.Fruits;
+using Items.Domain.Models.Categories.Fruits.ConcreteApple.Apple;
+using Items.Domain.Models.Categories.Fruits.ConcreteBanana.Banana;
+using Items.Domain.Models.Categories.Fruits.ConcreteBluBerry.BlueBerry;
+using Items.Domain.Models.Categories.Fruits.ConcreteCitrus.Citrus;
+using Items.Domain.Models.Categories.Fruits.ConcreteExoticFruit.ExoticFruit;
+using Items.Domain.Models.Categories.Fruits.ConcreteGrape.Grape;
+using Items.Domain.Models.Categories.Fruits.ConcretePear.Pear;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

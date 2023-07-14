@@ -1,6 +1,4 @@
-﻿using Items.Domain.Models.Categories.Common;
-
-namespace Items.Domain.Models.Categories.Fruits
+﻿namespace Items.Domain.Models.Categories.Common
 {
     public abstract class Fruit : Eat
     {
