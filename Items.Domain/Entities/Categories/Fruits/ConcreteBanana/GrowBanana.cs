@@ -1,5 +1,5 @@
 ﻿using BananaDomain = Items.Domain.Models.Categories.Fruits.ConcreteBanana.Banana.Banana;
-using Range = Items.Domain.Models.Categories.Common.Range;
+using Range = Items.Domain.Entities.Categories.Common.Range;
 
 namespace Items.Domain.Models.Categories.Fruits.ConcreteBanana
 {
