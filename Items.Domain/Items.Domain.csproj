@@ -7,11 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Categories\Bakery\Cheesecake\" />
+    <Folder Include="DTOs\Requests\Bakery\" />
+    <Folder Include="DTOs\Requests\Bread\" />
+    <Folder Include="DTOs\Requests\Drinks\" />
+    <Folder Include="DTOs\Requests\Eggs\" />
+    <Folder Include="DTOs\Requests\Vegetables\" />
+    <Folder Include="DTOs\Responses\Bakery\" />
+    <Folder Include="DTOs\Responses\Bread\" />
+    <Folder Include="DTOs\Responses\Drinks\" />
+    <Folder Include="DTOs\Responses\Eggs\" />
+    <Folder Include="DTOs\Responses\Vegetables\" />
+    <Folder Include="Entities\Categories\Bakery\Cheesecake\" />
   </ItemGroup>
 
 </Project>
