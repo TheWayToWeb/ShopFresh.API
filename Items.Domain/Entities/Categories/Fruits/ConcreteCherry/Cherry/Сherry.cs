@@ -8,22 +8,22 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteCherry.Cherry
 
         public Сherry(GrowCherry cherry)
         {
-            PersonId =  cherry.personId;
-            ItemId =    cherry.itemId;
-            Price =     cherry.price;
+            PersonId = cherry.personId;
+            ItemId = cherry.itemId;
+            Price = cherry.price;
             ImagePath = cherry.imagePath;
-            Maker =     cherry.maker;
-            MinTemp =   cherry.minTemp;
-            MaxTemp =   cherry.maxTemp;
-            Protein =   cherry.protein;
-            Fat =       cherry.fat;
-            Sugar =     cherry.sugar;
-            Energy =    cherry.energy;
+            Maker = cherry.maker;
+            MinTemp = cherry.minTemp;
+            MaxTemp = cherry.maxTemp;
+            Protein = cherry.protein;
+            Fat = cherry.fat;
+            Sugar = cherry.sugar;
+            Energy = cherry.energy;
             CountInPackage = cherry.countInPackage;
             CreatedDate = cherry.createdDate;
-            Weight =    cherry.weight;
+            Weight = cherry.weight;
             CoolingMode = cherry.coolingMode;
-            IsFarmer =  cherry.isFarmer;
+            IsFarmer = cherry.isFarmer;
         }
     }
 }

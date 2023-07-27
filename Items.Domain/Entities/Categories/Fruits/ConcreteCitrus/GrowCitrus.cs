@@ -22,12 +22,8 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteCitrus
         public bool isFarmer { get; private set; }
         public string grade { get; private set; } = string.Empty;
 
-        public GrowCitrus(
-            Guid personId,
-            int countInPackage,
-            int createdDate,
-            float weight
-        ) {
+        public GrowCitrus(Guid personId, int countInPackage, int createdDate, float weight)
+        {
             this.personId = personId;
             this.countInPackage = countInPackage;
             this.createdDate = createdDate;

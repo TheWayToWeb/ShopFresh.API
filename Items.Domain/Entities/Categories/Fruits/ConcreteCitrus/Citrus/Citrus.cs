@@ -8,23 +8,23 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteCitrus.Citrus
 
         public Citrus(GrowCitrus citrus)
         {
-            PersonId =  citrus.personId;
-            ItemId =    citrus.itemId;
-            Price =     citrus.price;
+            PersonId = citrus.personId;
+            ItemId = citrus.itemId;
+            Price = citrus.price;
             ImagePath = citrus.imagePath;
-            Maker =     citrus.maker;
-            MinTemp =   citrus.minTemp;
-            MaxTemp =   citrus.maxTemp;
-            Protein =   citrus.protein;
-            Fat =       citrus.fat;
-            Sugar =     citrus.sugar;
-            Energy =    citrus.energy;
+            Maker = citrus.maker;
+            MinTemp = citrus.minTemp;
+            MaxTemp = citrus.maxTemp;
+            Protein = citrus.protein;
+            Fat = citrus.fat;
+            Sugar = citrus.sugar;
+            Energy = citrus.energy;
             CountInPackage = citrus.countInPackage;
             CreatedDate = citrus.createdDate;
-            Weight =    citrus.weight;
+            Weight = citrus.weight;
             CoolingMode = citrus.coolingMode;
-            IsFarmer =  citrus.isFarmer;
-            Grade =     citrus.grade;
+            IsFarmer = citrus.isFarmer;
+            Grade = citrus.grade;
         }
     }
 }

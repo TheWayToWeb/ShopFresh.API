@@ -23,12 +23,8 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteExoticFruit
         public string grade { get; private set; } = string.Empty;
 
 
-        public GrowExoticFruit(
-            Guid personId,
-            int countInPackage,
-            int createdDate,
-            float weight
-        ) {
+        public GrowExoticFruit(Guid personId, int countInPackage, int createdDate, float weight)
+        {
             this.personId = personId;
             this.countInPackage = countInPackage;
             this.createdDate = createdDate;
