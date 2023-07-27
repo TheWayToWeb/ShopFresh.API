@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using SelfBeet = Items.Domain.Models.Categories.Vegetables.Beet;
+using SelfBeet = Items.Domain.Entities.Categories.Vegetables.ConcreteBeet.Beet.Beet;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.Beet.Commands.CreateBeet

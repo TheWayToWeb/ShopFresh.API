@@ -1,4 +1,15 @@
-﻿using Items.Domain.Models.Categories.Vegetables;
+﻿using Items.Domain.Entities.Categories.Vegetables.ConcreteBean.Bean;
+using Items.Domain.Entities.Categories.Vegetables.ConcreteBeet.Beet;
+using Items.Domain.Entities.Categories.Vegetables.ConcreteBroccoli.Broccoli;
+using Items.Domain.Entities.Categories.Vegetables.ConcreteCarrot.Carrot;
+using Items.Domain.Entities.Categories.Vegetables.ConcreteCauliflower.Cauliflower;
+using Items.Domain.Entities.Categories.Vegetables.ConcreteMushroom.Mushroom;
+using Items.Domain.Entities.Categories.Vegetables.ConcretePotato.Potato;
+using Items.Domain.Entities.Categories.Vegetables.ConcreteRedis.Redis;
+using Items.Domain.Entities.Categories.Vegetables.ConcreteSalad.Salad;
+using Items.Domain.Entities.Categories.Vegetables.ConcreteSaladMix.SaladMix;
+using Items.Domain.Entities.Categories.Vegetables.ConcreteSquash.Squash;
+using Items.Domain.Models.Categories.Vegetables;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

@@ -1,15 +1,14 @@
-﻿using Items.Domain.Entities.Categories.Fruits.Fruit;
+﻿using FruitSelf = Items.Domain.Entities.Categories.Fruits.Fruit.Fruit;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcretePear.Pear
+namespace Items.Domain.Entities.Categories.Fruits.ConcretePear.Pear
 {
-    public class Pear : Fruit
+    public class Pear : FruitSelf
     {
         public string? Grade { get; set; }
 
         public Pear(
             Guid personId,
             Guid itemId,
-            string itemName,
             int price,
             string imagePath,
             string maker,
@@ -28,7 +27,6 @@ namespace Items.Domain.Models.Categories.Fruits.ConcretePear.Pear
         ) {
             PersonId = personId;
             ItemId = itemId;
-            ItemName = itemName;
             Price = price;
             ImagePath = imagePath;
             Maker = maker;

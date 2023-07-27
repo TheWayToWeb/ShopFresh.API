@@ -1,12 +1,11 @@
-﻿using PearDomain = Items.Domain.Models.Categories.Fruits.ConcretePear.Pear.Pear;
+﻿using PearDomain = Items.Domain.Entities.Categories.Fruits.ConcretePear.Pear.Pear;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcretePear
+namespace Items.Domain.Entities.Categories.Fruits.ConcretePear
 {
     public class GrowPear : IGrowerPear
     {
         public Guid personId { get; private set; }
         public Guid itemId { get; private set; }
-        public string itemName { get; private set; }
         public int price { get; private set; }
         public string imagePath { get; private set; }
         public string maker { get; private set; }
@@ -26,7 +25,6 @@ namespace Items.Domain.Models.Categories.Fruits.ConcretePear
         public GrowPear(Guid personId) {
             this.personId = personId;
                 itemId = Guid.NewGuid();
-                itemName = string.Empty;
                 price = 0;
                 imagePath = string.Empty;
                 maker = string.Empty;
@@ -44,9 +42,8 @@ namespace Items.Domain.Models.Categories.Fruits.ConcretePear
                 grade = string.Empty;
         }
 
-        public void ItemName(string value) => itemName = value;
         public void Price(int value) => price = value;
-        public void ImagePath(string value) => itemName = value;
+        public void ImagePath(string value) => imagePath = value;
         public void Maker(string value) => maker = value;
         public void MinTemp(int value) => minTemp = value;
         public void MaxTemp(int value) => maxTemp = value;
@@ -65,7 +62,6 @@ namespace Items.Domain.Models.Categories.Fruits.ConcretePear
             return new PearDomain(
                 personId,
                 itemId,
-                itemName,
                 price,
                 imagePath,
                 maker,

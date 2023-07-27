@@ -1,6 +1,6 @@
-﻿using BlackberryDomain = Items.Domain.Models.Categories.Fruits.ConcreteBlackBerry.BlackBerry.Blackberry;
+﻿using BlackberryDomain = Items.Domain.Entities.Categories.Fruits.ConcreteBlackBerry.BlackBerry.Blackberry;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcreteBlackBerry
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteBlackBerry
 {
     public interface IGrowerBlackberry
     {

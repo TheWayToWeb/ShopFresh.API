@@ -1,6 +1,6 @@
-﻿using PearDomain = Items.Domain.Models.Categories.Fruits.ConcretePear.Pear.Pear;
+﻿using PearDomain = Items.Domain.Entities.Categories.Fruits.ConcretePear.Pear.Pear;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcretePear
+namespace Items.Domain.Entities.Categories.Fruits.ConcretePear
 {
     public interface IGrowerPear
     {

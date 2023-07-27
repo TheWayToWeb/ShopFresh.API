@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using SelfCauliflower = Items.Domain.Models.Categories.Vegetables.Cauliflower;
+using SelfCauliflower = Items.Domain.Entities.Categories.Vegetables.ConcreteCauliflower.Cauliflower.Cauliflower;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.Cauliflower.Commands.CreateCauliflower

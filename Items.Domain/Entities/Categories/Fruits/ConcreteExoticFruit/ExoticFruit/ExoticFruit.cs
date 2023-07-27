@@ -1,15 +1,14 @@
-﻿using Items.Domain.Entities.Categories.Fruits.Fruit;
+﻿using FruitSelf = Items.Domain.Entities.Categories.Fruits.Fruit.Fruit;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcreteExoticFruit.ExoticFruit
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteExoticFruit.ExoticFruit
 {
-    public class ExoticFruit : Fruit
+    public class ExoticFruit : FruitSelf
     {
-        public string? Grade { get; set; }
+        public string Grade { get; set; } = string.Empty;
 
         public ExoticFruit(
             Guid personId,
             Guid itemId,
-            string itemName,
             int price,
             string imagePath,
             string maker,
@@ -27,7 +26,6 @@ namespace Items.Domain.Models.Categories.Fruits.ConcreteExoticFruit.ExoticFruit
         ) {
             PersonId = personId;
             ItemId = itemId;
-            ItemName = itemName;
             Price = price;
             ImagePath = imagePath;
             Maker = maker;

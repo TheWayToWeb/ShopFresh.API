@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using SelfCarrot = Items.Domain.Models.Categories.Vegetables.Carrot;
+using SelfCarrot = Items.Domain.Entities.Categories.Vegetables.ConcreteCarrot.Carrot.Carrot;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.Carrot.Commands.CreateCarrot

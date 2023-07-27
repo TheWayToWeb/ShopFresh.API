@@ -1,49 +1,29 @@
-﻿using Items.Domain.Entities.Categories.Fruits.Fruit;
+﻿using FruitSelf = Items.Domain.Entities.Categories.Fruits.Fruit.Fruit;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcreteBluBerry.BlueBerry
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteBluBerry.BlueBerry
 {
-    public class Blueberry : Fruit
+    public class Blueberry : FruitSelf
     {
-        public string? Grade { get; set; }
+        public string Grade { get; set; } = string.Empty;
 
-        public Blueberry(
-            Guid personId,
-            Guid itemId,
-            string itemName,
-            int price,
-            string imagePath,
-            string maker,
-            int minTemp,
-            int maxTemp,
-            float protein,
-            float fat,
-            float sugar,
-            float energy,
-            int countInPackage,
-            int createdDate,
-            float weight,
-            string coolingMode,
-            bool isFarmer,
-            string grade
-        ) {
-            PersonId = personId;
-            ItemId = itemId;
-            ItemName = itemName;
-            Price = price;
-            ImagePath = imagePath;
-            Maker = maker;
-            MinTemp = minTemp;
-            MaxTemp = maxTemp;
-            Protein = protein;
-            Fat = fat;
-            Sugar = sugar;
-            Energy = energy;
-            CountInPackage = countInPackage;
-            CreatedDate = createdDate;
-            Weight = weight;
-            CoolingMode = coolingMode;
-            IsFarmer = isFarmer;
-            Grade = grade;
+        public Blueberry(GrowBlueBerry blueberry)
+        {
+            PersonId =  blueberry.personId;
+            ItemId =    blueberry.itemId;
+            Price =     blueberry.price;
+            ImagePath = blueberry.imagePath;
+            Maker =     blueberry.maker;
+            MinTemp =   blueberry.minTemp;
+            MaxTemp =   blueberry.maxTemp;
+            Protein =   blueberry.protein;
+            Fat =       blueberry.fat;
+            Sugar =     blueberry.sugar;
+            Energy =    blueberry.energy;
+            CountInPackage = blueberry.countInPackage;
+            Weight =    blueberry.weight;
+            CoolingMode = blueberry.coolingMode;
+            IsFarmer =  blueberry.isFarmer;
+            Grade =     blueberry.grade;
         }
     }
 }

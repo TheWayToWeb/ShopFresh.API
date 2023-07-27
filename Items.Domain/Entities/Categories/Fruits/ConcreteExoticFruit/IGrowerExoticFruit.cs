@@ -1,6 +1,6 @@
-﻿using ExoticFruitDomain = Items.Domain.Models.Categories.Fruits.ConcreteExoticFruit.ExoticFruit.ExoticFruit;
+﻿using ExoticFruitDomain = Items.Domain.Entities.Categories.Fruits.ConcreteExoticFruit.ExoticFruit.ExoticFruit;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcreteExoticFruit
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteExoticFruit
 {
     public interface IGrowerExoticFruit
     {

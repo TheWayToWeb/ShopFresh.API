@@ -1,4 +1,4 @@
-﻿using Items.Domain.Models.Categories.Vegetables;
+﻿using Items.Domain.Entities.Categories.Vegetables.ConcreteSalad.Salad;
 using MediatR;
 
 namespace Items.Application.Products.SaladMix.Commands.CreateSaladMix

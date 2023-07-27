@@ -1,53 +1,30 @@
-﻿using Items.Domain.Entities.Categories.Fruits.Fruit;
-using Range = Items.Domain.Models.Categories.Common.Range;
+﻿using FruitSelf = Items.Domain.Entities.Categories.Fruits.Fruit.Fruit;
+using Line = Items.Domain.Entities.Categories.Common.Range;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcreteApple.Apple
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteApple.Apple
 {
-    public class Apple : Fruit
+    public class Apple : FruitSelf
     {
         public string? Grade { get; set; }
-        public List<Range>? SaleWeights { get; set; }
+        public List<Line>? SaleWeights { get; set; }
 
-        public Apple(
-            Guid personId,
-            Guid itemId,
-            string itemName,
-            int price,
-            string imagePath,
-            string maker,
-            int minTemp,
-            int maxTemp,
-            float protein,
-            float fat,
-            float sugar,
-            float energy,
-            int countInPackage,
-            int createdDate,
-            float weight,
-            string coolingMode,
-            bool isFarmer,
-            string grade,
-            List<Range> saleWeights
-        ) {
-            PersonId = personId;
-            ItemId = itemId;
-            ItemName = itemName;
-            Price = price;
-            ImagePath = imagePath;
-            Maker = maker;
-            MinTemp = minTemp;
-            MaxTemp = maxTemp;
-            Protein = protein;
-            Fat = fat;
-            Sugar = sugar;
-            Energy = energy;
-            CountInPackage = countInPackage;
-            CreatedDate = createdDate;
-            Weight = weight;
-            CoolingMode = coolingMode;
-            IsFarmer = isFarmer;
-            Grade = grade;
-            SaleWeights = saleWeights;
+        public Apple(GrowApple apple)
+        {
+            PersonId =  apple.personId;
+            ItemId =    apple.itemId;
+            Price =     apple.price;
+            ImagePath = apple.imagePath;
+            Maker =     apple.maker;
+            MinTemp =   apple.minTemp;
+            MaxTemp =   apple.maxTemp;
+            Protein =   apple.protein;
+            Fat =       apple.fat;
+            Sugar =     apple.sugar;
+            Energy =    apple.energy;
+            CountInPackage = apple.countInPackage;
+            IsFarmer =  apple.isFarmer;
+            Grade =     apple.grade;
+            SaleWeights = apple.saleWeights;
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using BananaDomain = Items.Domain.Models.Categories.Fruits.ConcreteBanana.Banana.Banana;
+﻿using BananaDomain = Items.Domain.Entities.Categories.Fruits.ConcreteBanana.Banana.Banana;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcreteBanana
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteBanana
 {
     public interface IGrowerBanana
     {

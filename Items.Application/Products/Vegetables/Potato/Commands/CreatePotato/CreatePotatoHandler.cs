@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using SelfPotato = Items.Domain.Models.Categories.Vegetables.Potato;
+using SelfPotato = Items.Domain.Entities.Categories.Vegetables.ConcretePotato.Potato.Potato;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.Potato.Commands.CreatePotato

@@ -1,15 +1,14 @@
-﻿using BlueBerryDomain = Items.Domain.Models.Categories.Fruits.ConcreteBluBerry.BlueBerry.Blueberry;
+﻿using BlueberryDomain = Items.Domain.Entities.Categories.Fruits.ConcreteBluBerry.BlueBerry.Blueberry;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcreteBluBerry
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteBluBerry
 {
-    public class GrowBlueBerry : IGrowerBlueBerry
+    public class GrowBlueBerry : IGrowerBlueberry
     {
         public Guid personId { get; private set; }
-        public Guid itemId { get; private set; }
-        public string itemName { get; private set; }
+        public Guid itemId { get; private set; } = Guid.NewGuid();
         public int price { get; private set; }
-        public string imagePath { get; private set; }
-        public string maker { get; private set; }
+        public string imagePath { get; private set; } = string.Empty;
+        public string maker { get; private set; } = string.Empty;
         public int minTemp { get; private set; }
         public int maxTemp { get; private set; }
         public float protein { get; private set; }
@@ -19,33 +18,22 @@ namespace Items.Domain.Models.Categories.Fruits.ConcreteBluBerry
         public int countInPackage { get; private set; }
         public int createdDate { get; private set; }
         public float weight { get; private set; }
-        public string coolingMode { get; private set; }
+        public string coolingMode { get; private set; } = string.Empty;
         public bool isFarmer { get; private set; }
-        public string grade { get; private set; }
+        public string grade { get; private set; } = string.Empty;
 
-
-        public GrowBlueBerry(Guid personId) {
+        public GrowBlueBerry(
+            Guid personId,
+            int countInPackage,
+            int createdDate,
+            float weight
+        ) {
             this.personId = personId;
-            itemId = Guid.NewGuid();
-            itemName = string.Empty;
-            price = 0;
-            imagePath = string.Empty;
-            maker = string.Empty;
-            minTemp = 0;
-            maxTemp = 0;
-            protein = 0;
-            fat = 0;
-            sugar = 0;
-            energy = 0;
-            countInPackage = 1;
-            createdDate = 7;
-            weight = 1;
-            coolingMode = string.Empty;
-            isFarmer = false;
-            grade = string.Empty;
+            this.countInPackage = countInPackage;
+            this.createdDate = createdDate;
+            this.weight = weight;
         }
 
-        public void ItemName(string value) => itemName = value;
         public void Price(int value) => price = value;
         public void ImagePath(string value) => imagePath = value;
         public void Maker(string value) => maker = value;
@@ -61,27 +49,9 @@ namespace Items.Domain.Models.Categories.Fruits.ConcreteBluBerry
         public void CoolingMode(string value) => coolingMode = value;
         public void Grade(string value) => grade = value;
 
-        public BlueBerryDomain CreateBlueBerry() {
-            return new BlueBerryDomain(
-                personId,
-                itemId,
-                itemName,
-                price,
-                imagePath,
-                maker,
-                minTemp,
-                maxTemp,
-                protein,
-                fat,
-                sugar,
-                energy,
-                countInPackage,
-                createdDate,
-                weight,
-                coolingMode,
-                isFarmer,
-                grade
-            );
+
+        public BlueberryDomain CreateBlueberry() {
+            return new BlueberryDomain(this);
         }
     }
 }

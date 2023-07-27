@@ -1,48 +1,38 @@
-﻿using BlackberryDomain = Items.Domain.Models.Categories.Fruits.ConcreteBlackBerry.BlackBerry.Blackberry;
+﻿using BlackberryDomain = Items.Domain.Entities.Categories.Fruits.ConcreteBlackBerry.BlackBerry.Blackberry;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcreteBlackBerry
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteBlackBerry
 {
-    public class GrowBlackBerry : IGrowerBlackBerry
+    public class GrowBlackberry : IGrowerBlackberry
     {
         public Guid personId { get; private set; }
-        public Guid itemId { get; private set; }
-        public string itemName { get; private set; }
-        public int price { get; private set; } = 0;
+        public Guid itemId { get; private set; } = Guid.NewGuid();
+        public int price { get; private set; }
         public string imagePath { get; private set; } = string.Empty;
         public string maker { get; private set; } = string.Empty;
-        public int minTemp { get; private set; } = 0;
-        public int maxTemp { get; private set; } = 0;
-        public float protein { get; private set; } = 0;
-        public float fat { get; private set; } = 0;
-        public float sugar { get; private set; } = 0;
-        public float energy { get; private set; } = 0;
-        public int countInPackage { get; private set; } = 1;
-        public int createdDate { get; private set; } = 7;
+        public int minTemp { get; private set; }
+        public int maxTemp { get; private set; }
+        public float protein { get; private set; }
+        public float fat { get; private set; }
+        public float sugar { get; private set; }
+        public float energy { get; private set; }
+        public int countInPackage { get; private set; }
+        public int createdDate { get; private set; }
         public float weight { get; private set; }
-        public string coolingMode { get; private set; } = "Fresh";
-        public bool isFarmer { get; private set; } = false;
+        public string coolingMode { get; private set; } = string.Empty;
+        public bool isFarmer { get; private set; }
 
-        public GrowBlackBerry(Guid personId) {
+        public GrowBlackberry(
+            Guid personId,
+            int countInPackage,
+            int createdDate,
+            float weight
+        ) {
             this.personId = personId;
-            itemId = Guid.NewGuid();
-            itemName = string.Empty;
-            price = 0;
-            imagePath = string.Empty;
-            maker = string.Empty;
-            minTemp = 0;
-            maxTemp = 0;
-            protein = 0;
-            fat = 0;
-            sugar = 0;
-            energy = 0;
-            countInPackage = 1;
-            createdDate = 7;
-            weight = 1;
-            coolingMode = string.Empty;
-            isFarmer = false;
+            this.countInPackage = countInPackage;
+            this.createdDate = createdDate;
+            this.weight = weight;
         }
 
-        public void ItemName(string value) => itemName = value;
         public void Price(int value) => price = value;
         public void ImagePath(string value) => imagePath = value;
         public void Maker(string value) => maker = value;
@@ -57,26 +47,8 @@ namespace Items.Domain.Models.Categories.Fruits.ConcreteBlackBerry
         public void Weight(float value) => weight = value;
         public void CoolingMode(string value) => coolingMode = value;
 
-        public BlackberryDomain CreateBlackBerry() {
-            return new BlackberryDomain(
-                personId,
-                itemId,
-                itemName,
-                price,
-                imagePath,
-                maker,
-                minTemp,
-                maxTemp,
-                protein,
-                fat,
-                sugar,
-                energy,
-                countInPackage,
-                createdDate,
-                weight,
-                coolingMode,
-                isFarmer
-            );
+        public BlackberryDomain CreateBlackberry() {
+            return new BlackberryDomain(this);
         }
     }
 }

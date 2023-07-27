@@ -1,11 +1,12 @@
-﻿namespace Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry.Raspberry
+﻿using FruitSelf = Items.Domain.Entities.Categories.Fruits.Fruit.Fruit;
+
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry.Raspberry
 {
-    public class Raspberry : Fruit
+    public class Raspberry : FruitSelf
     {
         public Raspberry(
             Guid personId,
             Guid itemId,
-            string itemName,
             int price,
             string imagePath,
             string maker,
@@ -23,7 +24,6 @@
         ) {
             PersonId = personId;
             ItemId = itemId;
-            ItemName = itemName;
             Price = price;
             ImagePath = imagePath;
             Maker = maker;

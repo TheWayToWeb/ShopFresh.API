@@ -1,6 +1,6 @@
-﻿using GrapeDomain = Items.Domain.Models.Categories.Fruits.ConcreteGrape.Grape.Grape;
+﻿using GrapeDomain = Items.Domain.Entities.Categories.Fruits.ConcreteGrape.Grape.Grape;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcreteGrape
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteGrape
 {
     public interface IGrowerGrape
     {

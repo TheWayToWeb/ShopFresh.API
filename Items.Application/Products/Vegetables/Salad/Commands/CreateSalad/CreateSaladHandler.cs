@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using SelfSalad = Items.Domain.Models.Categories.Vegetables.Salad;
+using SelfSalad = Items.Domain.Entities.Categories.Vegetables.ConcreteSalad.Salad.Salad;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.Salad.Commands.CreateSalad

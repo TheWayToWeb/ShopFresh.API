@@ -1,46 +1,27 @@
-﻿using Items.Domain.Entities.Categories.Fruits.Fruit;
+﻿using FruitSelf = Items.Domain.Entities.Categories.Fruits.Fruit.Fruit;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcreteBlackBerry.BlackBerry
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteBlackBerry.BlackBerry
 {
-    public class Blackberry : Fruit
+    public class Blackberry : FruitSelf
     {
-
-        public Blackberry(
-            Guid personId,
-            Guid itemId,
-            string itemName,
-            int price,
-            string imagePath,
-            string maker,
-            int minTemp,
-            int maxTemp,
-            float protein,
-            float fat,
-            float sugar,
-            float energy,
-            int countInPackage,
-            int createdDate,
-            float weight,
-            string coolingMode,
-            bool isFarmer
-        ) {
-            PersonId = personId;
-            ItemId = itemId;
-            ItemName = itemName;
-            Price = price;
-            ImagePath = imagePath;
-            Maker = maker;
-            MinTemp = minTemp;
-            MaxTemp = maxTemp;
-            Protein = protein;
-            Fat = fat;
-            Sugar = sugar;
-            Energy = energy;
-            CountInPackage = countInPackage;
-            CreatedDate = createdDate;
-            Weight = weight;
-            CoolingMode = coolingMode;
-            IsFarmer = isFarmer;
+        public Blackberry(GrowBlackberry blackberry)
+        {
+            PersonId =  blackberry.personId;
+            ItemId =    blackberry.itemId;
+            Price =     blackberry.price;
+            ImagePath = blackberry.imagePath;
+            Maker =     blackberry.maker;
+            MinTemp =   blackberry.minTemp;
+            MaxTemp =   blackberry.maxTemp;
+            Protein =   blackberry.protein;
+            Fat =       blackberry.fat;
+            Sugar =     blackberry.sugar;
+            Energy =    blackberry.energy;
+            CountInPackage = blackberry.countInPackage;
+            CreatedDate = blackberry.createdDate;
+            Weight =    blackberry.weight;
+            CoolingMode = blackberry.coolingMode;
+            IsFarmer =  blackberry.isFarmer;
         }
     }
 }

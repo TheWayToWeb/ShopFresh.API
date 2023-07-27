@@ -1,9 +1,9 @@
-﻿using BlueBerryDomain = Items.Domain.Models.Categories.Fruits.ConcreteBluBerry.BlueBerry.Blueberry;
+﻿using BlueBerryDomain = Items.Domain.Entities.Categories.Fruits.ConcreteBluBerry.BlueBerry.Blueberry;
 
-namespace Items.Domain.Models.Categories.Fruits.ConcreteBluBerry
+namespace Items.Domain.Entities.Categories.Fruits.ConcreteBluBerry
 {
-    public interface IGrowerBlueBerry
+    public interface IGrowerBlueberry
     {
-        BlueBerryDomain CreateBlueBerry();
+        BlueBerryDomain CreateBlueberry();
     }
 }
