@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BroccoliDomain = Items.Domain.Entities.Categories.Vegetables.ConcreteBroccoli.Broccoli.Broccoli;
 
 namespace Items.Domain.Entities.Categories.Vegetables.ConcreteBroccoli
 {
-    internal interface IGrowerBroccoli
+    public interface IGrowerBroccoli
     {
+        BroccoliDomain CreateBroccoli();
     }
 }

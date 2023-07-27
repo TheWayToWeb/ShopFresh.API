@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BeetDomain = Items.Domain.Entities.Categories.Vegetables.ConcreteBeet.Beet.Beet;
 
 namespace Items.Domain.Entities.Categories.Vegetables.ConcreteBeet
 {
-    internal interface IGrowerBeet
+    public interface IGrowerBeet
     {
+        BeetDomain CreateBeet();
     }
 }

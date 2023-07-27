@@ -22,7 +22,6 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteCherry
         public string coolingMode { get; private set; } = string.Empty;
         public bool isFarmer { get; private set; }
 
-
         public GrowCherry(Guid personId, int countInPackage, int createdDate, float weight)
         {
             this.personId = personId;
@@ -30,7 +29,6 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteCherry
             this.createdDate = createdDate;
             this.weight = weight;
         }
-
 
         public void Price(int value) => price = value;
         public void ImagePath(string value) => imagePath = value;

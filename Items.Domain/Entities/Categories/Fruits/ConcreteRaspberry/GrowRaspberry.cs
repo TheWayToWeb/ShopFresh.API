@@ -5,10 +5,10 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry
     public class GrowRaspberry : IGrowerRaspberry
     {
         public Guid personId { get; private set; }
-        public Guid itemId { get; private set; }
+        public Guid itemId { get; private set; } = Guid.NewGuid();
         public int price { get; private set; }
-        public string imagePath { get; private set; }
-        public string maker { get; private set; }
+        public string imagePath { get; private set; } = string.Empty;
+        public string maker { get; private set; } = string.Empty;
         public int minTemp { get; private set; }
         public int maxTemp { get; private set; }
         public float protein { get; private set; }
@@ -18,27 +18,14 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry
         public int countInPackage { get; private set; }
         public int createdDate { get; private set; }
         public float weight { get; private set; }
-        public string coolingMode { get; private set; }
+        public string coolingMode { get; private set; } = string.Empty;
         public bool isFarmer { get; private set; }
 
-
-        public GrowRaspberry(Guid personId) {
+        protected GrowRaspberry(Guid personId, int countInPackage, int createdDate, float weight) {
             this.personId = personId;
-            itemId = Guid.NewGuid();
-            price = 0;
-            imagePath = string.Empty;
-            maker = string.Empty;
-            minTemp = 0;
-            maxTemp = 0;
-            protein = 0;
-            fat = 0;
-            sugar = 0;
-            energy = 0;
-            countInPackage = 1;
-            createdDate = 5;
-            weight = 0.5f;
-            coolingMode = string.Empty;
-            isFarmer = false;
+            this.countInPackage = countInPackage;
+            this.createdDate = createdDate;
+            this.weight = weight;
         }
 
         public void Price(int value) => price = value;
@@ -58,24 +45,7 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry
 
 
         public RaspberryDomain CreateRaspberry() {
-            return new RaspberryDomain(
-                personId,
-                itemId,
-                price,
-                imagePath,
-                maker,
-                minTemp,
-                maxTemp,
-                protein,
-                fat,
-                sugar,
-                energy,
-                countInPackage,
-                createdDate,
-                weight,
-                coolingMode,
-                isFarmer
-            );
+            return new RaspberryDomain(this);
         }
     }
 }

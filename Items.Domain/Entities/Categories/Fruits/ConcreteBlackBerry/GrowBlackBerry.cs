@@ -21,12 +21,7 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteBlackBerry
         public string coolingMode { get; private set; } = string.Empty;
         public bool isFarmer { get; private set; }
 
-        public GrowBlackberry(
-            Guid personId,
-            int countInPackage,
-            int createdDate,
-            float weight
-        ) {
+        public GrowBlackberry(Guid personId, int countInPackage, int createdDate, float weight) {
             this.personId = personId;
             this.countInPackage = countInPackage;
             this.createdDate = createdDate;

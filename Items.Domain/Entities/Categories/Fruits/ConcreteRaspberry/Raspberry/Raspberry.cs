@@ -4,40 +4,24 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry.Raspberry
 {
     public class Raspberry : FruitSelf
     {
-        public Raspberry(
-            Guid personId,
-            Guid itemId,
-            int price,
-            string imagePath,
-            string maker,
-            int minTemp,
-            int maxTemp,
-            float protein,
-            float fat,
-            float sugar,
-            float energy,
-            int countInPackage,
-            int createdDate,
-            float weight,
-            string coolingMode,
-            bool isFarmer
-        ) {
-            PersonId = personId;
-            ItemId = itemId;
-            Price = price;
-            ImagePath = imagePath;
-            Maker = maker;
-            MinTemp = minTemp;
-            MaxTemp = maxTemp;
-            Protein = protein;
-            Fat = fat;
-            Sugar = sugar;
-            Energy = energy;
-            CountInPackage = countInPackage;
-            CreatedDate = createdDate;
-            Weight = weight;
-            CoolingMode = coolingMode;
-            IsFarmer = isFarmer;
+        public Raspberry(GrowRaspberry raspberry)
+        {
+            PersonId = raspberry.personId;
+            ItemId = raspberry.itemId;
+            Price = raspberry.price;
+            ImagePath = raspberry.imagePath;
+            Maker = raspberry.maker;
+            MinTemp = raspberry.minTemp;
+            MaxTemp = raspberry.maxTemp;
+            Protein = raspberry.protein;
+            Fat = raspberry.fat;
+            Sugar = raspberry.sugar;
+            Energy = raspberry.energy;
+            CountInPackage = raspberry.countInPackage;
+            CreatedDate = raspberry.createdDate;
+            Weight = raspberry.weight;
+            CoolingMode = raspberry.coolingMode;
+            IsFarmer = raspberry.isFarmer;
         }
     }
 }

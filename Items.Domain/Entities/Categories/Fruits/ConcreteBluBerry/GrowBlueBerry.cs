@@ -22,12 +22,7 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteBluBerry
         public bool isFarmer { get; private set; }
         public string grade { get; private set; } = string.Empty;
 
-        public GrowBlueBerry(
-            Guid personId,
-            int countInPackage,
-            int createdDate,
-            float weight
-        ) {
+        public GrowBlueBerry(Guid personId, int countInPackage, int createdDate, float weight) {
             this.personId = personId;
             this.countInPackage = countInPackage;
             this.createdDate = createdDate;

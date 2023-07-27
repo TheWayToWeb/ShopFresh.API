@@ -6,22 +6,22 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteBlackBerry.BlackBerry
     {
         public Blackberry(GrowBlackberry blackberry)
         {
-            PersonId =  blackberry.personId;
-            ItemId =    blackberry.itemId;
-            Price =     blackberry.price;
+            PersonId = blackberry.personId;
+            ItemId = blackberry.itemId;
+            Price = blackberry.price;
             ImagePath = blackberry.imagePath;
-            Maker =     blackberry.maker;
-            MinTemp =   blackberry.minTemp;
-            MaxTemp =   blackberry.maxTemp;
-            Protein =   blackberry.protein;
-            Fat =       blackberry.fat;
-            Sugar =     blackberry.sugar;
-            Energy =    blackberry.energy;
+            Maker = blackberry.maker;
+            MinTemp = blackberry.minTemp;
+            MaxTemp = blackberry.maxTemp;
+            Protein = blackberry.protein;
+            Fat = blackberry.fat;
+            Sugar = blackberry.sugar;
+            Energy = blackberry.energy;
             CountInPackage = blackberry.countInPackage;
             CreatedDate = blackberry.createdDate;
-            Weight =    blackberry.weight;
+            Weight = blackberry.weight;
             CoolingMode = blackberry.coolingMode;
-            IsFarmer =  blackberry.isFarmer;
+            IsFarmer = blackberry.isFarmer;
         }
     }
 }

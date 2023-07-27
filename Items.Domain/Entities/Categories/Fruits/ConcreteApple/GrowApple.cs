@@ -24,38 +24,31 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteApple
         public string grade { get; private set; } = string.Empty;
         public List<Line> saleWeights { get; private set; } = new();
 
-        public GrowApple(
-            Guid personId, 
-            int countInPackage, 
-            int createdDate, 
-            List<Line> saleWeights
-        ) {
+        protected GrowApple(Guid personId, int countInPackage, int createdDate, List<Line> saleWeights) {
             this.personId = personId;
             this.countInPackage = countInPackage;
             this.createdDate = createdDate;
             this.saleWeights = saleWeights;
         }
 
-        public void Price(int value) => price = value;
-        public void ImagePath(string value) => imagePath = value;
-        public void Maker(string value) => maker = value;
-        public void MinTemp(int value) => minTemp = value;
-        public void MaxTemp(int value) => maxTemp = value;
-        public void Protein(float value) => protein = value;
-        public void Fat(float value) => fat = value;
-        public void Sugar(float value) => sugar = value;
-        public void Energy(float value) => energy = value;
-        public void CountInPackage(int value) => countInPackage = value;
-        public void CreatedDate(int value) => createdDate = value;
-        public void Weight(float value) => weight = value;
-        public void CoolingMode(string value) => coolingMode = value;
-        public void Grade(string value) => grade = value;
-        public void SaleWeights(List<Line> value) => saleWeights.AddRange(value);
-
+        protected void Price(int value) => price = value;
+        protected void ImagePath(string value) => imagePath = value;
+        protected void Maker(string value) => maker = value;
+        protected void MinTemp(int value) => minTemp = value;
+        protected void MaxTemp(int value) => maxTemp = value;
+        protected void Protein(float value) => protein = value;
+        protected void Fat(float value) => fat = value;
+        protected void Sugar(float value) => sugar = value;
+        protected void Energy(float value) => energy = value;
+        protected void CountInPackage(int value) => countInPackage = value;
+        protected void CreatedDate(int value) => createdDate = value;
+        protected void Weight(float value) => weight = value;
+        protected void CoolingMode(string value) => coolingMode = value;
+        protected void Grade(string value) => grade = value;
+        protected void SaleWeights(List<Line> value) => saleWeights.AddRange(value);
 
         public AppleDomain CreateApple() {
             return new AppleDomain(this);
-        }
         }
     }
 }

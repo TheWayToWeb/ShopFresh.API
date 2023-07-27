@@ -10,20 +10,20 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteApple.Apple
 
         public Apple(GrowApple apple)
         {
-            PersonId =  apple.personId;
-            ItemId =    apple.itemId;
-            Price =     apple.price;
+            PersonId = apple.personId;
+            ItemId = apple.itemId;
+            Price = apple.price;
             ImagePath = apple.imagePath;
-            Maker =     apple.maker;
-            MinTemp =   apple.minTemp;
-            MaxTemp =   apple.maxTemp;
-            Protein =   apple.protein;
-            Fat =       apple.fat;
-            Sugar =     apple.sugar;
-            Energy =    apple.energy;
+            Maker = apple.maker;
+            MinTemp = apple.minTemp;
+            MaxTemp = apple.maxTemp;
+            Protein = apple.protein;
+            Fat = apple.fat;
+            Sugar = apple.sugar;
+            Energy = apple.energy;
             CountInPackage = apple.countInPackage;
-            IsFarmer =  apple.isFarmer;
-            Grade =     apple.grade;
+            IsFarmer = apple.isFarmer;
+            Grade = apple.grade;
             SaleWeights = apple.saleWeights;
         }
     }

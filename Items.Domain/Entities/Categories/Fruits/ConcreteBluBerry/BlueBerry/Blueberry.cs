@@ -8,22 +8,22 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteBluBerry.BlueBerry
 
         public Blueberry(GrowBlueBerry blueberry)
         {
-            PersonId =  blueberry.personId;
-            ItemId =    blueberry.itemId;
-            Price =     blueberry.price;
+            PersonId = blueberry.personId;
+            ItemId = blueberry.itemId;
+            Price = blueberry.price;
             ImagePath = blueberry.imagePath;
-            Maker =     blueberry.maker;
-            MinTemp =   blueberry.minTemp;
-            MaxTemp =   blueberry.maxTemp;
-            Protein =   blueberry.protein;
-            Fat =       blueberry.fat;
-            Sugar =     blueberry.sugar;
-            Energy =    blueberry.energy;
+            Maker = blueberry.maker;
+            MinTemp = blueberry.minTemp;
+            MaxTemp = blueberry.maxTemp;
+            Protein = blueberry.protein;
+            Fat = blueberry.fat;
+            Sugar = blueberry.sugar;
+            Energy = blueberry.energy;
             CountInPackage = blueberry.countInPackage;
-            Weight =    blueberry.weight;
+            Weight = blueberry.weight;
             CoolingMode = blueberry.coolingMode;
-            IsFarmer =  blueberry.isFarmer;
-            Grade =     blueberry.grade;
+            IsFarmer = blueberry.isFarmer;
+            Grade = blueberry.grade;
         }
     }
 }

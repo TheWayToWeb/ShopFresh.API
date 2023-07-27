@@ -6,42 +6,25 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteGrape.Grape
     {
         public string Grade { get; set; } = string.Empty;
 
-        public Grape(
-            Guid personId,
-            Guid itemId,
-            int price,
-            string imagePath,
-            string maker,
-            int minTemp,
-            int maxTemp,
-            float protein,
-            float fat,
-            float sugar,
-            float energy,
-            int countInPackage,
-            int createdDate,
-            float weight,
-            bool isFarmer,
-            string coolingMode,
-            string grade
-        ) {
-            PersonId = personId;
-            ItemId = itemId;
-            Price = price;
-            ImagePath = imagePath;
-            Maker = maker;
-            MinTemp = minTemp;
-            MaxTemp = maxTemp;
-            Protein = protein;
-            Fat = fat;
-            Sugar = sugar;
-            Energy = energy;
-            CountInPackage = countInPackage;
-            CreatedDate = createdDate;
-            Weight = weight;
-            IsFarmer = isFarmer;
-            CoolingMode = coolingMode;
-            Grade = grade;
+        public Grape(GrowGrape grape)
+        {
+            PersonId = grape.personId;
+            ItemId = grape.itemId;
+            Price = grape.price;
+            ImagePath = grape.imagePath;
+            Maker = grape.maker;
+            MinTemp = grape.minTemp;
+            MaxTemp = grape.maxTemp;
+            Protein = grape.protein;
+            Fat = grape.fat;
+            Sugar = grape.sugar;
+            Energy = grape.energy;
+            CountInPackage = grape.countInPackage;
+            CreatedDate = grape.createdDate;
+            Weight = grape.weight;
+            IsFarmer = grape.isFarmer;
+            CoolingMode = grape.coolingMode;
+            Grade = grape.grade;
         }
     }
 }

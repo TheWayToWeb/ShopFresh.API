@@ -24,12 +24,7 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteBanana
         public string grade { get; private set; } = string.Empty;
         public List<Line> saleWeights { get; private set; } = new();
 
-        public GrowBanana(
-            Guid personId,
-            int countInPackage,
-            int createdDate,
-            List<Line> saleWeights
-        ) {
+        public GrowBanana(Guid personId, int countInPackage, int createdDate, List<Line> saleWeights) {
             this.personId = personId;
             this.countInPackage = countInPackage;
             this.createdDate = createdDate;
@@ -51,7 +46,6 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteBanana
         public void CoolingMode(string value) => coolingMode = value;
         public void Grade(string value) => grade = value;
         public void SaleWeight(List<Line> value) => saleWeights = value;
-
 
         public BananaDomain CreateBanana() {
             return new BananaDomain(this);

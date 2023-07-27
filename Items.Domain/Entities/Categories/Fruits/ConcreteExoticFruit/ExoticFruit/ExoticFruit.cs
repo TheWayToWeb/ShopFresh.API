@@ -6,40 +6,24 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteExoticFruit.ExoticFrui
     {
         public string Grade { get; set; } = string.Empty;
 
-        public ExoticFruit(
-            Guid personId,
-            Guid itemId,
-            int price,
-            string imagePath,
-            string maker,
-            int minTemp,
-            int maxTemp,
-            float protein,
-            float fat,
-            float sugar,
-            float energy,
-            int countInPackage,
-            int createdDate,
-            float weight,
-            string coolingMode,
-            string grade
-        ) {
-            PersonId = personId;
-            ItemId = itemId;
-            Price = price;
-            ImagePath = imagePath;
-            Maker = maker;
-            MinTemp = minTemp;
-            MaxTemp = maxTemp;
-            Protein = protein;
-            Fat = fat;
-            Sugar = sugar;
-            Energy = energy;
-            CountInPackage = countInPackage;
-            CreatedDate = createdDate;
-            Weight = weight;
-            CoolingMode = coolingMode;
-            Grade = grade;
+        public ExoticFruit(GrowExoticFruit exoticFruit)
+        {
+            PersonId = exoticFruit.personId;
+            ItemId = exoticFruit.itemId;
+            Price = exoticFruit.price;
+            ImagePath = exoticFruit.imagePath;
+            Maker = exoticFruit.maker;
+            MinTemp = exoticFruit.minTemp;
+            MaxTemp = exoticFruit.maxTemp;
+            Protein = exoticFruit.protein;
+            Fat = exoticFruit.fat;
+            Sugar = exoticFruit.sugar;
+            Energy = exoticFruit.energy;
+            CountInPackage = exoticFruit.countInPackage;
+            CreatedDate = exoticFruit.createdDate;
+            Weight = exoticFruit.weight;
+            CoolingMode = exoticFruit.coolingMode;
+            Grade = exoticFruit.grade;
         }
     }
 }

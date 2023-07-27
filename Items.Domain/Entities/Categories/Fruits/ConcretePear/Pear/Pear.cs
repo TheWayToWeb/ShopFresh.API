@@ -43,5 +43,26 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcretePear.Pear
             IsFarmer = isFarmer;
             Grade = grade;
         }
+
+        public Pear(GrowPear pear)
+        {
+            PersonId = pear.personId;
+            ItemId = pear.itemId;
+            Price = pear.price;
+            ImagePath = pear.imagePath;
+            Maker = pear.maker;
+            MinTemp = pear.minTemp;
+            MaxTemp = pear.maxTemp;
+            Protein = pear.protein;
+            Fat = pear.fat;
+            Sugar = pear.sugar;
+            Energy = pear.energy;
+            CountInPackage = pear.countInPackage;
+            CreatedDate = pear.createdDate;
+            Weight = pear.weight;
+            CoolingMode = pear.coolingMode;
+            IsFarmer = pear.isFarmer;
+            Grade = pear.grade;
+        }
     }
 }

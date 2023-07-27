@@ -4,44 +4,26 @@ namespace Items.Domain.Entities.Categories.Vegetables.ConcreteBean.Bean
 {
     public class Bean : Vegetable
     {
-        public Bean(
-            Guid personId,
-            Guid itemId,
-            int price,
-            string imagePath,
-            string maker,
-            int minTemp,
-            int maxTemp,
-            float protein,
-            float fat,
-            float sugar,
-            float energy,
-            int countInPackage,
-            int createdDate,
-            float weight,
-            string coolingMode,
-            bool isFarmer,
-            string grade,
-            bool isSlicingShape
-        ) {
-            PersonId = personId;
-            ItemId = itemId;
-            Price = price;
-            ImagePath = imagePath;
-            Maker = maker;
-            MinTemp = minTemp;
-            MaxTemp = maxTemp;
-            Protein = protein;
-            Fat = fat;
-            Sugar = sugar;
-            Energy = energy;
-            CountInPackage = countInPackage;
-            CreatedDate = createdDate;
-            Weight = weight;
-            CoolingMode = coolingMode;
-            IsFarmer = isFarmer;
-            Grade = grade;
-            IsSlicingShape = isSlicingShape;
+        public Bean(GrowBean bean)
+        {
+            PersonId = bean.personId;
+            ItemId = bean.itemId;
+            Price = bean.price;
+            ImagePath = bean.imagePath;
+            Maker = bean.maker;
+            MinTemp = bean.minTemp;
+            MaxTemp = bean.maxTemp;
+            Protein = bean.protein;
+            Fat = bean.fat;
+            Sugar = bean.sugar;
+            Energy = bean.energy;
+            CountInPackage = bean.countInPackage;
+            CreatedDate = bean.createdDate;
+            Weight = bean.weight;
+            CoolingMode = bean.coolingMode;
+            IsFarmer = bean.isFarmer;
+            Grade = bean.grade;
+            IsSlicingShape = bean.isSlicingShape;
         }
     }
 }
