@@ -1,4 +1,4 @@
-﻿using Items.Domain.Models.Categories.Common;
+﻿using Items.Domain.Entities.Categories.Fruits.Fruit;
 using Range = Items.Domain.Models.Categories.Common.Range;
 
 namespace Items.Domain.Models.Categories.Fruits.ConcreteBanana.Banana

@@ -1,4 +1,4 @@
-﻿using Items.Domain.Models.Categories.Common;
+﻿using Items.Domain.Entities.Categories.Fruits.Fruit;
 
 namespace Items.Domain.Models.Categories.Fruits.ConcreteBluBerry.BlueBerry
 {

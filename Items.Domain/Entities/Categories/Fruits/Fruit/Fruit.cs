@@ -1,4 +1,6 @@
-﻿namespace Items.Domain.Models.Categories.Common
+﻿using Items.Domain.Models.Categories.Common;
+
+namespace Items.Domain.Entities.Categories.Fruits.Fruit
 {
     public abstract class Fruit : Eat
     {

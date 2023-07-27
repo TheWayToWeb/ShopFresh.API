@@ -1,6 +1,4 @@
-﻿using Items.Domain.Models.Categories.Common;
-
-namespace Items.Domain.Entities.Categories.Fruits.ConcreteStrawberry.Strawberry
+﻿namespace Items.Domain.Entities.Categories.Fruits.ConcreteStrawberry.Strawberry
 {
     public class Strawberry : Fruit
     {

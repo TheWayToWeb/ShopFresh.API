@@ -1,6 +1,4 @@
-﻿using Items.Domain.Models.Categories.Common;
-
-namespace Items.Domain.Entities.Categories.Fruits.ConcreteSeaBucthorn.SeaBucthorn
+﻿namespace Items.Domain.Entities.Categories.Fruits.ConcreteSeaBucthorn.SeaBucthorn
 {
     public class SeaBucthorn : Fruit
     {

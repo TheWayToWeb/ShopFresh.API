@@ -1,6 +1,4 @@
-﻿using Items.Domain.Models.Categories.Common;
-
-namespace Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry.Raspberry
+﻿namespace Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry.Raspberry
 {
     public class Raspberry : Fruit
     {
