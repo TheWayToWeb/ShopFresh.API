@@ -1,8 +1,6 @@
-﻿using raspberryDomain = Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry.Raspberry.Raspberry;
-
-namespace Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry
+﻿namespace Items.Domain.Entities.Categories.Vegetables.ConcreteCauliflower
 {
-    public interface IGrowerRaspberry
+    public interface IGrowerCauliflower
     {
         void SetPrice(int value);
         void SetImagePath(string value);
@@ -17,7 +15,6 @@ namespace Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry
         void SetCreatedDate(int value);
         void SetWeight(float value);
         void SetCoolingMode(string value);
-        void SetFarmer(bool value);
-        raspberryDomain CreateRaspberry();
+        void SetSkinColor(string value);
     }
 }

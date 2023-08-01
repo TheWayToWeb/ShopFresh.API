@@ -5,6 +5,10 @@ namespace Items.Domain.Entities.Categories.Vegetables.ConcreteCarrot.Carrot
 {
     public class Carrot : Vegetable
     {
+        public Carrot(GrowCarrot growCarrot)
+        {
+        }
+
         public bool IsWash { get; set; }
     }
 }

@@ -1,54 +1,181 @@
-﻿using BeetDomain = Items.Domain.Entities.Categories.Vegetables.ConcreteBeet.Beet.Beet;
+﻿using beetDomain = Items.Domain.Entities.Categories.Vegetables.ConcreteBeet.Beet.Beet;
 
 namespace Items.Domain.Entities.Categories.Vegetables.ConcreteBeet
 {
     public class GrowBeet : IGrowerBeet
     {
-        public Guid personId { get; private set; }
-        public Guid itemId { get; private set; } = Guid.NewGuid();
-        public int price { get; private set; }
-        public string imagePath { get; private set; } = string.Empty;
-        public string maker { get; private set; } = string.Empty;
-        public int minTemp { get; private set; }
-        public int maxTemp { get; private set; }
-        public float protein { get; private set; }
-        public float fat { get; private set; }
-        public float sugar { get; private set; }
-        public float energy { get; private set; }
-        public int countInPackage { get; private set; }
-        public int createdDate { get; private set; }
-        public float weight { get; private set; }
-        public string coolingMode { get; private set; } = string.Empty;
-        public bool isFarmer { get; private set; }
-        public string grade { get; private set; } = string.Empty;
-        public bool isSlicingShape { get; private set; }
+        public Guid PersonId { get; private set; }
+        public Guid ItemId { get; private set; } = Guid.NewGuid();
+        public int Price { get; private set; }
+        public string ImagePath { get; private set; } = string.Empty;
+        public string Maker { get; private set; } = string.Empty;
+        public int MinTemp { get; private set; }
+        public int MaxTemp { get; private set; }
+        public float Protein { get; private set; }
+        public float Fat { get; private set; }
+        public float Sugar { get; private set; }
+        public float Energy { get; private set; }
+        public int CountInPackage { get; private set; }
+        public int CreatedDate { get; private set; }
+        public float Weight { get; private set; }
+        public string CoolingMode { get; private set; } = string.Empty;
+        public bool IsFarmer { get; private set; }
+        public string Grade { get; private set; } = string.Empty;
+        public bool IsSlicingShape { get; private set; }
 
-        protected GrowBeet(Guid personId, int countInPackage, int createdDate, float weight) {
-            this.personId = personId;
-            this.countInPackage = countInPackage;
-            this.createdDate = createdDate;
-            this.weight = weight;
+        public GrowBeet(Guid personId, int countInPackage, int createdDate, float weight) {
+            PersonId = personId;
+            CountInPackage = countInPackage;
+            CreatedDate = createdDate;
+            Weight = weight;
         }
 
-        protected void Price(int value) => price = value;
-        protected void ImagePath(string value) => imagePath = value;
-        protected void Maker(string value) => maker = value;
-        protected void MinTemp(int value) => minTemp = value;
-        protected void MaxTemp(int value) => maxTemp = value;
-        protected void Protein(float value) => protein = value;
-        protected void Fat(float value) => fat = value;
-        protected void Sugar(float value) => sugar = value;
-        protected void Energy(float value) => energy = value;
-        protected void CountInPackage(int value) => countInPackage = value;
-        protected void CreatedDate(int value) => createdDate = value;
-        protected void Weight(float value) => weight = value;
-        protected void CoolingMode(string value) => coolingMode = value;
-        protected void IsFarmer(bool value) => isFarmer = value;
-        protected void Grade(string value) => grade = value;
-        protected void IsSlicingShape(bool value) => isSlicingShape = value;
+        public void SetPrice(int value)
+        {
+            if (value <= 0)
+            {
+                return;
+            }
+            Price = value;
+        }
 
-        public BeetDomain CreateBeet() {
-            return new BeetDomain(this);
+        public void SetImagePath(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return;
+            }
+            ImagePath = value;
+        }
+
+        public void SetMaker(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return;
+            }
+            Maker = value;
+        }
+
+        public void SetMinTemp(int value)
+        {
+            if (value <= 0)
+            {
+                return;
+            }
+            MinTemp = value;
+        }
+
+        public void SetMaxTemp(int value)
+        {
+            if (value <= 0)
+            {
+                return;
+            }
+            MaxTemp = value;
+        }
+
+        public void SetProtein(float value)
+        {
+            if (value <= 0)
+            {
+                return;
+            }
+            Protein = value;
+        }
+
+        public void SetFat(float value)
+        {
+            if (value <= 0)
+            {
+                return;
+            }
+            Fat = value;
+        }
+
+        public void SetSugar(float value)
+        {
+            if (value <= 0)
+            {
+                return;
+            }
+            Sugar = value;
+        }
+
+        public void SetEnergy(float value)
+        {
+            if (value <= 0)
+            {
+                return;
+            }
+            Energy = value;
+        }
+
+        public void SetCountInPackage(int value)
+        {
+            if (value <= 0)
+            {
+                return;
+            }
+            CountInPackage = value;
+        }
+
+        public void SetCreatedDate(int value)
+        {
+            if (value <= 0)
+            {
+                return;
+            }
+            CreatedDate = value;
+        }
+
+        public void SetWeight(float value)
+        {
+            if (value <= 0)
+            {
+                return;
+            }
+            Weight = value;
+        }
+
+        public void SetCoolingMode(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return;
+            }
+            CoolingMode = value;
+        }
+
+        public void SetFarmer(bool value)
+        {
+            if (value)
+            {
+                return;
+            }
+            IsFarmer = value;
+        }
+
+        public void SetGrade(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return;
+            }
+            Grade = value;
+        }
+
+        public void SetSlicingShape(bool value)
+        {
+            if (value)
+            {
+                return;
+            }
+            IsSlicingShape = value;
+        }
+
+        public beetDomain CreateBeet() {
+            return new beetDomain(this);
         }
     }
 }
