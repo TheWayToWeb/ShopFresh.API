@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfVegetableMix = Items.Domain.Models.Categories.Vegetables.VegetableMix;
+using SelfVegetableMix = Items.Domain.Entities.Categories.Vegetables.ConcreteVegetableMix.VegetableMix.VegetableMix;
 
 namespace Items.Application.Products.Vegetables.VegetableMix.CreateVegetableMix
 {
