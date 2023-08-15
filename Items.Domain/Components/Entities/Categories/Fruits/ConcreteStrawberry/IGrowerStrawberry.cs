@@ -1,0 +1,24 @@
+﻿using strawberryDomain = Items.Domain.Components.Entities.Categories.Fruits.ConcreteStrawberry.Strawberry.Strawberry;
+
+namespace Items.Domain.Components.Entities.Categories.Fruits.ConcreteStrawberry
+{
+    public interface IGrowerStrawberry
+    {
+        void SetPrice(int value);
+        void SetImagePath(string value);
+        void SetMaker(string value);
+        void SetMinTemp(int value);
+        void SetMaxTemp(int value);
+        void SetProtein(float value);
+        void SetFat(float value);
+        void SetSugar(float value);
+        void SetEnergy(float value);
+        void SetCountInPackage(int value);
+        void SetCreatedDate(int value);
+        void SetWeight(float value);
+        void SetCoolingMode(string value);
+        void SetFarmer(bool value);
+        void SetGrade(string value);
+        strawberryDomain CreateStrawberry();
+    }
+}

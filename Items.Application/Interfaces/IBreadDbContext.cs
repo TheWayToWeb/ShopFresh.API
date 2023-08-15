@@ -1,15 +1,15 @@
 ﻿using Cheesecake = Items.Domain.Products.FreshItem.Bread.
 using Microsoft.EntityFrameworkCore;
 using Items.Domain.Products.FreshItem.Bread.MakingFlapJack;
-using Items.Domain.Models.Categories.Bread;
-using Items.Domain.Models.Categories.Bread.MakingCroissant;
-using Items.Domain.Models.Categories.Bread.MakingPuff;
-using Items.Domain.Models.Categories.Bread.MakingSimpleCake;
-using Items.Domain.Models.Categories.Bread.MakingSingleFood;
-using Items.Domain.Models.Categories.Bread.MakingToast;
-using Items.Domain.Models.Categories.Bread.Baguette;
-using Items.Domain.Models.Categories.Bread.Bun;
-using Items.Domain.Models.Categories.Bread.CottageCheesePatty;
+using Items.Domain.Components.Entities.Categories.Bread;
+using Items.Domain.Components.Entities.Categories.Bread.Baguette;
+using Items.Domain.Components.Entities.Categories.Bread.Bun;
+using Items.Domain.Components.Entities.Categories.Bread.CottageCheesePatty;
+using Items.Domain.Components.Entities.Categories.Bread.MakingCroissant;
+using Items.Domain.Components.Entities.Categories.Bread.MakingPuff;
+using Items.Domain.Components.Entities.Categories.Bread.MakingSimpleCake;
+using Items.Domain.Components.Entities.Categories.Bread.MakingSingleFood;
+using Items.Domain.Components.Entities.Categories.Bread.MakingToast;
 
 namespace Items.Application.Interfaces
 {

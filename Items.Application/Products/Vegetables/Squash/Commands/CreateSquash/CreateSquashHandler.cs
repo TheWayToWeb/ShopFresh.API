@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using SelfSquash = Items.Domain.Entities.Categories.Vegetables.ConcreteSquash.Squash.Squash;
+using SelfSquash = Items.Domain.Components.Entities.Categories.Vegetables.ConcreteSquash.Squash.Squash;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.Squash.Commands.CreateSquash

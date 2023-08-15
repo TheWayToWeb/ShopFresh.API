@@ -1,4 +1,9 @@
-﻿using Items.Domain.Entities.Categories.Vegetables.ConcreteBean.Bean;
+﻿using Items.Domain.Components.Entities.Categories.Vegetables.ConcreteSaladMix.SaladMix;
+using Items.Domain.Components.Entities.Categories.Vegetables.ConcreteSquash.Squash;
+using Items.Domain.Components.Entities.Categories.Vegetables.ConcreteTomato.Tomato;
+using Items.Domain.Components.Entities.Categories.Vegetables.ConcreteVegetableMix.VegetableMix;
+using Items.Domain.Components.Entities.Categories.Vegetables.Vegetable;
+using Items.Domain.Entities.Categories.Vegetables.ConcreteBean.Bean;
 using Items.Domain.Entities.Categories.Vegetables.ConcreteBeet.Beet;
 using Items.Domain.Entities.Categories.Vegetables.ConcreteBroccoli.Broccoli;
 using Items.Domain.Entities.Categories.Vegetables.ConcreteCabbage.Cabbage;
@@ -8,11 +13,6 @@ using Items.Domain.Entities.Categories.Vegetables.ConcreteMushroom.Mushroom;
 using Items.Domain.Entities.Categories.Vegetables.ConcretePotato.Potato;
 using Items.Domain.Entities.Categories.Vegetables.ConcreteRedis.Redis;
 using Items.Domain.Entities.Categories.Vegetables.ConcreteSalad.Salad;
-using Items.Domain.Entities.Categories.Vegetables.ConcreteSaladMix.SaladMix;
-using Items.Domain.Entities.Categories.Vegetables.ConcreteSquash.Squash;
-using Items.Domain.Entities.Categories.Vegetables.ConcreteTomato.Tomato;
-using Items.Domain.Entities.Categories.Vegetables.ConcreteVegetableMix.VegetableMix;
-using Items.Domain.Entities.Categories.Vegetables.Vegetable;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

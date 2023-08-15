@@ -1,4 +1,4 @@
-﻿using Items.Domain.Models.Categories.Common;
+﻿using Items.Domain.Components.Entities.Categories.Common;
 using MediatR;
 
 /*Йогурты в свою очередь тоже абстракция*/

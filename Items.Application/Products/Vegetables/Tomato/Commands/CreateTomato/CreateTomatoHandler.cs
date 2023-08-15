@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfTomato = Items.Domain.Entities.Categories.Vegetables.ConcreteTomato.Tomato.Tomato;
+using SelfTomato = Items.Domain.Components.Entities.Categories.Vegetables.ConcreteTomato.Tomato.Tomato;
 
 namespace Items.Application.Products.Vegetables.Tomato.Commands.CreateTomato
 {

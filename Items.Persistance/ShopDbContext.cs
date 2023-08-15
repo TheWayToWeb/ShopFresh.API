@@ -4,8 +4,8 @@ using Items.Domain;
 using Items.Persistance.EntityTypeConfiguration;
 using Items.Domain.Products.Category.SubCategory.ItemCategory.Items.Cheese;
 using Items.Domain.Products.FreshItem.FrozenFood.Ice_cream;
-using Items.Domain.Models.Categories.MilkProducts;
-using Items.Domain.Models;
+using Items.Domain.Components.Entities;
+using Items.Domain.Components.Entities.Categories.MilkProducts;
 
 namespace Items.Persistance
 {

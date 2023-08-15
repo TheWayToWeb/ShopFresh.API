@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Items.Domain.DTOs.Requests.Common;
-using RaspberryDomain = Items.Domain.Entities.Categories.Fruits.ConcreteRaspberry.Raspberry.Raspberry;
+using RaspberryDomain = Items.Domain.Components.Entities.Categories.Fruits.ConcreteRaspberry.Raspberry.Raspberry;
 
 namespace Items.Domain.DTOs.Requests.Fruits.Raspberry
 {

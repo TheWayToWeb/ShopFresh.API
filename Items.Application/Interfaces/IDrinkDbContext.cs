@@ -1,15 +1,15 @@
-﻿using Items.Domain.Models;
-using Items.Domain.Models.Categories.Drinks.ConcreteCoffee.Coffee;
+﻿using Items.Domain.Components.Entities.Categories.Drinks.ConcreteCoffee.Coffee;
+using Items.Domain.Components.Entities.Categories.Drinks.ConcreteFruitDrink.FruitDrink;
+using Items.Domain.Components.Entities.Categories.Drinks.ConcreteJuice.Juice;
+using Items.Domain.Components.Entities.Categories.Drinks.ConcreteKissel.Kissel;
+using Items.Domain.Components.Entities.Categories.Drinks.ConcreteSoyMilk.SoyMilk;
+using Items.Domain.Components.Entities.Categories.Drinks.MakingTea;
+using Items.Domain.Components.Entities.Categories.Drinks.MakingTea.MakingDrinkingTea;
+using Items.Domain.Components.Entities.Categories.Drinks.MakingTea.MakingPackageTea;
+using Items.Domain.Models;
 using Items.Domain.Models.Categories.Drinks.ConcreteEnergyDrink.EnergyDrink;
-using Items.Domain.Models.Categories.Drinks.ConcreteFruitDrink.FruitDrink;
-using Items.Domain.Models.Categories.Drinks.ConcreteJuice.Juice;
-using Items.Domain.Models.Categories.Drinks.ConcreteKissel.Kissel;
-using Items.Domain.Models.Categories.Drinks.ConcreteSoyMilk.SoyMilk;
 using Items.Domain.Models.Categories.Drinks.MakingCoffee;
 using Items.Domain.Models.Categories.Drinks.MakingLemonade.Lemonade;
-using Items.Domain.Models.Categories.Drinks.MakingTea;
-using Items.Domain.Models.Categories.Drinks.MakingTea.MakingDrinkingTea;
-using Items.Domain.Models.Categories.Drinks.MakingTea.MakingPackageTea;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Models.Categories.Drinks.MakingTea.MakingPackageTea;
+using Items.Domain.Components.Entities.Categories.Drinks.MakingTea.MakingPackageTea;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.PackageTea.Commands.DryTea.Commands.CreateDryTea

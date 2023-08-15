@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Items.Domain.DTOs.Requests.Common;
 using BananaDomain = Items.Domain.Models.Categories.Fruits.ConcreteBanana.Banana.Banana;
-using Range = Items.Domain.Entities.Categories.Common.Range;
+using Range = Items.Domain.Components.Entities.Categories.Fruits.Common.Range;
 
 namespace Items.Domain.DTOs.Requests.Fruits.Banana
 {

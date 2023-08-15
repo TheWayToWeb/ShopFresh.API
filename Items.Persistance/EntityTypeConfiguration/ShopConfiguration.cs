@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Items.Domain.Models;
+using Items.Domain.Components.Entities;
 
 namespace Items.Persistance.EntityTypeConfiguration
 {

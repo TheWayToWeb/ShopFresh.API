@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Models.Categories.Drinks.ConcreteSoyMilk.SoyMilk.SoyMilk;
+using Items.Domain.Components.Entities.Categories.Drinks.ConcreteSoyMilk.SoyMilk.SoyMilk;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

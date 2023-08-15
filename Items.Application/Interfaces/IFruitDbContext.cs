@@ -1,5 +1,5 @@
-﻿using Items.Domain.Entities.Categories.Fruits.ConcreteStrawberry.Strawberry;
-using Items.Domain.Entities.Categories.Fruits.Fruit;
+﻿using Items.Domain.Components.Entities.Categories.Fruits.ConcreteStrawberry.Strawberry;
+using Items.Domain.Components.Entities.Categories.Fruits.Fruit;
 using Items.Domain.Models.Categories.Fruits;
 using Items.Domain.Models.Categories.Fruits.ConcreteApple.Apple;
 using Items.Domain.Models.Categories.Fruits.ConcreteBanana.Banana;

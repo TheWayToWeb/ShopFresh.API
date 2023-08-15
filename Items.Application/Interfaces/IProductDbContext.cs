@@ -1,6 +1,6 @@
 ﻿using Items.Domain.Brands;
-using Items.Domain.Models;
-using Items.Domain.Models.Categories.Common;
+using Items.Domain.Components.Entities;
+using Items.Domain.Components.Entities.Categories.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

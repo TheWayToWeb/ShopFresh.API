@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfGingerBread = Items.Domain.Models.Categories.Bakery.GingerBread.Gingerbread;
+using SelfGingerBread = Items.Domain.Components.Entities.Categories.Bakery.GingerBread.Gingerbread;
 
 namespace Items.Application.Products.Bakery.Gingerbread.Commands.CreateGingerbread
 {

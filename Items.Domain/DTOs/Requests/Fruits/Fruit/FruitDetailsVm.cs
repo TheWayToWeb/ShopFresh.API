@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Items.Domain.DTOs.Requests.Common;
-using FruitDomain = Items.Domain.Entities.Categories.Fruits.Fruit.Fruit;
+using FruitDomain = Items.Domain.Components.Entities.Categories.Fruits.Fruit.Fruit;
 
 namespace Items.Domain.DTOs.Requests.Fruits.Fruit
 {
