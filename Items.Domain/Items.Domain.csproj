@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Brands\" />
     <Folder Include="DTOs\Requests\Bakery\" />
     <Folder Include="DTOs\Requests\Bread\" />
     <Folder Include="DTOs\Requests\Drinks\" />
