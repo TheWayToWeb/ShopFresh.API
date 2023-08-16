@@ -1,6 +1,6 @@
 ﻿using Items.Domain.Components.Entities.Categories.Common;
 
-namespace Items.Domain.Review
+namespace Items.Domain.Components.Review
 {
     public class Review
     {

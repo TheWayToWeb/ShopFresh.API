@@ -4,7 +4,7 @@ namespace Items.Domain.Components.Entities.Categories
 {
     public class SubCategory
     {
-        public Guid SubCategoryId { get; private set; }
+        public Guid Id { get; private set; }
         public Guid CategoryId { get; private set; }
         public string? SubCategoryName { get; private set; }
         public Category? Category { get; set; }

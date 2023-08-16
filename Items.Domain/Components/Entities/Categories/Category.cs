@@ -6,6 +6,6 @@
         public string? CategoryName { get; private set; }
         public List<Category> SubCategories { get; private set; } = new();
         public Guid ParentCategoryId { get; private set; }
-        public Category? ParentCategory { get; set; }
+        public ParentCategory? ParentCategory { get; set; }
     }
 }
