@@ -1,5 +1,5 @@
-﻿using Items.Domain.Components.Entities.Categories.Drinks.Common;
-using Items.Domain.Components.Entities.Categories.MilkProducts.Common;
+﻿using Items.Domain.Components.Entities.Categories.Common;
+using Items.Domain.Components.Entities.Categories.Drinks.Common;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.EnergyDrink.Commands.UpdateEnergyDrink

@@ -1,4 +1,4 @@
-﻿using Items.Domain.Components.Entities.Categories.MilkProducts.Common;
+﻿using Items.Domain.Components.Entities.Categories.Common;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.Water.Commands.CreateWater

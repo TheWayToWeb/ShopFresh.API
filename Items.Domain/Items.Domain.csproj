@@ -24,7 +24,7 @@
     <Folder Include="DTOs\Responses\Drinks\" />
     <Folder Include="DTOs\Responses\Eggs\" />
     <Folder Include="DTOs\Responses\Vegetables\" />
-    <Folder Include="Components\Entities\Categories\Bakery\Cheesecake\" />
+    <Folder Include="Components\Entities\ItemCategories\Bakery\Cheesecake\" />
   </ItemGroup>
 
 </Project>
