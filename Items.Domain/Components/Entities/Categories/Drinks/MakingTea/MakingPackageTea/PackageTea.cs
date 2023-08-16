@@ -1,5 +1,5 @@
-﻿using Items.Domain.Components.Entities.Categories.Common;
-using Items.Domain.Components.Entities.Categories.Drinks.MakingTea;
+﻿using Items.Domain.Components.Entities.Categories.Drinks.MakingTea;
+using Items.Domain.Components.Entities.Categories.MilkProducts.Common;
 
 namespace Items.Domain.Components.Entities.Categories.Drinks.MakingTea.MakingPackageTea
 {
@@ -22,8 +22,8 @@ namespace Items.Domain.Components.Entities.Categories.Drinks.MakingTea.MakingPac
             float energy,
             int countInPackage,
             int createdDate,
-            List<Taste> tastes,
-            List<Capacity> capacities,
+            List<ProductTaste> tastes,
+            List<SoldCapacity> capacities,
             bool isChilled,
             string grade,
             string kindOfTea,

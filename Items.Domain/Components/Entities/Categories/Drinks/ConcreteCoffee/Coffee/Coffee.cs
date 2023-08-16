@@ -1,4 +1,5 @@
 ﻿using Items.Domain.Components.Entities.Categories.Common;
+using Items.Domain.Components.Entities.Categories.MilkProducts.Common;
 
 namespace Items.Domain.Components.Entities.Categories.Drinks.ConcreteCoffee.Coffee
 {
@@ -27,8 +28,8 @@ namespace Items.Domain.Components.Entities.Categories.Drinks.ConcreteCoffee.Coff
             float energy,
             int countInPackage,
             int createdDate,
-            List<Taste> tastes,
-            List<Capacity> capacities,
+            List<ProductTaste> tastes,
+            List<SoldCapacity> capacities,
             bool isChilled,
             string typeCoffee,
             string kindOfCoffee,

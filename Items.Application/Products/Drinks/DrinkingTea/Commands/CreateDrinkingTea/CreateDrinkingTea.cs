@@ -1,4 +1,4 @@
-﻿using Items.Domain.Components.Entities.Categories.Common;
+﻿using Items.Domain.Components.Entities.Categories.MilkProducts.Common;
 using MediatR;
 
 namespace Items.Application.Products.Drinks.TeaDrink.Commands.CreateTeaDrink
@@ -16,8 +16,8 @@ namespace Items.Application.Products.Drinks.TeaDrink.Commands.CreateTeaDrink
         public float Energy { get; set; }
         public int CountInPackage { get; set; }
         public DateOnly BeforeDate { get; set; }
-        public List<Capacity> Capacity { get; set; } = new();
-        public List<Taste>? Taste { get; set; } = new();
+        public List<SoldCapacity> Capacity { get; set; } = new();
+        public List<ProductTaste>? Taste { get; set; } = new();
         public bool IsChilled { get; set; }
         public string? Sort { get; set; }
         public string? KindOfTea { get; set; }

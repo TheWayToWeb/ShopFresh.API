@@ -1,4 +1,5 @@
-﻿using Items.Domain.Components.Entities.Categories.Common;
+﻿using Items.Domain.Components.Entities.Categories.Drinks.Common;
+using Items.Domain.Components.Entities.Categories.MilkProducts.Common;
 using DomainDrinkEnergy = Items.Domain.Components.Entities.Categories.Drinks.ConcreteDrinkEnergy.DrinkEnergy.DrinkEnergy;
 
 
@@ -21,8 +22,8 @@ namespace Items.Domain.Components.Entities.Categories.Drinks.ConcreteDrinkEnergy
         public float energy { get; private set; } = 0;
         public int countInPackage { get; private set; } = 0;
         public int createdDate { get; private set; } = 0;
-        public List<Taste> tastes { get; private set; } = new();
-        public List<Capacity> capacities { get; private set; } = new();
+        public List<ProductTaste> tastes { get; private set; } = new();
+        public List<SoldCapacity> capacities { get; private set; } = new();
         public bool isChilled { get; private set; } = false;
         public List<SaleStatus> sales { get; private set; } = new();
         public float coffein { get; private set; } = 0;
@@ -39,8 +40,8 @@ namespace Items.Domain.Components.Entities.Categories.Drinks.ConcreteDrinkEnergy
         public void Energy(float value) => energy = value;
         public void CountInPackage(int value) => countInPackage = value;
         public void CreatedDate(int value) => createdDate = value;
-        public void Taste(List<Taste> value) => tastes.AddRange(value);
-        public void Capacity(List<Capacity> value) => capacities.AddRange(value);
+        public void Taste(List<ProductTaste> value) => tastes.AddRange(value);
+        public void Capacity(List<SoldCapacity> value) => capacities.AddRange(value);
         public void IsChilled(bool value) => isChilled = value;
         public void SaleStatus(List<SaleStatus> value) => sales.AddRange(value);
         public void Coffein(float value) => coffein = value;

@@ -1,4 +1,5 @@
 ﻿using Items.Domain.Components.Entities.Categories.Common;
+using Items.Domain.Components.Entities.Categories.MilkProducts.Common;
 
 namespace Items.Domain.Components.Entities.Categories.Drinks.ConcreteKissel.Kissel
 {
@@ -19,8 +20,8 @@ namespace Items.Domain.Components.Entities.Categories.Drinks.ConcreteKissel.Kiss
             float energy,
             int countInPackage,
             int createdDate,
-            List<Taste> tastes,
-            List<Capacity> capacities,
+            List<ProductTaste> tastes,
+            List<SoldCapacity> capacities,
             bool isChilled
         )
         {

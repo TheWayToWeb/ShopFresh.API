@@ -1,4 +1,4 @@
-﻿using Items.Domain.Components.Entities.Categories.Common;
+﻿using Items.Domain.Components.Entities.Categories.MilkProducts.Common;
 using MediatR;
 
 /*Йогурты в свою очередь тоже абстракция*/
@@ -13,7 +13,7 @@ namespace Items.Application.Products.ProductMilk.CreateYogurt
         public int MinTemp { get; set; }
         public int MaxTemp { get; set; }
         public float? Weight { get; set; }
-        public List<Capacity>? Capacity { get; set; } = new();
+        public List<SoldCapacity>? Capacity { get; set; } = new();
         public float Protein { get; set; }
         public float Fat { get; set; }
         public float Sugar { get; set; }
@@ -24,7 +24,7 @@ namespace Items.Application.Products.ProductMilk.CreateYogurt
         public bool IsFarmer { get; set; }
         public bool IsVegan { get; set; }
         public bool IsBestseller { get; set; }
-        public List<Taste>? Tastes { get; set; } = new();
+        public List<ProductTaste>? Tastes { get; set; } = new();
         public float FatContent { get; set; }
     }
 }

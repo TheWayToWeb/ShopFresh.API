@@ -1,6 +1,4 @@
-﻿using Items.Domain.Components.Entities;
-
-namespace Items.Domain.Components.Entities.Categories.Common
+﻿namespace Items.Domain.Components.Entities.Categories.Common
 {
     public abstract class Eat : Item
     {

@@ -1,5 +1,4 @@
 ﻿using Items.Domain.Brands;
-using Items.Domain.Components.Entities;
 using Items.Domain.Components.Entities.Categories.Common;
 using Microsoft.EntityFrameworkCore;
 

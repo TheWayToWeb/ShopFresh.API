@@ -1,5 +1,5 @@
 ﻿using SelfSquash = Items.Domain.Components.Entities.Categories.Vegetables.BuilderSquash.Squash.Squash;
-using Line = Items.Domain.Components.Entities.Categories.Fruits.Common.Range;
+using Line = Items.Domain.Components.Entities.Categories.Fruits.Common.SalesLine;
 
 namespace Items.Domain.Components.Entities.Categories.Vegetables.BuilderSquash
 {

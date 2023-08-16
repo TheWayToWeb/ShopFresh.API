@@ -4,8 +4,8 @@ using Items.Domain;
 using Items.Persistance.EntityTypeConfiguration;
 using Items.Domain.Products.Category.SubCategory.ItemCategory.Items.Cheese;
 using Items.Domain.Products.FreshItem.FrozenFood.Ice_cream;
-using Items.Domain.Components.Entities;
-using Items.Domain.Components.Entities.Categories.MilkProducts;
+using Items.Domain.Components.Entities.Categories.Common;
+using Items.Domain.Components.Entities.Categories.DairyProducts.BuilderCreamLiquid.CreamLiquid;
 
 namespace Items.Persistance
 {
@@ -14,7 +14,7 @@ namespace Items.Persistance
         public DbSet<Item> Items { get; set; }
         public DbSet<Cheese1> Cheeses { get; set; }
         public DbSet<Cookie> Cookies { get; set; }
-        public DbSet<Cream> Creams { get; set; }
+        public DbSet<CreamLiquid> Creams { get; set; }
         public DbSet<GameConsole> GameConsoles { get; set; }
         public DbSet<Gamepad> Gamepads { get; set; }
         public DbSet<HerbalDrink> HerbalDrinks { get; set; }

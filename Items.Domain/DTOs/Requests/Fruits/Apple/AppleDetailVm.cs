@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Items.Domain.DTOs.Requests.Common;
 using AppleDomain = Items.Domain.Models.Categories.Fruits.ConcreteApple.Apple.Apple;
-using Range = Items.Domain.Components.Entities.Categories.Fruits.Common.Range;
+using SalesLine = Items.Domain.Components.Entities.Categories.Fruits.Common.SalesLine;
 
 namespace Items.Domain.DTOs.Requests.Fruits.Apple
 {
@@ -23,7 +23,7 @@ namespace Items.Domain.DTOs.Requests.Fruits.Apple
         public float Weight { get; set; }
         public string? CoolingMode { get; set; }
         public string? Grade { get; set; }
-        public List<Range>? SaleWeights { get; set; }
+        public List<SalesLine>? SaleWeights { get; set; }
 
         public void Mapping(Profile profile) {
             profile.CreateMap<AppleDomain, AppleDetailVm>()

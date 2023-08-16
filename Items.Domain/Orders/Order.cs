@@ -1,4 +1,4 @@
-﻿using Items.Domain.Components.Entities;
+﻿using Items.Domain.Components.Entities.Categories.Common;
 
 namespace Items.Domain.Orders
 {

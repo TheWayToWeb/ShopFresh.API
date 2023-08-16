@@ -1,4 +1,6 @@
 ﻿using Items.Domain.Components.Entities.Categories.Common;
+using Items.Domain.Components.Entities.Categories.Drinks.Common;
+using Items.Domain.Components.Entities.Categories.MilkProducts.Common;
 
 namespace Items.Domain.Components.Entities.Categories.Drinks.ConcreteDrinkEnergy.DrinkEnergy
 {
@@ -22,8 +24,8 @@ namespace Items.Domain.Components.Entities.Categories.Drinks.ConcreteDrinkEnergy
             float energy,
             int countInPackage,
             int createdDate,
-            List<Taste> tastes,
-            List<Capacity> capacities,
+            List<ProductTaste> tastes,
+            List<SoldCapacity> capacities,
             bool isChilled,
             List<SaleStatus> sales,
             float coffein
