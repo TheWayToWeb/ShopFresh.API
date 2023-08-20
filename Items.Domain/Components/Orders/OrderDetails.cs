@@ -8,7 +8,7 @@ namespace Items.Domain.Components.Orders
         public Guid Id { get; private set; }
         public float OrderPrice { get; private set; }
         public DateTime DispatchDate { get; private set; }
-        public DateTime ReceiptDate { get; private set; }
+        public DateTime ReceivingDate { get; private set; }
         public Guid AddressId { get; private set; }
         public Address? Address { get; set; }
         public Guid OrderId { get; private set; }
