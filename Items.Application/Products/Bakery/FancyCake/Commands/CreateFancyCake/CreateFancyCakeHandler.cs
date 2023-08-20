@@ -1,6 +1,6 @@
 ﻿using Items.Application.Interfaces;
 using MediatR;
-using SelfFancyCake = Items.Domain.Components.Entities.Categories.Bakery.FancyCake.FancyCake;
+using SelfFancyCake = Items.Domain.Components.Entities.Bakery.FancyCake.FancyCake;
 
 namespace Items.Application.Products.Bakery.FancyCake.Commands.CreateFancyCake
 {

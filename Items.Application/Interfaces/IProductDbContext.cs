@@ -1,5 +1,5 @@
 ﻿using Items.Domain.Brands;
-using Items.Domain.Components.Entities.Categories.Common;
+using Items.Domain.Components.Entities.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

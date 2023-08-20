@@ -1,4 +1,5 @@
-﻿using Items.Domain.Components.Entities.Categories.Vegetables.Vegetable;
+﻿using Items.Domain.Components.Entities.Vegetables;
+using Items.Domain.Components.Entities.Vegetables.Vegetable;
 using MediatR;
 
 namespace Items.Application.Products.Vegetables.VegetableMix.CreateVegetableMix

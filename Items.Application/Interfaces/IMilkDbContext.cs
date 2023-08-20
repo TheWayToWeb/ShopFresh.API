@@ -7,7 +7,7 @@ using Items.Domain.Components.Entities.Categories.DairyProducts.BuilderRolledUpM
 using Items.Domain.Components.Entities.Categories.DairyProducts.BuilderThickCream.ThickCream;
 using Items.Domain.Components.Entities.Categories.DairyProducts.BuilderThickDairyProduct.ThickDairyProduct;
 using Items.Domain.Components.Entities.Categories.DairyProducts.BuilderYogurt.Yogurt;
-using Items.Domain.Components.Entities.Categories.Eggs;
+using Items.Domain.Components.Entities.Eggs;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces

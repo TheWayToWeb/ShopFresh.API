@@ -7,6 +7,5 @@
         public string? Region { get; private set; }
         public string? Country { get; private set; }
         public string? PostCode { get; private set; }
-        // public Person Person { get; set; }
     }
 }

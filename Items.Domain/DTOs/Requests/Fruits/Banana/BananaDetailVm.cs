@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Items.Domain.DTOs.Requests.Common;
 using BananaDomain = Items.Domain.Models.Categories.Fruits.ConcreteBanana.Banana.Banana;
-using SalesLine = Items.Domain.Components.Entities.Categories.Fruits.Common.SalesLine;
+using SalesLine = Items.Domain.Components.Entities.Fruits.Common.SalesLine;
 
 namespace Items.Domain.DTOs.Requests.Fruits.Banana
 {

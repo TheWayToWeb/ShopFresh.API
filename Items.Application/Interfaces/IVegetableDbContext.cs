@@ -2,7 +2,8 @@
 using Items.Domain.Components.Entities.Categories.Vegetables.ConcreteSquash.Squash;
 using Items.Domain.Components.Entities.Categories.Vegetables.ConcreteTomato.Tomato;
 using Items.Domain.Components.Entities.Categories.Vegetables.ConcreteVegetableMix.VegetableMix;
-using Items.Domain.Components.Entities.Categories.Vegetables.Vegetable;
+using Items.Domain.Components.Entities.Vegetables;
+using Items.Domain.Components.Entities.Vegetables.Vegetable;
 using Items.Domain.Entities.Categories.Vegetables.ConcreteBean.Bean;
 using Items.Domain.Entities.Categories.Vegetables.ConcreteBeet.Beet;
 using Items.Domain.Entities.Categories.Vegetables.ConcreteBroccoli.Broccoli;

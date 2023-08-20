@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Items.Domain.DTOs.Requests.Common;
 using AppleDomain = Items.Domain.Models.Categories.Fruits.ConcreteApple.Apple.Apple;
-using SalesLine = Items.Domain.Components.Entities.Categories.Fruits.Common.SalesLine;
+using SalesLine = Items.Domain.Components.Entities.Fruits.Common.SalesLine;
 
 namespace Items.Domain.DTOs.Requests.Fruits.Apple
 {

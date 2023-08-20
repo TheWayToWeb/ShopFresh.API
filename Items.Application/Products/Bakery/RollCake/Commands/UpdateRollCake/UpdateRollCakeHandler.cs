@@ -1,5 +1,5 @@
 ﻿using Items.Application.Interfaces;
-using Items.Domain.Components.Entities.Categories.Bakery.RollCake;
+using Items.Domain.Components.Entities.Bakery.RollCake;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
