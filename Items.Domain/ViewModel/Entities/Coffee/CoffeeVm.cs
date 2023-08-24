@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Items.Domain.ViewModel.Entities.Common
+namespace Items.Domain.ViewModel.Entities.Coffee
 {
-    internal class ItemFood
+    internal class Coffee
     {
     }
 }
