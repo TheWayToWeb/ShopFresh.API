@@ -10,10 +10,6 @@ namespace Items.Domain.ViewModel.Entities.Common
         public string? BrandName { get; set; }
         public int Price { get; set; }
         public string? ImagePath { get; set; }
-        public string? Maker { get; set; }
-        public int CountInPackage { get; set; }
-        public float Weight { get; set; }
-        public string? Description { get; set; }
 
         public void Mapping(Profile profile)
         {
@@ -25,15 +21,7 @@ namespace Items.Domain.ViewModel.Entities.Common
                 .ForMember(map => map.Price,
                     opt => opt.MapFrom(map => map.Price))
                 .ForMember(map => map.ImagePath,
-                    opt => opt.MapFrom(map => map.ImagePath))
-                .ForMember(map => map.Maker,
-                    opt => opt.MapFrom(map => map.Maker))
-                .ForMember(map => map.CountInPackage,
-                    opt => opt.MapFrom(map => map.CountInPackage))
-                .ForMember(map => map.Weight,
-                    opt => opt.MapFrom(map => map.Weight))
-                .ForMember(map => map.Description,
-                    opt => opt.MapFrom(map => map.Description));
+                    opt => opt.MapFrom(map => map.ImagePath));
         }
     }
 }
