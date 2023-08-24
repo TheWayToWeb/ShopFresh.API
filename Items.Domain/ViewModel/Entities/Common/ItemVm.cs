@@ -2,7 +2,7 @@
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.DTOs.Requests.Common;
 
-namespace Items.Domain.ViewModel.Items
+namespace Items.Domain.ViewModel.Entities.Common
 {
     public class ItemVm : IMapWith<Item>
     {
