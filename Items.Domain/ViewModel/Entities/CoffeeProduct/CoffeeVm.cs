@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Coffee;
 using Items.Domain.Components.Entities.Common;
+using Items.Domain.DTOs.Requests.Common;
 
 namespace Items.Domain.ViewModel.Entities.CoffeeProduct
 {
-    public class CoffeeVm
+    public class CoffeeVm : IMapWith<Coffee>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
