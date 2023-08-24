@@ -12,7 +12,7 @@ namespace Items.Domain.ViewModel.Entities.Common
         public string? ImagePath { get; set; }
         public string? Maker { get; set; }
         public int CountInPackage { get; set; }
-        public float? Weight { get; set; }
+        public float Weight { get; set; }
         public string? Description { get; set; }
 
         public void Mapping(Profile profile)
