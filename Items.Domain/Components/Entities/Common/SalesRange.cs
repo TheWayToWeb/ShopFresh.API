@@ -1,4 +1,4 @@
-﻿namespace Items.Domain.Components.Entities.Vegetables.Common
+﻿namespace Items.Domain.Components.Entities.Common
 {
     public class SalesRange
     {
