@@ -1,24 +1,22 @@
 ﻿using AutoMapper;
-using Items.Domain.Components.Entities.Cheeses;
+using Items.Domain.Components.Entities.CheesyProducts;
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.DTOs.Requests.Common;
-using Items.Domain.ViewModel.Entities.Common;
+using Items.Domain.ViewModel.EntitiesVm.Common;
 
-namespace Items.Domain.ViewModel.Entities.Cheeses
+namespace Items.Domain.ViewModel.EntitiesVm.CheesyProducts
 {
-    public class CheeseDetailVm : ItemVmBase, IMapWith<Cheese>
+    public class CheesyProductDetailVm : ItemVmBase, IMapWith<CheesyProduct>
     {
         public List<ProductTaste> Tastes { get; set; } = new();
-        public string? FormRelease { get; set; }
-        public string? PrimaryProduct { get; set; }
-        public List<SalesRange> SaleWeights { get; set; } = new();
-        public bool InParts { get; set; }
+        public string? FatContent { get; set; }
+        public string? KindRelease { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Cheese, CheeseDetailVm>()
-                .ForMember(map => map.Id,
-                    opt => opt.MapFrom(map => map.Id))
+            profile.CreateMap<CheesyProduct, CheesyProductDetailVm>()
+                .ForMember(map => map.Id
+                    , opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
                     opt => opt.MapFrom(map => map.Brand!.BrandName))
                 .ForMember(map => map.ImagePath,
@@ -51,15 +49,10 @@ namespace Items.Domain.ViewModel.Entities.Cheeses
                     opt => opt.MapFrom(map => map.MaxTemp))
                 .ForMember(map => map.Tastes,
                     opt => opt.MapFrom(map => map.Tastes))
-                .ForMember(map => map.FormRelease,
-                    opt => opt.MapFrom(map => map.FormRelease))
-                .ForMember(map => map.PrimaryProduct,
-                    opt => opt.MapFrom(map => map.PrimaryProduct))
-                .ForMember(map => map.SaleWeights,
-                    opt => opt.MapFrom(map => map.SalesWeights))
-                .ForMember(map => map.InParts,
-                    opt => opt.MapFrom(map => map.InParts));
-
+                .ForMember(map => map.FatContent,
+                    opt => opt.MapFrom(map => map.FatContent))
+                .ForMember(map => map.KindRelease,
+                    opt => opt.MapFrom(map => map.KindRelease));
         }
     }
 }

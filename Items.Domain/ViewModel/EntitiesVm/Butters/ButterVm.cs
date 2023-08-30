@@ -1,19 +1,20 @@
 ﻿using AutoMapper;
-using Items.Domain.Components.Entities.CheesyProducts;
+using Items.Domain.Components.Entities.Butter;
 using Items.Domain.DTOs.Requests.Common;
 
-namespace Items.Domain.ViewModel.Entities.CheesyProducts
+namespace Items.Domain.ViewModel.EntitiesVm.Butters
 {
-    public class CheesyProductVm : IMapWith<CheesyProduct>
+    public class ButterVm : IMapWith<Butter>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
         public string? ImagePath { get; set; }
         public int Price { get; set; }
+        public float Weight { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<CheesyProduct, CheesyProductVm>()
+            profile.CreateMap<Butter, ButterVm>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
@@ -21,7 +22,9 @@ namespace Items.Domain.ViewModel.Entities.CheesyProducts
                 .ForMember(map => map.ImagePath,
                     opt => opt.MapFrom(map => map.ImagePath))
                 .ForMember(map => map.Price,
-                    opt => opt.MapFrom(map => map.Price));
+                    opt => opt.MapFrom(map => map.Price))
+                .ForMember(map => map.Weight,
+                    opt => opt.MapFrom(map => map.Weight));
         }
     }
 }

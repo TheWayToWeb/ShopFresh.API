@@ -1,4 +1,4 @@
-﻿namespace Items.Domain.ViewModel.Entities.Common
+﻿namespace Items.Domain.ViewModel.EntitiesVm.Common
 {
     public class ItemVmBase
     {

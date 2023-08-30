@@ -1,20 +1,21 @@
 ﻿using AutoMapper;
-using Items.Domain.Components.Entities.Butter;
 using Items.Domain.Components.Entities.Common;
+using Items.Domain.Components.Entities.Cream;
 using Items.Domain.DTOs.Requests.Common;
-using Items.Domain.ViewModel.Entities.Common;
+using Items.Domain.ViewModel.EntitiesVm.Common;
 
-namespace Items.Domain.ViewModel.Entities.Butters
+namespace Items.Domain.ViewModel.EntitiesVm.Creams
 {
-    public class ButterDetailVm : ItemVmBase, IMapWith<Butter>
+    public class CreamDetailVm : ItemVmBase, IMapWith<Cream>
     {
-        public List<ProductTaste> Tastes { get; set; } = new();
-        public List<FatContentProduct> FatContents { get; set; } = new();
-        public bool IsVegan { get; set; }
+        public string? Taste { get; set; }
+        public List<FatContentProduct> CreamFats { get; set; } = new();
+        public string? MilkProcessing { get; set; }
+        public string? PrimaryProduct { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Butter, ButterDetailVm>()
+            profile.CreateMap<Cream, CreamDetailVm>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
@@ -27,8 +28,6 @@ namespace Items.Domain.ViewModel.Entities.Butters
                     opt => opt.MapFrom(map => map.Maker))
                 .ForMember(map => map.CountInPackage,
                     opt => opt.MapFrom(map => map.CountInPackage))
-                .ForMember(map => map.Weight,
-                    opt => opt.MapFrom(map => map.Weight))
                 .ForMember(map => map.Description,
                     opt => opt.MapFrom(map => map.Description))
                 .ForMember(map => map.IsFarmer,
@@ -47,12 +46,16 @@ namespace Items.Domain.ViewModel.Entities.Butters
                     opt => opt.MapFrom(map => map.MinTemp))
                 .ForMember(map => map.MaxTemp,
                     opt => opt.MapFrom(map => map.MaxTemp))
-                .ForMember(map => map.Tastes,
-                    opt => opt.MapFrom(map => map.Tastes))
-                .ForMember(map => map.FatContents,
-                    opt => opt.MapFrom(map => map.FatContents))
-                .ForMember(map => map.IsVegan,
-                    opt => opt.MapFrom(map => map.IsVegan));
+                .ForMember(map => map.Taste,
+                    opt => opt.MapFrom(map => map.Taste))
+                .ForMember(map => map.CreamFats,
+                    opt => opt.MapFrom(map => map.CreamFats))
+                .ForMember(map => map.MilkProcessing,
+                    opt => opt.MapFrom(map => map.MilkProcessing))
+                .ForMember(map => map.PrimaryProduct,
+                    opt => opt.MapFrom(map => map.PrimaryProduct));
+
+
         }
     }
 }

@@ -2,7 +2,7 @@
 using Items.Domain.Components.Entities.Coffee;
 using Items.Domain.DTOs.Requests.Common;
 
-namespace Items.Domain.ViewModel.Entities.CoffeeProduct
+namespace Items.Domain.ViewModel.EntitiesVm.CoffeeProduct
 {
     public class CoffeeVm : IMapWith<Coffee>
     {

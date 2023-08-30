@@ -2,7 +2,7 @@
 using Items.Domain.Components.Entities.Cream;
 using Items.Domain.DTOs.Requests.Common;
 
-namespace Items.Domain.ViewModel.Entities.Creams
+namespace Items.Domain.ViewModel.EntitiesVm.Creams
 {
     public class CreamVm : IMapWith<Cream>
     {

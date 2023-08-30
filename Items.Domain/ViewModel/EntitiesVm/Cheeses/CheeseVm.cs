@@ -3,7 +3,7 @@ using Items.Domain.Components.Entities.Cheeses;
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.DTOs.Requests.Common;
 
-namespace Items.Domain.ViewModel.Entities.Cheeses
+namespace Items.Domain.ViewModel.EntitiesVm.Cheeses
 {
     public class CheeseVm : IMapWith<Cheese>
     {

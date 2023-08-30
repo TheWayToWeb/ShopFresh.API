@@ -1,28 +1,33 @@
 ﻿using AutoMapper;
-using Items.Domain.Components.Entities.CheesyProducts;
+using Items.Domain.Components.Entities.Coffee;
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.DTOs.Requests.Common;
-using Items.Domain.ViewModel.Entities.Common;
+using Items.Domain.ViewModel.EntitiesVm.Common;
 
-namespace Items.Domain.ViewModel.Entities.CheesyProducts
+namespace Items.Domain.ViewModel.EntitiesVm.CoffeeProduct
 {
-    public class CheesyProductDetailVm : ItemVmBase, IMapWith<CheesyProduct>
+    public class CoffeeDetailVm : ItemVmBase, IMapWith<Coffee>
     {
         public List<ProductTaste> Tastes { get; set; } = new();
-        public string? FatContent { get; set; }
-        public string? KindRelease { get; set; }
+        public string? TypeCoffee { get; set; }
+        public string? KindCoffee { get; set; }
+        public string? ConsistencyRelease { get; set; }
+        public string? Сomposition { get; set; }
+        public string? IntencityRelease { get; set; }
+        public bool IsCoffeinFrree { get; set; }
+
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<CheesyProduct, CheesyProductDetailVm>()
-                .ForMember(map => map.Id
-                    , opt => opt.MapFrom(map => map.Id))
+            profile.CreateMap<Coffee, CoffeeDetailVm>()
+                .ForMember(map => map.Id,
+                    opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
                     opt => opt.MapFrom(map => map.Brand!.BrandName))
-                .ForMember(map => map.ImagePath,
-                    opt => opt.MapFrom(map => map.ImagePath))
                 .ForMember(map => map.Price,
                     opt => opt.MapFrom(map => map.Price))
+                .ForMember(map => map.ImagePath,
+                    opt => opt.MapFrom(map => map.ImagePath))
                 .ForMember(map => map.Maker,
                     opt => opt.MapFrom(map => map.Maker))
                 .ForMember(map => map.CountInPackage,
@@ -49,10 +54,18 @@ namespace Items.Domain.ViewModel.Entities.CheesyProducts
                     opt => opt.MapFrom(map => map.MaxTemp))
                 .ForMember(map => map.Tastes,
                     opt => opt.MapFrom(map => map.Tastes))
-                .ForMember(map => map.FatContent,
-                    opt => opt.MapFrom(map => map.FatContent))
-                .ForMember(map => map.KindRelease,
-                    opt => opt.MapFrom(map => map.KindRelease));
+                .ForMember(map => map.TypeCoffee,
+                    opt => opt.MapFrom(map => map.TypeCoffee))
+                .ForMember(map => map.KindCoffee,
+                    opt => opt.MapFrom(map => map.KindCoffee))
+                .ForMember(map => map.ConsistencyRelease,
+                    opt => opt.MapFrom(map => map.ConsistencyRelease))
+                .ForMember(map => map.Сomposition,
+                    opt => opt.MapFrom(map => map.Composition))
+                .ForMember(map => map.IntencityRelease,
+                    opt => opt.MapFrom(map => map.IntencityRelease))
+                .ForMember(map => map.IsCoffeinFrree,
+                    opt => opt.MapFrom(map => map.IsCoffeinFree));
         }
     }
 }

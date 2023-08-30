@@ -1,25 +1,20 @@
 ﻿using AutoMapper;
-using Items.Domain.Components.Entities.Coffee;
+using Items.Domain.Components.Entities.Butter;
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.DTOs.Requests.Common;
-using Items.Domain.ViewModel.Entities.Common;
+using Items.Domain.ViewModel.EntitiesVm.Common;
 
-namespace Items.Domain.ViewModel.Entities.CoffeeProduct
+namespace Items.Domain.ViewModel.EntitiesVm.Butters
 {
-    public class CoffeeDetailVm : ItemVmBase, IMapWith<Coffee>
+    public class ButterDetailVm : ItemVmBase, IMapWith<Butter>
     {
         public List<ProductTaste> Tastes { get; set; } = new();
-        public string? TypeCoffee { get; set; }
-        public string? KindCoffee { get; set; }
-        public string? ConsistencyRelease { get; set; }
-        public string? Сomposition { get; set; }
-        public string? IntencityRelease { get; set; }
-        public bool IsCoffeinFrree { get; set; }
-
+        public List<FatContentProduct> FatContents { get; set; } = new();
+        public bool IsVegan { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Coffee, CoffeeDetailVm>()
+            profile.CreateMap<Butter, ButterDetailVm>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
@@ -54,18 +49,10 @@ namespace Items.Domain.ViewModel.Entities.CoffeeProduct
                     opt => opt.MapFrom(map => map.MaxTemp))
                 .ForMember(map => map.Tastes,
                     opt => opt.MapFrom(map => map.Tastes))
-                .ForMember(map => map.TypeCoffee,
-                    opt => opt.MapFrom(map => map.TypeCoffee))
-                .ForMember(map => map.KindCoffee,
-                    opt => opt.MapFrom(map => map.KindCoffee))
-                .ForMember(map => map.ConsistencyRelease,
-                    opt => opt.MapFrom(map => map.ConsistencyRelease))
-                .ForMember(map => map.Сomposition,
-                    opt => opt.MapFrom(map => map.Composition))
-                .ForMember(map => map.IntencityRelease,
-                    opt => opt.MapFrom(map => map.IntencityRelease))
-                .ForMember(map => map.IsCoffeinFrree,
-                    opt => opt.MapFrom(map => map.IsCoffeinFree));
+                .ForMember(map => map.FatContents,
+                    opt => opt.MapFrom(map => map.FatContents))
+                .ForMember(map => map.IsVegan,
+                    opt => opt.MapFrom(map => map.IsVegan));
         }
     }
 }
