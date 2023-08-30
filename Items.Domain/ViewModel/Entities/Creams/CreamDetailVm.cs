@@ -2,27 +2,12 @@
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.Components.Entities.Cream;
 using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.ViewModel.Entities.Common;
 
 namespace Items.Domain.ViewModel.Entities.Creams
 {
-    public class CreamDetailVm : IMapWith<Cream>
+    public class CreamDetailVm : ItemVmBase, IMapWith<Cream>
     {
-        public Guid Id { get; set; }
-        public string? BrandName { get; set; }
-        public int Price { get; set; }
-        public string? ImagePath { get; set; }
-        public string? Maker { get; set; }
-        public int CountInPackage { get; set; }
-        public float Weight { get; set; }
-        public string? Description { get; set; }
-        public bool IsFarmer { get; set; }
-        public float Protein { get; set; }
-        public float Fat { get; set; }
-        public float Sugar { get; set; }
-        public float Energy { get; set; }
-        public int CreatedDate { get; set; }
-        public int MinTemp { get; set; }
-        public int MaxTemp { get; set; }
         public string? Taste { get; set; }
         public List<FatContentProduct> CreamFats { get; set; } = new();
         public string? MilkProcessing { get; set; }
