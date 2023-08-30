@@ -2,27 +2,12 @@
 using Items.Domain.Components.Entities.Coffee;
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.ViewModel.Entities.Common;
 
 namespace Items.Domain.ViewModel.Entities.CoffeeProduct
 {
-    public class CoffeeDetailVm : IMapWith<Coffee>
+    public class CoffeeDetailVm : ItemVmBase, IMapWith<Coffee>
     {
-        public Guid Id { get; set; }
-        public string? BrandName { get; set; }
-        public int Price { get; set; }
-        public string? ImagePath { get; set; }
-        public string? Maker { get; set; }
-        public int CountInPackage { get; set; }
-        public float Weight { get; set; }
-        public string? Description { get; set; }
-        public bool IsFarmer { get; set; }
-        public float Protein { get; set; }
-        public float Fat { get; set; }
-        public float Sugar { get; set; }
-        public float Energy { get; set; }
-        public int CreatedDate { get; set; }
-        public int MinTemp { get; set; }
-        public int MaxTemp { get; set; }
         public List<ProductTaste> Tastes { get; set; } = new();
         public string? TypeCoffee { get; set; }
         public string? KindCoffee { get; set; }
