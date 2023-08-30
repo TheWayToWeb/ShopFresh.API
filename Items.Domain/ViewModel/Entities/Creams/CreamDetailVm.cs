@@ -5,7 +5,7 @@ using Items.Domain.DTOs.Requests.Common;
 
 namespace Items.Domain.ViewModel.Entities.Creams
 {
-    public class CreamDetailVm : IMapWith<CreamDetailVm>
+    public class CreamDetailVm : IMapWith<Cream>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
@@ -32,7 +32,7 @@ namespace Items.Domain.ViewModel.Entities.Creams
         {
             profile.CreateMap<CreamVm, CreamDetailVm>()
                 .ForMember(map => map.Id,
-                    opt => opt.MapFrom(map => map.Id))
+                    opt => opt.MapFrom(map => map))
                 .ForMember(map => map.BrandName,
                     opt => opt.MapFrom(map => map.Brand!.BrandName))
                 .ForMember(map => map.Price,
