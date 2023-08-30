@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Common;
-using Items.Domain.Components.Entities.FruitDrink;
+using Items.Domain.Components.Entities.Juice;
 using Items.Domain.DTOs.Requests.Common;
 
-namespace Items.Domain.ViewModel.EntitiesVm.FruitDrinks
+namespace Items.Domain.ViewModel.EntitiesVm.Juices
 {
-    public class FruitDrinkVm : IMapWith<FruitDrink>
+    public class JuiceVm : IMapWith<Juice>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
@@ -15,10 +15,9 @@ namespace Items.Domain.ViewModel.EntitiesVm.FruitDrinks
         public int AgeLimit { get; set; }
         public List<SoldCapacity> Volume { get; set; } = new();
 
-
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<FruitDrink, FruitDrinkVm>()
+            profile.CreateMap<Juice, JuiceVm>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,

@@ -1,21 +1,20 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Common;
-using Items.Domain.Components.Entities.FruitDrink;
+using Items.Domain.Components.Entities.Juice;
 using Items.Domain.DTOs.Requests.Common;
 using Items.Domain.ViewModel.EntitiesVm.Common;
 
-namespace Items.Domain.ViewModel.EntitiesVm.FruitDrinks
+namespace Items.Domain.ViewModel.EntitiesVm.Juices
 {
-    public class FruitDrinkDetailVm : ItemVmBase, IMapWith<FruitDrink>
+    public class JuiceDetailVm : ItemVmBase, IMapWith<Juice>
     {
+        public bool IsCold { get; set; }
         public List<ProductTaste> Tastes { get; set; } = new();
         public List<SoldCapacity> Volume { get; set; } = new();
-        public int AgeLimit { get; set; }
-        public bool IsCold { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<FruitDrink, FruitDrinkDetailVm>()
+            profile.CreateMap<Juice, JuiceDetailVm>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
@@ -52,8 +51,6 @@ namespace Items.Domain.ViewModel.EntitiesVm.FruitDrinks
                     opt => opt.MapFrom(map => map.Tastes))
                 .ForMember(map => map.Volume,
                     opt => opt.MapFrom(map => map.Volume))
-                .ForMember(map => map.AgeLimit,
-                    opt => opt.MapFrom(map => map.AgeLimit))
                 .ForMember(map => map.IsCold,
                     opt => opt.MapFrom(map => map.IsCold));
         }
