@@ -1,5 +1,4 @@
 ﻿using Items.Domain.Components.Entities.Common;
-using SalesLine = Items.Domain.Components.Entities.Fruits.Common.SalesLine;
 
 namespace Items.Domain.Components.Entities.Fruits
 {
@@ -10,6 +9,6 @@ namespace Items.Domain.Components.Entities.Fruits
         public string? CoolingMode { get; private set; }
         public string? SkinColor { get; private set; }
         public bool ByWeight { get; set; }
-        public List<SalesLine> SalesWeights { get; private set; } = new();
+        public List<SalesRange> SalesWeights { get; private set; } = new();
     }
 }
