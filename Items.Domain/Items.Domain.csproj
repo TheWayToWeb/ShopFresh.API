@@ -24,6 +24,7 @@
     <Folder Include="DTOs\Responses\Eggs\" />
     <Folder Include="DTOs\Responses\Vegetables\" />
     <Folder Include="Components\Entities\Bakery\Cheesecake\" />
+    <Folder Include="ViewModel\EntitiesVm\Новая папка\" />
   </ItemGroup>
 
 </Project>

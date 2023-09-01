@@ -1,5 +1,4 @@
 ﻿using Items.Domain.Components.Entities.Common;
-using SalesRange = Items.Domain.Components.Entities.Common.SalesRange;
 
 namespace Items.Domain.Components.Entities.Vegetables
 {
