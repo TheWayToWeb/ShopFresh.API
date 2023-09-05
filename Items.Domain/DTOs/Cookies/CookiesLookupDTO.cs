@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Items.Domain.Components.Entities;
+using Items.Domain.Components.Entities.Cookies;
 using Items.Domain.DTOs.Common;
 
 namespace Items.Domain.DTOs.Cookies
