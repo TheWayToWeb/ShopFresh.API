@@ -1,6 +1,6 @@
 ﻿using Items.Domain.Components.Entities.Common;
 
-namespace Items.Domain.Components.Entities.Juice
+namespace Items.Domain.Components.Entities.Juices
 {
     public class Juice : ItemFood
     {
