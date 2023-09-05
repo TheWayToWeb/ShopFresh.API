@@ -2,7 +2,7 @@
 
 namespace Items.Domain.Components.Entities.Cakes
 {
-    public class FancyCake : ItemFood
+    public class Cake : ItemFood
     {
         public string? Taste { get; set; }
     }
