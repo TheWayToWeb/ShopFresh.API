@@ -3,7 +3,7 @@ using Items.Domain.Components.Entities.Categories.Common;
 using Items.Domain.Components.Entities.Bakery.FancyCake;
 using Items.Domain.Components.Entities.Bakery.GingerBread;
 using Items.Domain.Components.Entities.Bakery.RollCake;
-using Items.Domain.Components.Entities;
+using Items.Domain.Components.Entities.Cookies;
 
 namespace Items.Application.Interfaces
 {
