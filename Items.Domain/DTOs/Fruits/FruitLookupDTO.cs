@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Common;
-using Items.Domain.Components.Entities.Vegetables;
+using Items.Domain.Components.Entities.Fruits;
 using Items.Domain.DTOs.Common;
 
-namespace Items.Domain.ViewModel.EntitiesVm.Vegetables
+namespace Items.Domain.DTOs.Fruits
 {
-    public class VegetableVm : IMapWith<Vegetable>
+    public class FruitLookupDTO : IMapWith<Fruit>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
@@ -17,7 +17,7 @@ namespace Items.Domain.ViewModel.EntitiesVm.Vegetables
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Vegetable, VegetableVm>()
+            profile.CreateMap<Fruit, FruitLookupDTO>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,

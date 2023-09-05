@@ -1,23 +1,22 @@
 ﻿using AutoMapper;
-using Items.Domain.Components.Entities.Common;
-using Items.Domain.Components.Entities.Fruits;
+using Items.Domain.Components.Entities.Eggs;
 using Items.Domain.DTOs.Common;
 
-namespace Items.Domain.ViewModel.EntitiesVm.Fruits
+namespace Items.Domain.DTOs.Eggs
 {
-    public class FruitVm : IMapWith<Fruit>
+    public class EggLookupDTO : IMapWith<Egg>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
         public string? ImagePath { get; set; }
         public int Price { get; set; }
-        public float Weight { get; set; }
-        public bool ByWeight { get; set; }
-        public List<SalesRange> SalesWeights { get; set; } = new();
+        public int CountInPackage { get; set; }
+        public string? Category { get; set; }
+        public string? Kind { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Fruit, FruitVm>()
+            profile.CreateMap<Egg, EggLookupDTO>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
@@ -26,12 +25,12 @@ namespace Items.Domain.ViewModel.EntitiesVm.Fruits
                     opt => opt.MapFrom(map => map.ImagePath))
                 .ForMember(map => map.Price,
                     opt => opt.MapFrom(map => map.Price))
-                .ForMember(map => map.Weight,
-                    opt => opt.MapFrom(map => map.Weight))
-                .ForMember(map => map.ByWeight,
-                    opt => opt.MapFrom(map => map.ByWeight))
-                .ForMember(map => map.SalesWeights,
-                    opt => opt.MapFrom(map => map.SalesWeights));
+                .ForMember(map => map.CountInPackage,
+                    opt => opt.MapFrom(map => map.CountInPackage))
+                .ForMember(map => map.Category,
+                    opt => opt.MapFrom(map => map.Category))
+                .ForMember(map => map.Kind,
+                    opt => opt.MapFrom(map => map.Kind));
         }
     }
 }
