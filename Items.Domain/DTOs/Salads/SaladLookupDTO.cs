@@ -2,9 +2,9 @@
 using Items.Domain.Components.Entities.Salads;
 using Items.Domain.DTOs.Common;
 
-namespace Items.Domain.ViewModel.EntitiesVm.Salads
+namespace Items.Domain.DTOs.Salads
 {
-    public class SaladVm : IMapWith<Salad>
+    public class SaladLookupDTO : IMapWith<Salad>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
@@ -14,7 +14,7 @@ namespace Items.Domain.ViewModel.EntitiesVm.Salads
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Salad, SaladVm>()
+            profile.CreateMap<Salad, SaladLookupDTO>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
