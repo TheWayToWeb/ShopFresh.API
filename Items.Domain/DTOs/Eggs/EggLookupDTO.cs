@@ -9,6 +9,7 @@ namespace Items.Domain.DTOs.Eggs
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
         public string? ImagePath { get; set; }
+        public int Price { get; set; }
         public float Weight { get; set; }
         public int CountInPackage { get; set; }
 
@@ -24,7 +25,9 @@ namespace Items.Domain.DTOs.Eggs
                 .ForMember(map => map.Weight,
                     opt => opt.MapFrom(map => map.Weight))
                 .ForMember(map => map.CountInPackage,
-                    opt => opt.MapFrom(map => map.CountInPackage));
+                    opt => opt.MapFrom(map => map.CountInPackage))
+                .ForMember(map => map.Price,
+                    opt => opt.MapFrom(map => map.Price));
         }
     }
 }

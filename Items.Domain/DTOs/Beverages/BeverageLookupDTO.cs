@@ -10,6 +10,7 @@ namespace Items.Domain.DTOs.Beverages
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
         public string? ImagePath { get; set; }
+        public int Price { get; set; }
         public List<SoldCapacity> Volume { get; private set; } = new();
 
         public void Mapping(Profile profile)
@@ -22,7 +23,9 @@ namespace Items.Domain.DTOs.Beverages
                 .ForMember(map => map.ImagePath,
                     opt => opt.MapFrom(map => map.ImagePath))
                 .ForMember(map => map.Volume,
-                    opt => opt.MapFrom(map => map.Volume));
+                    opt => opt.MapFrom(map => map.Volume))
+                .ForMember(map => map.Price,
+                    opt => opt.MapFrom(map => map.Price));
         }
     }
 }
