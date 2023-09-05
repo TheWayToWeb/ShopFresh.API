@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Butter;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 
-namespace Items.Domain.ViewModel.EntitiesVm.Butters
+namespace Items.Domain.DTOs.Butters
 {
-    public class ButterVm : IMapWith<Butter>
+    public class ButterLoookupDTO : IMapWith<Butter>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
@@ -12,9 +12,8 @@ namespace Items.Domain.ViewModel.EntitiesVm.Butters
         public int Price { get; set; }
         public float Weight { get; set; }
 
-        public void Mapping(Profile profile)
-        {
-            profile.CreateMap<Butter, ButterVm>()
+        public void Mapping(Profile profile) {
+            profile.CreateMap<Butter, ButterLoookupDTO>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,

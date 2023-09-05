@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.CheesyProducts;
 using Items.Domain.Components.Entities.Common;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 using Items.Domain.ViewModel.EntitiesVm.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.CheesyProducts
 {
-    public class CheesyProductDetailVm : ItemVmBase, IMapWith<CheesyProduct>
+    public class CheesyProductDetailVm : ItemVmCommon, IMapWith<CheesyProduct>
     {
         public List<ProductTaste> Tastes { get; set; } = new();
         public string? FatContent { get; set; }

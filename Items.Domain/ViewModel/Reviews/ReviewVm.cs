@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Feedback;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 
 namespace Items.Domain.ViewModel.Reviews
 {

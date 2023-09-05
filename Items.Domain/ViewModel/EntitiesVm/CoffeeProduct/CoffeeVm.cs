@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Coffee;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.CoffeeProduct
 {

@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Butter;
 using Items.Domain.Components.Entities.Common;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 using Items.Domain.ViewModel.EntitiesVm.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.Butters
 {
-    public class ButterDetailVm : ItemVmBase, IMapWith<Butter>
+    public class ButterDetailVm : ItemVmCommon, IMapWith<Butter>
     {
         public List<ProductTaste> Tastes { get; set; } = new();
         public List<FatContentProduct> FatContents { get; set; } = new();

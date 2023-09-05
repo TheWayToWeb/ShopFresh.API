@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Eggs;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 using Items.Domain.ViewModel.EntitiesVm.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.BirdEggs
 {
-    public class EggsDetailVm : ItemVmBase, IMapWith<Egg>
+    public class EggsDetailVm : ItemVmCommon, IMapWith<Egg>
     {
         public string? Category { get; set; }
         public string? Kind { get; set; }

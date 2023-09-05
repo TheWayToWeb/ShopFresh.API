@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace Items.Domain.DTOs.Requests.Common
+namespace Items.Domain.DTOs.Common
 {
     public interface IMapWith<T>
     {

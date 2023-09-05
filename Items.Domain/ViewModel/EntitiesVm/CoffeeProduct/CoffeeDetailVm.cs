@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Coffee;
 using Items.Domain.Components.Entities.Common;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 using Items.Domain.ViewModel.EntitiesVm.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.CoffeeProduct
 {
-    public class CoffeeDetailVm : ItemVmBase, IMapWith<Coffee>
+    public class CoffeeDetailVm : ItemVmCommon, IMapWith<Coffee>
     {
         public List<ProductTaste> Tastes { get; set; } = new();
         public string? TypeCoffee { get; set; }

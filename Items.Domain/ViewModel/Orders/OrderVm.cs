@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.Components.Orders;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 
 namespace Items.Domain.ViewModel.Orders
 {

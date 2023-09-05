@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.Components.Entities.Cream;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 using Items.Domain.ViewModel.EntitiesVm.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.Creams
 {
-    public class CreamDetailVm : ItemVmBase, IMapWith<Cream>
+    public class CreamDetailVm : ItemVmCommon, IMapWith<Cream>
     {
         public string? Taste { get; set; }
         public List<FatContentProduct> CreamFats { get; set; } = new();

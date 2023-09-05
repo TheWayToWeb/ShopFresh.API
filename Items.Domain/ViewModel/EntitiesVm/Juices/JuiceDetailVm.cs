@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.Components.Entities.Juice;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 using Items.Domain.ViewModel.EntitiesVm.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.Juices
 {
-    public class JuiceDetailVm : ItemVmBase, IMapWith<Juice>
+    public class JuiceDetailVm : ItemVmCommon, IMapWith<Juice>
     {
         public bool IsCold { get; set; }
         public List<ProductTaste> Tastes { get; set; } = new();

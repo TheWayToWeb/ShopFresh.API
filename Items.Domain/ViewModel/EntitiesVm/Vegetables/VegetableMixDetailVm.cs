@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Vegetables;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 using Items.Domain.ViewModel.EntitiesVm.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.Vegetables
 {
-    public class VegetableMixDetailVm : ItemVmBase, IMapWith<VegetableMix>
+    public class VegetableMixDetailVm : ItemVmCommon, IMapWith<VegetableMix>
     {
         public List<Vegetable> Vegetables { get; set; } = new();
 

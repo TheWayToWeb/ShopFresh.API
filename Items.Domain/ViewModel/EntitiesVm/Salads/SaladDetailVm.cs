@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.Components.Entities.Salads;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 using Items.Domain.ViewModel.EntitiesVm.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.Salads
 {
-    public class SaladDetailVm : ItemVmBase, IMapWith<Salad>
+    public class SaladDetailVm : ItemVmCommon, IMapWith<Salad>
     {
         public List<ItemFood> SaladIngridients { get; set; } = new();
 

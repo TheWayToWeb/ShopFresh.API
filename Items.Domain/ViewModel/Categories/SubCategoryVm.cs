@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Categories;
 using Items.Domain.Components.Entities.Common;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 
 namespace Items.Domain.ViewModel.Categories
 {

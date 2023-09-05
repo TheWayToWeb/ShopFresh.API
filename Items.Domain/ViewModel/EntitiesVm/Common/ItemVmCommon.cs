@@ -1,6 +1,6 @@
 ﻿namespace Items.Domain.ViewModel.EntitiesVm.Common
 {
-    public class ItemVmBase
+    public class ItemVmCommon
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }

@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.Components.Entities.Fruits;
-using Items.Domain.DTOs.Requests.Common;
+using Items.Domain.DTOs.Common;
 using Items.Domain.ViewModel.EntitiesVm.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.Fruits
 {
-    public class FruitDetailVm : ItemVmBase, IMapWith<Fruit>
+    public class FruitDetailVm : ItemVmCommon, IMapWith<Fruit>
     {
         public string? Grade { get; set; }
         public string? FormRelease { get; set; }
