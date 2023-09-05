@@ -1,23 +1,22 @@
 ﻿using AutoMapper;
-using Items.Domain.Components.Entities.Common;
-using Items.Domain.Components.Entities.Juice;
+using Items.Domain.Components.Entities.Eggs;
 using Items.Domain.DTOs.Common;
 
-namespace Items.Domain.DTOs.Juices
+namespace Items.Domain.ViewModel.EntitiesVm.BirdEggs
 {
-    public class JuiceLookupDTO : IMapWith<JuiceLookupDTO>
+    public class EggsVm : IMapWith<Egg>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
         public string? ImagePath { get; set; }
         public int Price { get; set; }
         public int CountInPackage { get; set; }
-        public int AgeLimit { get; set; }
-        public List<SoldCapacity> Volume { get; set; } = new();
+        public string? Category { get; set; }
+        public string? Kind { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Juice, JuiceLookupDTO>()
+            profile.CreateMap<Egg, EggsVm>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
@@ -28,10 +27,10 @@ namespace Items.Domain.DTOs.Juices
                     opt => opt.MapFrom(map => map.Price))
                 .ForMember(map => map.CountInPackage,
                     opt => opt.MapFrom(map => map.CountInPackage))
-                .ForMember(map => map.AgeLimit,
-                    opt => opt.MapFrom(map => map.AgeLimit))
-                .ForMember(map => map.Volume,
-                    opt => opt.MapFrom(map => map.Volume));
+                .ForMember(map => map.Category,
+                    opt => opt.MapFrom(map => map.Category))
+                .ForMember(map => map.Kind,
+                    opt => opt.MapFrom(map => map.Kind));
         }
     }
 }

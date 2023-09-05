@@ -1,30 +1,31 @@
 ﻿using AutoMapper;
-using Items.Domain.Components.Entities.Vegetables;
+using Items.Domain.Components.Entities.Cream;
 using Items.Domain.DTOs.Common;
 
-namespace Items.Domain.DTOs.Vegetables
+namespace Items.Domain.ViewModel.EntitiesVm.Creams
 {
-    public class VegetableMixLookupDTO : IMapWith<VegetableMix>
+    public class CreamVm : IMapWith<Cream>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
         public string? ImagePath { get; set; }
         public int Price { get; set; }
-        public float Weight { get; set; }
+        public float Volume { get; set; }
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<VegetableMix, VegetableMixLookupDTO>()
+            profile.CreateMap<Cream, CreamVm>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
-                    opt => opt.MapFrom(map => map.Id))
+                    opt => opt.MapFrom(map => map.Brand!.BrandName))
                 .ForMember(map => map.ImagePath,
                     opt => opt.MapFrom(map => map.ImagePath))
                 .ForMember(map => map.Price,
                     opt => opt.MapFrom(map => map.Price))
-                .ForMember(map => map.Weight,
-                    opt => opt.MapFrom(map => map.Weight));
+                .ForMember(map => map.Volume,
+                    opt => opt.MapFrom(map => map.Volume));
+
         }
     }
 }

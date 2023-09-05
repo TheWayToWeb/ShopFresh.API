@@ -1,22 +1,23 @@
 ﻿using AutoMapper;
-using Items.Domain.Components.Entities.Eggs;
+using Items.Domain.Components.Entities.Common;
+using Items.Domain.Components.Entities.Fruits;
 using Items.Domain.DTOs.Common;
 
-namespace Items.Domain.DTOs.Eggs
+namespace Items.Domain.ViewModel.EntitiesVm.Fruits
 {
-    public class EggLookupDTO : IMapWith<Egg>
+    public class FruitVm : IMapWith<Fruit>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
         public string? ImagePath { get; set; }
         public int Price { get; set; }
-        public int CountInPackage { get; set; }
-        public string? Category { get; set; }
-        public string? Kind { get; set; }
+        public float Weight { get; set; }
+        public bool ByWeight { get; set; }
+        public List<SalesRange> SalesWeights { get; set; } = new();
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Egg, EggLookupDTO>()
+            profile.CreateMap<Fruit, FruitVm>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
@@ -25,12 +26,12 @@ namespace Items.Domain.DTOs.Eggs
                     opt => opt.MapFrom(map => map.ImagePath))
                 .ForMember(map => map.Price,
                     opt => opt.MapFrom(map => map.Price))
-                .ForMember(map => map.CountInPackage,
-                    opt => opt.MapFrom(map => map.CountInPackage))
-                .ForMember(map => map.Category,
-                    opt => opt.MapFrom(map => map.Category))
-                .ForMember(map => map.Kind,
-                    opt => opt.MapFrom(map => map.Kind));
+                .ForMember(map => map.Weight,
+                    opt => opt.MapFrom(map => map.Weight))
+                .ForMember(map => map.ByWeight,
+                    opt => opt.MapFrom(map => map.ByWeight))
+                .ForMember(map => map.SalesWeights,
+                    opt => opt.MapFrom(map => map.SalesWeights));
         }
     }
 }
