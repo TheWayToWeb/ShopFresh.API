@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Items.Domain.Components.Entities.Categories.Common;
-using Items.Domain.Components.Entities.Bakery.Cookie;
 using Items.Domain.Components.Entities.Bakery.FancyCake;
 using Items.Domain.Components.Entities.Bakery.GingerBread;
 using Items.Domain.Components.Entities.Bakery.RollCake;
+using Items.Domain.Components.Entities;
 
 namespace Items.Application.Interfaces
 {
