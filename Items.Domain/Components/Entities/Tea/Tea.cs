@@ -4,7 +4,6 @@ namespace Items.Domain.Components.Entities.Tea
 {
     public class Tea : ItemFood
     {
-        public string? Grade { get; private set; }
-        public string? TeaKind { get; private set; }
+        public int SashetCount { get; private set; }
     }
 }
