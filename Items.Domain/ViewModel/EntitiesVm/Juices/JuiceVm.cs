@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Items.Domain.Components.Entities.Common;
-using Items.Domain.Components.Entities.Juice;
+using Items.Domain.Components.Entities.Juices;
 using Items.Domain.DTOs.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.Juices
