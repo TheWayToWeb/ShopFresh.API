@@ -4,11 +4,8 @@ namespace Items.Domain.Components.Entities.Cream
 {
     public class Cream : ItemFood
     {
-        public float Volume { get; set; }
-        public string? Taste { get; private set; }
-        public List<FatContentProduct> CreamFats { get; private set; } = new();
-        public string? MilkProcessing { get; private set; }
-        public string? PrimaryProduct { get; private set; }
-
+        public float Volume { get; private set; }
+        public List<FatContentProduct> FatContents { get; set; } = new();
+        public bool IsLactoseFree { get; set; }
     }
 }
