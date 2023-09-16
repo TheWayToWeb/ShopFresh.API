@@ -2,16 +2,27 @@
 using Items.Domain.Components.Entities.Common;
 using Items.Domain.Components.Entities.Cream;
 using Items.Domain.DTOs.Common;
-using Items.Domain.ViewModel.EntitiesVm.Common;
 
 namespace Items.Domain.ViewModel.EntitiesVm.Creams
 {
-    public class CreamDetailVm : ItemVmCommon, IMapWith<Cream>
+    public class CreamDetailVm : IMapWith<Cream>
     {
-        public string? Taste { get; set; }
-        public List<FatContentProduct> CreamFats { get; set; } = new();
-        public string? MilkProcessing { get; set; }
-        public string? PrimaryProduct { get; set; }
+        public Guid Id { get; set; }
+        public string? BrandName { get; set; }
+        public string? ImagePath { get; set; }
+        public int Price { get; set; }
+        public int MinTemp { get; set; }
+        public int MaxTemp { get; set; }
+        public string? Maker { get; set; }
+        public string? Description { get; set; }
+        public float Protein { get; set; }
+        public float Fat { get; set; }
+        public float Sugar { get; set; }
+        public float Energy { get; set; }
+        public int CreatedDate { get; set; }
+        public float Volume { get; private set; }
+        public List<FatContentProduct> FatContents { get; set; } = new();
+        public bool IsLactoseFree { get; set; }
 
         public void Mapping(Profile profile)
         {
@@ -20,18 +31,18 @@ namespace Items.Domain.ViewModel.EntitiesVm.Creams
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
                     opt => opt.MapFrom(map => map.Brand!.BrandName))
-                .ForMember(map => map.Price,
-                    opt => opt.MapFrom(map => map.Price))
                 .ForMember(map => map.ImagePath,
                     opt => opt.MapFrom(map => map.ImagePath))
+                .ForMember(map => map.Price,
+                    opt => opt.MapFrom(map => map.Price))
+                .ForMember(map => map.MinTemp,
+                    opt => opt.MapFrom(map => map.MinTemp))
+                .ForMember(map => map.MaxTemp,
+                    opt => opt.MapFrom(map => map.MaxTemp))
                 .ForMember(map => map.Maker,
                     opt => opt.MapFrom(map => map.Maker))
-                .ForMember(map => map.CountInPackage,
-                    opt => opt.MapFrom(map => map.CountInPackage))
                 .ForMember(map => map.Description,
                     opt => opt.MapFrom(map => map.Description))
-                .ForMember(map => map.IsFarmer,
-                    opt => opt.MapFrom(map => map.IsFarmer))
                 .ForMember(map => map.Protein,
                     opt => opt.MapFrom(map => map.Protein))
                 .ForMember(map => map.Fat,
@@ -42,20 +53,12 @@ namespace Items.Domain.ViewModel.EntitiesVm.Creams
                     opt => opt.MapFrom(map => map.Energy))
                 .ForMember(map => map.CreatedDate,
                     opt => opt.MapFrom(map => map.CreatedDate))
-                .ForMember(map => map.MinTemp,
-                    opt => opt.MapFrom(map => map.MinTemp))
-                .ForMember(map => map.MaxTemp,
-                    opt => opt.MapFrom(map => map.MaxTemp))
-                .ForMember(map => map.Taste,
-                    opt => opt.MapFrom(map => map.Taste))
-                .ForMember(map => map.CreamFats,
-                    opt => opt.MapFrom(map => map.CreamFats))
-                .ForMember(map => map.MilkProcessing,
-                    opt => opt.MapFrom(map => map.MilkProcessing))
-                .ForMember(map => map.PrimaryProduct,
-                    opt => opt.MapFrom(map => map.PrimaryProduct));
-
-
+                .ForMember(map => map.Volume,
+                    opt => opt.MapFrom(map => map.Volume))
+                .ForMember(map => map.FatContents,
+                    opt => opt.MapFrom(map => map.FatContents))
+                .ForMember(map => map.IsLactoseFree,
+                    opt => opt.MapFrom(map => map.IsLactoseFree));
         }
     }
 }
