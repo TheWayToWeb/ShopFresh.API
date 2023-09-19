@@ -15,6 +15,10 @@ namespace Items.Domain.ViewModel.EntitiesVm.Cakes
         public float Protein { get; set; }
         public float Fat { get; set; }
         public float Sugar { get; set; }
+        public float Weight { get; set; }
+        public int CreatedDate { get; set; }
+        public int MinTemp { get; set; }
+        public int MaxTemp { get; set; }
         public string? Description { get; set; }
 
         public void Mapping(Profile profile)
@@ -38,6 +42,14 @@ namespace Items.Domain.ViewModel.EntitiesVm.Cakes
                     opt => opt.MapFrom(map => map.Fat))
                 .ForMember(map => map.Sugar,
                     opt => opt.MapFrom(map => map.Sugar))
+                .ForMember(map => map.Weight,
+                    opt => opt.MapFrom(map => map.Weight))
+                .ForMember(map => map.CreatedDate,
+                    opt => opt.MapFrom(map => map.CreatedDate))
+                .ForMember(map => map.MinTemp,
+                    opt => opt.MapFrom(map => map.MinTemp))
+                .ForMember(map => map.MaxTemp,
+                    opt => opt.MapFrom(map => map.MaxTemp))
                 .ForMember(map => map.Description,
                     opt => opt.MapFrom(map => map.Description));
         }
