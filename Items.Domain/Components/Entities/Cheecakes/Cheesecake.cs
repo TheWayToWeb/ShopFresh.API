@@ -4,5 +4,6 @@ namespace Items.Domain.Components.Entities.Cheecakes
 {
     public class Cheesecake : ItemFood
     {
+        public string? CoolingMode { get; set; }
     }
 }
