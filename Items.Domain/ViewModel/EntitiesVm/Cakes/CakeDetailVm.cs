@@ -17,8 +17,8 @@ namespace Items.Domain.ViewModel.EntitiesVm.Cakes
         public float Sugar { get; set; }
         public float Weight { get; set; }
         public int CreatedDate { get; set; }
-        public int MinTemp { get; set; }
-        public int MaxTemp { get; set; }
+        public float MinTemp { get; set; }
+        public float MaxTemp { get; set; }
         public string? Description { get; set; }
 
         public void Mapping(Profile profile)
