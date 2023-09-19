@@ -17,7 +17,7 @@ namespace Items.Application.Products.Drinks.Lemonade.Commands.CreateLemonade
         public int CountInPackage { get; set; }
         public DateOnly BeforeDate { get; set; }
         public List<SoldCapacity> Capacity { get; set; } = new();
-        public List<ProductTaste>? Taste { get; set; } = new();
+        public List<FlavorName>? Taste { get; set; } = new();
         public bool IsSparkling { get; set; }
     }
 }

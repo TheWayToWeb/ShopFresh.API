@@ -24,7 +24,7 @@ namespace Items.Application.Products.ProductMilk.CreateYogurt
         public bool IsFarmer { get; set; }
         public bool IsVegan { get; set; }
         public bool IsBestseller { get; set; }
-        public List<ProductTaste>? Tastes { get; set; } = new();
+        public List<FlavorName>? Tastes { get; set; } = new();
         public float FatContent { get; set; }
     }
 }

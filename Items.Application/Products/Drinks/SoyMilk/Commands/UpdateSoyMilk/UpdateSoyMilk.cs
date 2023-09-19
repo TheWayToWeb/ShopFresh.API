@@ -19,7 +19,7 @@ namespace Items.Application.Products.Drinks.SoyMilk.Commands.UpdateSoyMilk
         public float Energy { get; set; }
         public int CountInPackage { get; set; }
         public int CreatedDate { get; set; }
-        public List<ProductTaste> Tastes { get; set; } = new();
+        public List<FlavorName> Tastes { get; set; } = new();
         public List<SoldCapacity> Capacities { get; set; } = new();
         public bool IsChilled { get; set; }
         public string KindOfMilk { get; set; } = "";

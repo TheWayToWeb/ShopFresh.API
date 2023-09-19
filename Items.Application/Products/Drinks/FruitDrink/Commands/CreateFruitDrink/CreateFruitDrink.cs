@@ -17,7 +17,7 @@ namespace Items.Application.Products.Drinks.FruitDrink.Commands.CreateFruitDrink
         public float Energy { get; set; }
         public int CountInPackage { get; set; }
         public DateOnly BeforeDate { get; set; }
-        public List<ProductTaste>? Taste { get; set; } = new();
+        public List<FlavorName>? Taste { get; set; } = new();
         public List<SoldCapacity>? Capacity { get; set; } = new();
         public bool IsChilled { get; set; }
     }

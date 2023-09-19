@@ -11,7 +11,7 @@ namespace Items.Domain.ViewModel.EntitiesVm.Juices
         public string? BrandName { get; set; }
         public string? ImagePath { get; set; }
         public int Price { get; set; }
-        public List<ProductTaste> Tastes { get; set; } = new();
+        public List<FlavorName> Tastes { get; set; } = new();
         public List<SoldCapacity> Volume { get; set; } = new();
         public int MinTemp { get; set; }
         public string? Description { get; set; }

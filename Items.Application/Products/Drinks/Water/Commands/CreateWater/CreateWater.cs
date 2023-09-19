@@ -16,7 +16,7 @@ namespace Items.Application.Products.Drinks.Water.Commands.CreateWater
         public int CountInPackage { get; set; }
         public DateOnly BeforeDate { get; set; }
         public List<SoldCapacity>? Capacity { get; set; } = new();
-        public List<ProductTaste>? Taste { get; set; } = new();
+        public List<FlavorName>? Taste { get; set; } = new();
         public bool IsChilled { get; set; }
         public bool IsSparkling { get; set; }
         public string? Purpose { get; set; }

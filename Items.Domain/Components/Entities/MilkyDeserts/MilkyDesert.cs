@@ -4,7 +4,7 @@ namespace Items.Domain.Components.Entities.JuiceDessert
 {
     public class MilkyDesert : ItemFood
     {
-        public List<ProductTaste> Tastes { get; private set; } = new();
+        public List<FlavorName> Tastes { get; private set; } = new();
         public float Volume { get; private set; }
         public string? FormRelease { get; private set; }
         public bool IsCold { get; private set; }

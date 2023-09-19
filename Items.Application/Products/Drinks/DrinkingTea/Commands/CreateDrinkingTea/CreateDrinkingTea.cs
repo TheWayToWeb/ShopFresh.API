@@ -17,7 +17,7 @@ namespace Items.Application.Products.Drinks.TeaDrink.Commands.CreateTeaDrink
         public int CountInPackage { get; set; }
         public DateOnly BeforeDate { get; set; }
         public List<SoldCapacity> Capacity { get; set; } = new();
-        public List<ProductTaste>? Taste { get; set; } = new();
+        public List<FlavorName>? Taste { get; set; } = new();
         public bool IsChilled { get; set; }
         public string? Sort { get; set; }
         public string? KindOfTea { get; set; }
