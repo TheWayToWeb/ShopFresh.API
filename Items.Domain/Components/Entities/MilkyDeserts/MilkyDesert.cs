@@ -6,7 +6,6 @@ namespace Items.Domain.Components.Entities.JuiceDessert
     {
         public List<FlavorName> Tastes { get; private set; } = new();
         public float Volume { get; private set; }
-        public string? FormRelease { get; private set; }
-        public bool IsCold { get; private set; }
+        public float FatContent { get; private set; }
     }
 }
