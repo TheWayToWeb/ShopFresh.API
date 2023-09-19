@@ -5,5 +5,6 @@ namespace Items.Domain.Components.Entities.Cakes
     public class Cake : ItemFood
     {
         public string? Taste { get; set; }
+        public string? CakeType { get; set; }
     }
 }
