@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using Items.Domain.Components.Entities.ViscousCream;
+using Items.Domain.Components.Entities.CreamProducts;
 using Items.Domain.DTOs.Common;
 
 namespace Items.Domain.DTOs.ViscousCreams
 {
-    public class CreamProductLookupDTO : IMapWith<ViscousCream>
+    public class CreamProductLookupDTO : IMapWith<CreamProduct>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
@@ -14,7 +14,7 @@ namespace Items.Domain.DTOs.ViscousCreams
 
         public void Mappin(Profile profile)
         {
-            profile.CreateMap<ViscousCream, CreamProductLookupDTO>()
+            profile.CreateMap<CreamProduct, CreamProductLookupDTO>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,
