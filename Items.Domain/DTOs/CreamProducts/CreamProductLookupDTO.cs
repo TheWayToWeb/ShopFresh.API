@@ -4,7 +4,7 @@ using Items.Domain.DTOs.Common;
 
 namespace Items.Domain.DTOs.ViscousCreams
 {
-    public class ViscousCreamLookupDTO : IMapWith<ViscousCream>
+    public class CreamProductLookupDTO : IMapWith<ViscousCream>
     {
         public Guid Id { get; set; }
         public string? BrandName { get; set; }
@@ -14,7 +14,7 @@ namespace Items.Domain.DTOs.ViscousCreams
 
         public void Mappin(Profile profile)
         {
-            profile.CreateMap<ViscousCream, ViscousCreamLookupDTO>()
+            profile.CreateMap<ViscousCream, CreamProductLookupDTO>()
                 .ForMember(map => map.Id,
                     opt => opt.MapFrom(map => map.Id))
                 .ForMember(map => map.BrandName,

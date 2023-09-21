@@ -1,8 +1,8 @@
 ﻿using Items.Domain.Components.Entities.Common;
 
-namespace Items.Domain.Components.Entities.ViscousCream
+namespace Items.Domain.Components.Entities.CreamProducts
 {
-    public class ViscousCream : ItemFood
+    public class CreamProduct : ItemFood
     {
         public List<FlavorName> Taste { get; private set; } = new();
         public List<FatContentProduct> FatContents { get; private set; } = new();
