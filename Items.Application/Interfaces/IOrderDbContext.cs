@@ -5,7 +5,7 @@ namespace Items.Application.Interfaces
 {
     public interface IOrderDbContext
     {
-        DbSet<Booking> Orders { get; set; }
+        DbSet<Booking> Bookings { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
