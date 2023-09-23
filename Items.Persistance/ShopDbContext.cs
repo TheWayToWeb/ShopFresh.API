@@ -5,7 +5,7 @@ using Items.Persistance.EntityTypeConfiguration;
 using Items.Domain.Products.Category.SubCategory.ItemCategory.Items.Cheese;
 using Items.Domain.Products.FreshItem.FrozenFood.Ice_cream;
 using Items.Domain.Components.Entities.Categories.DairyProducts.BuilderCreamLiquid.CreamLiquid;
-using Items.Domain.Components.Entities.Common;
+using Items.Domain.Components.Items;
 
 namespace Items.Persistance
 {

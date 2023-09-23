@@ -1,4 +1,4 @@
-﻿using Items.Domain.Components.Entities.Common;
+﻿using Items.Domain.Components.Items;
 using Items.Domain.Components.Person;
 
 namespace Items.Domain.Components.Feedback

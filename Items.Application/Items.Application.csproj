@@ -16,9 +16,4 @@
     <ProjectReference Include="..\Items.Domain\Items.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Products\Bread\FlapJack\" />
-  </ItemGroup>
-
 </Project>

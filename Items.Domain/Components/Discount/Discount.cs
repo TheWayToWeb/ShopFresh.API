@@ -1,4 +1,4 @@
-﻿using Items.Domain.Components.Entities.Common;
+﻿using Items.Domain.Components.Items;
 
 namespace Items.Domain.Components.Discount
 {
