@@ -1,14 +1,11 @@
-﻿using Items.Domain.Brands;
-using Items.Domain.Components.Entities.Common;
+﻿using Items.Domain.Components.Items;
 using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces
 {
-    public interface IProductDbContext
+    public interface IItemDbContext
     {
         DbSet<Item> Items { get; set; }
-        DbSet<Eat> Eat { get; set; }
-        DbSet<Drink> Drinks { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
