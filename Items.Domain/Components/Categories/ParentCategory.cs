@@ -2,8 +2,8 @@
 {
     public class ParentCategory
     {
-        public Guid Id { get; private set; }
-        public string? Name { get; private set; }
-        public List<Category> Categories { get; private set; } = new();
+        public Guid Id { get; set; }
+        public string? Name { get; set; }
+        public IEnumerable<Category> Categories { get; set; }
     }
 }

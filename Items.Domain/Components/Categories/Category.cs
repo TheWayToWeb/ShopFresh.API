@@ -2,10 +2,7 @@
 {
     public class Category
     {
-        public Guid Id { get; private set; }
-        public string? CategoryName { get; private set; }
-        public List<SubCategory> SubCategories { get; private set; } = new();
-        public Guid ParentCategoryId { get; private set; }
-        public ParentCategory? ParentCategory { get; set; }
+        public Guid Id { get; set; }
+        public string CategoryName { get; set; }
     }
 }
