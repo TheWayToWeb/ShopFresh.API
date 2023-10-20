@@ -6,9 +6,9 @@ namespace Items.Application.OrderDetails.Commands.CreateOrderDetails
 {
     public class CreateOrderDetailsRequestHandler : IRequestHandler<CreateOrderDetailsRequest, Guid>
     {
-        private readonly IBookingrDetailsDbContext _dbContext;
+        private readonly IOrderDetailsDbContext _dbContext;
 
-        public CreateOrderDetailsRequestHandler(IBookingrDetailsDbContext dbContext)
+        public CreateOrderDetailsRequestHandler(IOrderDetailsDbContext dbContext)
         {
             _dbContext = dbContext;
         }

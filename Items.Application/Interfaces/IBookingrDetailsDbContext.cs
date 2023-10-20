@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Items.Application.Interfaces
 {
-    public interface IBookingrDetailsDbContext
+    public interface IOrderDetailsDbContext
     {
         DbSet<BookingDetails> BookingDetails { get; set; }
 

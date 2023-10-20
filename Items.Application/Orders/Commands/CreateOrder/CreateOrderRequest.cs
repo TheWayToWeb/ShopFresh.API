@@ -7,6 +7,6 @@ namespace Items.Application.Orders.Commands.CreateOrder
     {
         public Guid UserId { get; set; }
         public Guid OrderId { get; set; }
-        public List<Item>? Items { get; set; }
+        public IEnumerable<Item> Items { get; set; }
     }
 }
