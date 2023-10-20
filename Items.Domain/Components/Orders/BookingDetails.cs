@@ -10,8 +10,8 @@ namespace Items.Domain.Components.Orders
         public DateTime DispatchDate { get; set; }
         public DateTime ReceivingDate { get; set; }
         public Guid AddressId { get; set; }
-        public Address? Address { get; set; }
+        public Address Address { get; set; }
         public Guid OrderId { get; set; }
-        public Booking? Order { get; set; }
+        public Booking Order { get; set; }
     }
 }
